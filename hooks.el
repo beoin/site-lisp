@@ -10,6 +10,11 @@
 (add-hook 'clojure-mode-hook (defun clojure-hook () (lisp-hook)))
 (add-hook 'scheme-mode-hook (defun scheme-hook () (lisp-hook)))
 
+(add-hook 'hare-mode-hook
+	  (defun hare-hook ()
+	    (keymap-local-set "C-M-a" #'hare-mode-beginning-of-defun)
+	    (keymap-local-set "C-M-e" #'hare-mode-end-of-defun)))
+
 (add-hook 'eshell-mode-hook
 	  (defun eshell-hook ()
 	    (eshell/addpath (concat (getenv "HOME") "/.local/bin"))
