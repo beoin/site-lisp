@@ -64,8 +64,6 @@
 
 ;; Shell
 (setq eshell-aliases-file "~/.emacs.d/eshell/alias")
-;;(setenv "PATH" (concat (getenv "PATH") ":" (getenv "HOME") "/.local/bin"))
-;;(setenv "PATH" (concat (getenv "PATH") ":" (getenv "HOME") "/bin"))
 
 (provide 'vars)
 ;;; vars.el ends here
