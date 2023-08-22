@@ -14,4 +14,5 @@
 (find-file-noselect "~/.bashrc")
 (find-file-noselect "~/.config/sway/config")
 (find-file-noselect "~/.config/river/init")
+(find-file-noselect "~/Org/dhamma/suttas.org")
 (find-file "~/Org/todo.org")
