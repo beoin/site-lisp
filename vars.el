@@ -57,7 +57,6 @@
 (setq vc-follow-symlinks nil)
 
 ;; Text Editing
-(setq electric-pair-pairs '((?\| . ?\|)))
 (put 'downcase-region 'disabled nil)
 (put 'set-goal-column 'disabled nil)
 (delete-selection-mode t)
