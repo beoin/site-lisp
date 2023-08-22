@@ -9,7 +9,6 @@
 (add-hook 'emacs-lisp-mode-hook (defun elisp-hook ()(lisp-hook)))
 (add-hook 'clojure-mode-hook (defun clojure-hook () (lisp-hook)))
 (add-hook 'scheme-mode-hook (defun scheme-hook () (lisp-hook)))
-;;(add-hook 'geiser-repl-mode-hook (defun geiser-repl-hook () (lisp-hook)))
 
 (add-hook 'eshell-mode-hook
 	  (defun eshell-hook ()
