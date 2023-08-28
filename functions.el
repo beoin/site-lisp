@@ -90,27 +90,6 @@ KEY represents a $HOME directory"
         (other-window 1)
         (switch-to-buffer (other-buffer))))))
 
-;; https://zck.org/emacs-move-file
-;; https://zck.org/emacs-move-file-again
-(defun move-file (new-location)
-  "Write this file to NEW-LOCATION, and delete the old one.
-See rename-visited-file for an inbuilt alternative."
-  (interactive (list (expand-file-name
-                      (if buffer-file-name
-                          (read-file-name "Move file to: ")
-                        (read-file-name "Move file to: "
-                                        default-directory
-                                        (expand-file-name (file-name-nondirectory (buffer-name))
-                                                          default-directory))))))
-  (when (file-exists-p new-location)
-    (delete-file new-location))
-  (let ((old-location (expand-file-name (buffer-file-name))))
-    (write-file new-location t)
-    (when (and old-location
-               (file-exists-p new-location)
-               (not (string-equal old-location new-location)))
-      (delete-file old-location))))
-
 (defun zig-install ()
   "Place zig executable on the system path via a symbolic link."
   (interactive)
