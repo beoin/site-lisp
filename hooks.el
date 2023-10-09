@@ -8,7 +8,6 @@
 (add-hook 'paredit-mode-hook (defun paredit-hook () (keymap-unset paredit-mode-map "M-r" t)))
 (add-hook 'emacs-lisp-mode-hook (defun elisp-hook ()(lisp-hook)))
 (add-hook 'clojure-mode-hook (defun clojure-hook () (lisp-hook)))
-(add-hook 'scheme-mode-hook (defun scheme-hook () (lisp-hook)))
 
 (add-hook 'hare-mode-hook
 	  (defun hare-hook ()

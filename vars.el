@@ -50,8 +50,6 @@
 (electric-pair-mode)
 (setq xref-show-definitions-function #'xref-show-definitions-completing-read)
 (setq flymake-shellcheck-path "~/.local/bin/shellcheck")
-(setq geiser-chicken-binary "chicken-csi")
-(setq geiser-chez-binary "scheme")
 
 ;; Version Control
 (setq vc-follow-symlinks nil)
