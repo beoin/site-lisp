@@ -15,5 +15,7 @@
 (find-file-noselect "~/.config/sway/config")
 (find-file-noselect "~/.config/river/init")
 (find-file-noselect "~/Org/dhamma/suttas.org")
-(find-file-noselect "~/Org/hare/standard_library.org")
+(find-file-noselect "~/src/rust/scratch/src/main.rs")
+(find-file-noselect "~/Org/rust/rust.org")
+
 (find-file "~/Org/todo.org")
