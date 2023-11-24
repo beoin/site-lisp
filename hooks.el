@@ -2,6 +2,7 @@
 ;;; mode hooks.
 
 ;;; Code:
+(add-hook 'go-mode-hook 'lsp-deferred)
 (add-hook 'xref-backend-functions #'dumb-jump-xref-activate)
 (add-hook 'find-function-after-hook #'view-mode-enter)
 
@@ -33,6 +34,10 @@
 	    (buffer-face-mode)
 	    ;(electric-pair-local-mode -1)
 	    ))
+(add-hook 'org-shiftup-final-hook 'windmove-up)
+(add-hook 'org-shiftleft-final-hook 'windmove-left)
+(add-hook 'org-shiftdown-final-hook 'windmove-down)
+(add-hook 'org-shiftright-final-hook 'windmove-right)
 
 (add-hook 'markdown-mode-hook
 	  (defun markdown-hook ()
