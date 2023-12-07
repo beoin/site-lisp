@@ -56,6 +56,13 @@ With argument, do this that many times."
   (interactive "p")
   (delete-word (- arg)))
 
+(defun kill-line-backward ()
+  "Kill the line at point from its beginning."
+  (interactive)
+  (progn
+    (beginning-of-line)
+    (kill-line)))
+
 (defun newline-above-below-point ()
   "Create a newline below point and move to it.
 If \\[universal-argument] is supplied newline is created above point."
