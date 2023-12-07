@@ -63,5 +63,8 @@
 ;; Shell
 (setq eshell-aliases-file "~/.emacs.d/eshell/alias")
 
+;; Snippets
+(yas-global-mode 1)
+
 (provide 'vars)
 ;;; vars.el ends here
