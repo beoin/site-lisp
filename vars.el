@@ -55,6 +55,7 @@
 (setq vc-follow-symlinks nil)
 
 ;; Text Editing
+(put 'upcase-region 'disabled nil)
 (put 'downcase-region 'disabled nil)
 (put 'set-goal-column 'disabled nil)
 (delete-selection-mode t)
