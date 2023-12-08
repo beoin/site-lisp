@@ -4,6 +4,7 @@
 ;;; Convenience functions common across configs
 
 ;;; Code:
+
 (defun lisp-hook ()
   (paredit-mode)
   (rainbow-blocks-mode)
@@ -120,5 +121,5 @@ KEY represents a $HOME directory"
 
 
 (provide 'functions)
-;;; functions.el ends here
 
+;;; functions.el ends here
