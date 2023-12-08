@@ -3,6 +3,7 @@
 
 ;;; Code:
 (add-hook 'go-mode-hook 'lsp-deferred)
+;;(add-hook 'before-save-hook 'gofmt-before-save)
 (add-hook 'go-mode-hook 
 	  (defun go-hook ()
 	    (keymap-local-set "C-c f" #'gofmt)))

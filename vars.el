@@ -50,6 +50,7 @@
 (electric-pair-mode)
 (setq xref-show-definitions-function #'xref-show-definitions-completing-read)
 (setq flymake-shellcheck-path "~/.local/bin/shellcheck")
+(setq gofmt-command "goimports")
 
 ;; Version Control
 (setq vc-follow-symlinks nil)
