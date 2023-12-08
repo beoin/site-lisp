@@ -3,6 +3,10 @@
 
 ;;; Code:
 (add-hook 'go-mode-hook 'lsp-deferred)
+(add-hook 'go-mode-hook 
+	  (defun go-hook ()
+	    (keymap-local-set "C-c f" #'gofmt)))
+
 (add-hook 'xref-backend-functions #'dumb-jump-xref-activate)
 (add-hook 'find-function-after-hook #'view-mode-enter)
 
