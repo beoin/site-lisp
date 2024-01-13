@@ -6,7 +6,9 @@
 ;;(add-hook 'before-save-hook 'gofmt-before-save)
 (add-hook 'go-mode-hook 
 	  (defun go-hook ()
-	    (keymap-local-set "C-c f" #'gofmt)))
+	    (keymap-local-set "C-c f" #'gofmt)
+	    (keymap-local-set "C-<tab>" #'company-complete)
+	    ))
 
 (add-hook 'xref-backend-functions #'dumb-jump-xref-activate)
 (add-hook 'find-function-after-hook #'view-mode-enter)
