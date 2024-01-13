@@ -1,5 +1,12 @@
 ;; vars.el --- Variable settings.  -*- lexical-binding: t -*-
 
+;; Web Mode
+(add-to-list 'auto-mode-alist '("\\.gohtml\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.tpl\\'" . web-mode))
+;;(setq web-mode-enable-current-column-highlight t)
+(setq web-mode-enable-current-element-highlight t)
+(setq web-mode-enable-auto-pairing t)
+
 ;; Search
 (setq lazy-highlight-initial-delay 5.00)
 
@@ -44,6 +51,9 @@
 
 ;; Custom File
 (setq custom-file (concat user-emacs-directory "custom.el"))
+
+;; Company
+(setq company-idle-delay nil)
 
 ;; Programming
 (setq zig-zig-bin "~/Zig/zig-master/zig")
