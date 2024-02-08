@@ -78,5 +78,8 @@
 ;; Snippets
 (yas-global-mode 1)
 
+;; JavaScript
+(add-to-list 'auto-mode-alist '("\\.ejs\\'" . js-mode))
+
 (provide 'vars)
 ;;; vars.el ends here
