@@ -63,7 +63,7 @@ PROMPT sets the `read-string prompt."
 (install-search-engine "duckduckgo" "https://duckduckgo.com/?q=" "DuckDuckGo: ")
 (install-search-engine "google"  "https://www.google.com/search?hl=en&q=" "Google: ")
 (install-search-engine "youtube" "https://www.youtube.com/results?search_query=" "Youtube: ")
-(install-search-engine "book" "https://www.amazon.com/s?rh=n%3A283155&dc&k=" "Book: ")
+(install-search-engine "book" "https://www.amazon.com/s?k=" "Book: ")
 (install-search-engine "archwiki" "https://wiki.archlinux.org/index.php?search=" "Arch Wiki: ")
 
 (defun open-known  (key file)
