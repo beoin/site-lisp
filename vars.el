@@ -82,5 +82,8 @@
 ;; JavaScript
 (add-to-list 'auto-mode-alist '("\\.ejs\\'" . js-mode))
 
+;; Common Lisp
+(setq inferior-lisp-program "/usr/bin/sbcl")
+
 (provide 'vars)
 ;;; vars.el ends here
