@@ -35,6 +35,7 @@
 (keymap-global-set "M-c" 'capitalise-word)
 (keymap-unset global-map "C-x m")
 (keymap-global-set "C-x m e" 'eshell)
+(keymap-global-set "C-x M" (lambda () (interactive) (display-buffer "*Messages*")))
 (keymap-global-set "C-x m s" 'shell)
 (keymap-global-set "C-x m a" 'ansi-term)
 (keymap-global-set "M-SPC" 'ispell-word)
