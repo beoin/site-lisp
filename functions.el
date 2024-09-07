@@ -66,15 +66,18 @@ PROMPT sets the `read-string prompt."
 (install-search-engine "book" "https://www.amazon.com/s?k=" "Book: ")
 (install-search-engine "archwiki" "https://wiki.archlinux.org/index.php?search=" "Arch Wiki: ")
 
-(defun open-known  (key file)
-  "A function in progesss. Open locations which are known to you in the file system.
-KEY represents a $HOME directory"
-  (interactive "sr ~/remote, o ~/Org, b ~/bin, s ~/src: \nsFile: ")
-  (cond ((equal key "r") (dired (concat "~/remote/" file)))
-	       ((equal key "o") (find-file (concat "~/Org/" file ".org")))
-	       ((equal key "b") (find-file (concat "~/bin/" file)))
-	       ((equal key "s") (dired (concat "~/src/" file)))
-	       ))
+;;TODO: fix
+;; (defun open-known  (key file)
+;;   "A function in progesss. Open locations which are known to you in the file system.
+;; KEY represents a $HOME directory"
+;;   (interactive "sr ~/remote, o ~/Org, b ~/bin, s ~/src, d ~/Downloads: \nsFile: ")
+;;   (cond ((equal key "r") (dired (concat "~/remote/" file)))
+;; 	       ((equal key "o") (find-file (concat "~/Org/" file ".org")))
+;; 	       ((equal key "b") (find-file (concat "~/bin/" file)))
+;; 	       ((equal key "s") (dired (concat "~/src/" file)))
+;; 	       ;;((equal key "d") (dired (concat "~/Downloads/" file)))
+;; 	       ((equal key "d") (dired "~/Downloads/"))
+;; 	       ))
 
 ;;https://emacs.stackexchange.com/questions/5371/how-to-change-emacs-windows-from-vertical-split-to-horizontal-split
 (defun window-split-toggle ()
