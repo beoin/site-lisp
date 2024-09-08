@@ -60,7 +60,7 @@
 (setq zig-zig-bin "~/Zig/zig-master/zig")
 (electric-pair-mode)
 (setq xref-show-definitions-function #'xref-show-definitions-completing-read)
-(setq flymake-shellcheck-path "~/.local/bin/shellcheck")
+(setq flymake-shellcheck-path "usr/bin/shellcheck")
 (setq gofmt-command "goimports")
 
 ;; Version Control
