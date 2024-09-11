@@ -66,18 +66,17 @@ PROMPT sets the `read-string prompt."
 (install-search-engine "book" "https://www.amazon.com/s?k=" "Book: ")
 (install-search-engine "archwiki" "https://wiki.archlinux.org/index.php?search=" "Arch Wiki: ")
 
-;;TODO: fix
-;; (defun open-known  (key file)
-;;   "A function in progesss. Open locations which are known to you in the file system.
-;; KEY represents a $HOME directory"
-;;   (interactive "sr ~/remote, o ~/Org, b ~/bin, s ~/src, d ~/Downloads: \nsFile: ")
-;;   (cond ((equal key "r") (dired (concat "~/remote/" file)))
-;; 	       ((equal key "o") (find-file (concat "~/Org/" file ".org")))
-;; 	       ((equal key "b") (find-file (concat "~/bin/" file)))
-;; 	       ((equal key "s") (dired (concat "~/src/" file)))
-;; 	       ;;((equal key "d") (dired (concat "~/Downloads/" file)))
-;; 	       ((equal key "d") (dired "~/Downloads/"))
-;; 	       ))
+(defun dired-common-dirs  (key)
+  "A function in progesss. Open locations which are known to you in the file system.
+KEY represents a $HOME directory"
+  (interactive "sr ~/remote, o ~/Org, b ~/bin, s ~/src, dw ~/Downloads, dk ~/Desktop: ")
+  (cond ((equal key "r") (dired (concat "~/remote/" file)))
+	       ((equal key "o") (dired-other-window "~/Org"))
+	       ((equal key "b") (dired-other-window "~/bin"))
+	       ((equal key "s") (dired-other-window "~/src"))
+	       ((equal key "dw") (dired-other-window "~/Downloads"))
+	       ((equal key "dk") (dired-other-window "~/Desktop"))
+	       ))
 
 ;;https://emacs.stackexchange.com/questions/5371/how-to-change-emacs-windows-from-vertical-split-to-horizontal-split
 (defun window-split-toggle ()

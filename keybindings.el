@@ -31,7 +31,7 @@
 (global-set-key (kbd "M-z") 'zap-up-to-char)
 (global-set-key (kbd "M-!") 'eshell-command)
 (keymap-global-set "C-a" 'crux-move-beginning-of-line)
-(keymap-global-set "C-c o" 'open-known)
+(keymap-global-set "C-c o" 'dired-common-dirs)
 (keymap-global-set "M-c" 'capitalise-word)
 (keymap-unset global-map "C-x m")
 (keymap-global-set "C-x m e" 'eshell)
