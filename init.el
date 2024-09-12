@@ -10,10 +10,4 @@
 
 (find-file-noselect "~/.bashrc")
 (find-file-noselect "~/.config/sway/config")
-(find-file-noselect "~/Org/edu.org")
-(find-file-noselect "~/Org/bookmarks.org")
-(find-file-noselect "~/Org/journal.org")
 (find-file "~/Org/todo.org")
-
-(add-to-list 'load-path "/home/eoin/remote/odin-mode")
-(require 'odin-mode)
