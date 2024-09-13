@@ -62,6 +62,7 @@
 (setq xref-show-definitions-function #'xref-show-definitions-completing-read)
 (setq flymake-shellcheck-path "usr/bin/shellcheck")
 (setq gofmt-command "goimports")
+(global-flycheck-mode +1)
 
 ;; Version Control
 (setq vc-follow-symlinks nil)
