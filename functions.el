@@ -70,7 +70,7 @@ PROMPT sets the `read-string prompt."
   "A function in progesss. Open locations which are known to you in the file system.
 KEY represents a $HOME directory"
   (interactive "sr ~/remote, o ~/Org, b ~/bin, s ~/src, dw ~/Downloads, dk ~/Desktop: ")
-  (cond ((equal key "r") (dired (concat "~/remote/" file)))
+  (cond ((equal key "r") (dired-other-window "~/remote"))
 	       ((equal key "o") (dired-other-window "~/Org"))
 	       ((equal key "b") (dired-other-window "~/bin"))
 	       ((equal key "s") (dired-other-window "~/src"))
