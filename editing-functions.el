@@ -77,3 +77,5 @@ If \\[universal-argument] is supplied newline is created above point."
       (newline))))
 
 (provide 'editing-functions)
+
+;;; editing-functions.el ends here
