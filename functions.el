@@ -93,15 +93,6 @@ KEY represents a $HOME directory"
         (other-window 1)
         (switch-to-buffer (other-buffer))))))
 
-(defun zig-install ()
-  "Place zig executable on the system path via a symbolic link."
-  (interactive)
-  (letrec ((path (string-trim-right (file-name-directory (buffer-file-name)) "/src/" ) )
-	   (file-name (car (last (split-string path "/"))))
-	   (cmd (format "ln -sf %s/zig-out/bin/%s ~/.local/bin/" path file-name)))
-    (start-process-shell-command "file-path" nil cmd)
-    (message "%s installed" file-name)))
-
 (defun status ()
   (interactive)
   (eshell-command "status"))
