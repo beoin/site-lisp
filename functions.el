@@ -17,19 +17,6 @@ Takes a String NODE-NAME, used search to documentation tree."
   (interactive "sNode: ")
   (info (format "(elisp)%s" node-name)))
 
-(defun firefox ()
-  "Launch Firefox"
-  (interactive)
-  (browse-url "about:profiles"))
-
-(defun firefox-with-profile (p)
-  "Launch Firefox with a named configuration PROFILE."
-  (interactive "sGoogle (g), WhatsApp (w) Reddit (r): ")
-  (let ((profile (cond ((equal p "g") "Google")
-			  ((equal p "w") "WhatsApp")
-			  ((equal p "r") "Reddit"))))
-	   (start-process-shell-command "firefox" nil (format "firefox -P  %s" profile))))
-
 (defun firefox-with-cookies (url)
   "Launch Firefox in Cookies profile with named URL."
   (interactive "s Firefox with Cookies URL: ")
