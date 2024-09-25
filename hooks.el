@@ -3,13 +3,6 @@
 
 ;;; Code:
 
-(add-hook 'purescript-mode-hook
-  (lambda ()
-    (psc-ide-mode)
-    (company-mode)
-    (flycheck-mode)
-    (turn-on-purescript-indentation)))
-
 (add-hook 'elixir-mode-hook
 	  (defun elixir-hook ()
 	    (keymap-local-set "C-c f" #'elixir-format)
