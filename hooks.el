@@ -3,12 +3,6 @@
 
 ;;; Code:
 
-(add-hook 'elixir-mode-hook
-	  (defun elixir-hook ()
-	    (keymap-local-set "C-c f" #'elixir-format)
-	    (keymap-local-set "C-M-a" #'elixir-beginning-of-defun)
-	    (keymap-local-set "C-M-e" #'elixir-end-of-defun)))
-
 (add-hook 'go-mode-hook 'lsp-deferred)
 ;;(add-hook 'before-save-hook 'gofmt-before-save)
 (add-hook 'go-mode-hook 
