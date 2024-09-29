@@ -50,10 +50,6 @@
 	    (display-line-numbers-mode t)
 	    (dired-omit-mode t)))
 
-(add-hook 'zig-mode-hook
-	  (defun zig-hook ()
-	    (keymap-local-set "<f9>" #'zig-compile)))
-
 (add-hook 'prog-mode-hook
 	  (defun prog-hook ()
 	    (display-line-numbers-mode +1)))
