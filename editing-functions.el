@@ -39,10 +39,16 @@ C: The character to zap up to."
 	 (forward-whitespace -1))
 
 (defun capitalise-word ()
-  "Variant of builtin capitalize-word. Capitalise the word at point."
+  "Variant of builtin \"capitalize-word\". Capitalise the word at point."
   (interactive)
   (backward-whitespace)
   (capitalize-word 1))
+
+(defun downcase-word-start ()
+  "Downcase form the beginnning of the word at point.
+Variant of the builtin \"downcase-word\"."
+  (interactive)
+  (downcase-word -1))
 
 (defun delete-word (arg)
   "Delete characters forward until encountering the end of a word.
