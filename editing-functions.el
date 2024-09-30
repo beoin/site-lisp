@@ -50,6 +50,13 @@ Variant of the builtin \"downcase-word\"."
   (interactive)
   (downcase-word -1))
 
+(defun upcase-word-start ()
+  "Upcase from the beginning of the word at point.
+Variant of the builtin \"upcase-word\""
+  (interactive)
+  (interactive)
+  (upcase-word -1))
+
 (defun delete-word (arg)
   "Delete characters forward until encountering the end of a word.
 With argument, do this that many times."

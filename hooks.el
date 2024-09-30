@@ -29,6 +29,7 @@
 	    (keymap-local-set "C-S-n" #'org-next-visible-heading)
 	    (keymap-local-set "C-S-p" (lambda () (interactive) (org-next-visible-heading -1)))
 	    (keymap-local-set "M-l" #'downcase-word-start)
+	    (keymap-local-set "M-u" #'upcase-word-start)
 	    (keymap-local-set "C-j" #'newline-above-below-point)
 	    (flyspell-mode +1)
 	    (display-line-numbers-mode -1)
