@@ -5,12 +5,6 @@
 
 ;;; Code:
 
-(defun lisp-hook ()
-  (paredit-mode)
-  (rainbow-blocks-mode)
-  (rainbow-delimiters-mode)
-  (prettify-symbols-mode))
-
 (defun elisp-info (node-name)
   "Search the builtin Emacs Lisp information pages.
 Takes a String NODE-NAME, used search to documentation tree."
