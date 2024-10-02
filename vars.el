@@ -1,13 +1,5 @@
 ;; vars.el --- Variable settings.  -*- lexical-binding: t -*-
 
-;; Web Mode
-(add-to-list 'auto-mode-alist '("\\.gohtml\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.tpl\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.heex\\'" . web-mode))
-;;(setq web-mode-enable-current-column-highlight t)
-(defvar web-mode-enable-current-element-highlight t)
-(defvar web-mode-enable-auto-pairing t)
-
 ;; Search
 (setq lazy-highlight-initial-delay 5.00)
 
