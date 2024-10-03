@@ -52,7 +52,6 @@
 (electric-pair-mode)
 (defvar xref-show-definitions-function #'xref-show-definitions-completing-read)
 (defvar flymake-shellcheck-path "usr/bin/shellcheck")
-(defvar gofmt-command "goimports")
 (global-flycheck-mode +1)
 
 ;; Version Control
