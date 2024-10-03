@@ -49,7 +49,6 @@
 (defvar company-idle-delay nil)
 
 ;; Programming
-;;(customize-set-variable zig-zig-bin "~/Zig/zig-master/zig")
 (electric-pair-mode)
 (defvar xref-show-definitions-function #'xref-show-definitions-completing-read)
 (defvar flymake-shellcheck-path "usr/bin/shellcheck")
