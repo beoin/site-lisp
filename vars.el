@@ -1,4 +1,6 @@
 ;; vars.el --- Variable settings.  -*- lexical-binding: t -*-
+;;; Commentary:
+;;; Code:
 
 ;; Search
 (setq lazy-highlight-initial-delay 5.00)
@@ -65,13 +67,10 @@
 (which-function-mode t)
 
 ;; Shell
-(customize-set-variable eshell-aliases-file "~/.emacs.d/eshell/alias")
+(defvar eshell-aliases-file "~/.emacs.d/eshell/alias")
 
 ;; Snippets
 (yas-global-mode 1)
-
-;; JavaScript
-(add-to-list 'auto-mode-alist '("\\.ejs\\'" . js-mode))
 
 ;; Location of "~" backup files
 (setq backup-directory-alist '(("." . "~/.emacs.d/backups")))
