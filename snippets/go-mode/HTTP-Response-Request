@@ -1,5 +1,0 @@
-# -*- mode: snippet -*-
-# name: HTTP Response Request
-# key: wr
-# --
-w http.ResponseWriter, r *http.Request

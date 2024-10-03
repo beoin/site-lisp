@@ -1,8 +1,0 @@
-# -*- mode: snippet -*-
-# name: type
-# key: type
-# description: snippet for new type
-# --
-type ${1:TypeName} struct {
-     $0
-}
