@@ -74,9 +74,6 @@
 ;; JavaScript
 (add-to-list 'auto-mode-alist '("\\.ejs\\'" . js-mode))
 
-;; Common Lisp
-(defvar inferior-lisp-program "/usr/bin/sbcl")
-
 ;; Location of "~" backup files
 (setq backup-directory-alist '(("." . "~/.emacs.d/backups")))
 
