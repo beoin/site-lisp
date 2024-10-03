@@ -69,9 +69,6 @@
 ;; Shell
 (defvar eshell-aliases-file "~/.emacs.d/eshell/alias")
 
-;; Snippets
-(yas-global-mode 1)
-
 ;; Location of "~" backup files
 (setq backup-directory-alist '(("." . "~/.emacs.d/backups")))
 
