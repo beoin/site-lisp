@@ -66,7 +66,7 @@
 (which-function-mode t)
 
 ;; Shell
-;;(customize-set-variable eshell-aliases-file "~/.emacs.d/eshell/alias")
+(customize-set-variable eshell-aliases-file "~/.emacs.d/eshell/alias")
 
 ;; Snippets
 (yas-global-mode 1)
