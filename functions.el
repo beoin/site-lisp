@@ -11,11 +11,6 @@ Takes a String NODE-NAME, used search to documentation tree."
   (interactive "sNode: ")
   (info (format "(elisp)%s" node-name)))
 
-(defun firefox-with-cookies (url)
-  "Launch Firefox in Cookies profile with named URL."
-  (interactive "s Firefox with Cookies URL: ")
-  (start-process-shell-command "firefox" nil (format "firefox -P Cookies %s" url)))
-
 (defun search-github-ext (term ext)
   "Serach Github with a TERM and extension EXT."
   (interactive "sGithub Term: \nsExt: ")
