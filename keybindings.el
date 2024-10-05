@@ -22,7 +22,6 @@
 ;;(keymap-global-set "C-x C-S-f" 'find-file)
 (keymap-global-set "C-c v" 'view-mode)
 (keymap-global-set "M-o" 'other-window)
-(keymap-global-set "C-c f" 'firefox-with-cookies)
 (keymap-global-set "C-c l" 'comment-or-uncomment-region)
 (keymap-unset global-map "C-x d")
 (global-set-key (kbd "C-x d") 'dired-jump)
