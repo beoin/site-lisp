@@ -26,7 +26,7 @@ C: The character to zap up to."
   (delete-line))
 
 (defun move-to-line-middle ()
-  "Move point to the middle of the line"
+  "Move point to the middle of the line."
   (interactive)
   (let* ((begin (line-beginning-position))
          (end (line-end-position))
@@ -53,7 +53,6 @@ Variant of the builtin \"downcase-word\"."
 (defun upcase-word-start ()
   "Upcase from the beginning of the word at point.
 Variant of the builtin \"upcase-word\""
-  (interactive)
   (interactive)
   (upcase-word -1))
 
@@ -84,7 +83,7 @@ If \\[universal-argument] is supplied newline is created above point."
       (progn
 	(beginning-of-line)
 	(newline)
-	(previous-line))
+	(forward-line -1))
     (progn
       (end-of-line)
       (newline))))
