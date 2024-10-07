@@ -11,3 +11,6 @@
 (find-file-noselect "~/.bashrc")
 (find-file-noselect "~/.config/sway/config")
 (find-file "~/Org/todo.org")
+
+(require 'gleam-ts-mode)
+(add-to-list 'auto-mode-alist '("\\.gleam\\'" . gleam-ts-mode))
