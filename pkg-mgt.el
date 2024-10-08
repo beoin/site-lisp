@@ -1,7 +1,7 @@
-;;; pkg-mgt.el --- Package Management
-
+;;; pkg-mgt.el --- Package Management -*- lexical-binding: t; -*-
 ;;; Commentary:
 ;;; Configuration of Emacs package related functionality.
+
 
 ;;; Code:
 
@@ -20,4 +20,4 @@
 (package-initialize)
 
 (provide 'pkg-mgt)
-;; pkg-mgt.el ends here
+;;; pkg-mgt.el ends here

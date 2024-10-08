@@ -1,5 +1,6 @@
 ;; vars.el --- Variable settings.  -*- lexical-binding: t -*-
 ;;; Commentary:
+
 ;;; Code:
 
 ;; Search

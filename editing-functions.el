@@ -1,5 +1,10 @@
+;;; editing-functions.el --- Functions related to text editing -*- lexical-binding: t; -*-
+
+;;; Commentary:
+;;; Code:
+
 (defun replace-char ()
-  "Replace the char at point"
+  "Replace the char at point."
   (interactive)
   (setq c (read-key))
   (progn
@@ -88,6 +93,6 @@ If \\[universal-argument] is supplied newline is created above point."
       (end-of-line)
       (newline))))
 
-(provide 'editing-functions)
 
+(provide 'editing-functions)
 ;;; editing-functions.el ends here

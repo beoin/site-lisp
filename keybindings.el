@@ -1,4 +1,7 @@
-;;;; keybindings.el --- -*- lexical-binding: t; -*-
+;;; keybindings.el --- Global keybindings -*- lexical-binding: t; -*-
+;;; Commentary:
+
+;;; Code:
 
 (keymap-global-set "M-<backspace>" 'backward-delete-word)
 (keymap-global-set "C-x l" (lambda()(interactive)(dired "~/.emacs.d/lisp")))
@@ -50,6 +53,8 @@
 (keymap-global-set "C-x e" 'emacs-version)
 (keymap-global-set "C-c c" 'compile)
 
+
 (provide 'keybindings)
+;;; keybindings.el ends here
 
 

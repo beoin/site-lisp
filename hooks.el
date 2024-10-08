@@ -1,3 +1,5 @@
+;;; hooks.el --- Mode hooks -*- lexical-binding: t; -*-
+
 ;;; Commentary:
 ;;; mode hooks.
 
@@ -61,6 +63,6 @@
 	  (defun prog-hook ()
 	    (display-line-numbers-mode +1)))
 
-(provide 'hooks)
 
+(provide 'hooks)
 ;;; hooks.el ends here.

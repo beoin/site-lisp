@@ -1,3 +1,7 @@
+;;; init.el --- Entry point for config -*- lexical-binding: t; -*-
+;;; Commentary:
+;;; Code:
+
 (add-to-list 'load-path  "~/.emacs.d/lisp")
 (require 'pkg-mgt)
 (require 'vars)
@@ -14,3 +18,7 @@
 
 (require 'gleam-ts-mode)
 (add-to-list 'auto-mode-alist '("\\.gleam\\'" . gleam-ts-mode))
+
+
+(provide 'init)
+;;; init.el ends here

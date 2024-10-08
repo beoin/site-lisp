@@ -76,5 +76,4 @@ KEY represents a $HOME directory"
 
 
 (provide 'functions)
-
 ;;; functions.el ends here
