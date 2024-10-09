@@ -19,7 +19,6 @@
 (require 'gleam-ts-mode)
 (add-to-list 'auto-mode-alist '("\\.gleam\\'" . gleam-ts-mode))
 
-(setq flycheck-phpcs-standard "psr2")
 
 (provide 'init)
 ;;; init.el ends here

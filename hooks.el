@@ -5,6 +5,11 @@
 
 ;;; Code:
 
+(add-hook 'php-mode-hook (defun php-hook ()
+			   (subword-mode t)
+			   (setq-local flycheck-phpcs-standard "psr2")
+  			   (setq-local show-trailing-whitespace t)))
+
 (add-hook 'find-function-after-hook #'view-mode-enter)
 (add-hook 'xref-backend-functions #'dumb-jump-xref-activate)
 
