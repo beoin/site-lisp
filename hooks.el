@@ -62,7 +62,8 @@
 	  (defun dired-hook ()
 	    (keymap-local-set "c" #'dired-create-empty-file)
 	    (display-line-numbers-mode t)
-	    (dired-omit-mode t)))
+	    (dired-omit-mode t)
+	    (diredfl-global-mode t)))
 
 (add-hook 'prog-mode-hook
 	  (defun prog-hook ()
