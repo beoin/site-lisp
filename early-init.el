@@ -2,7 +2,7 @@
 
 ;;; Commentary:
 ;;; Code:
-(setq gc-cons-threshold (* 50 1000 1000))
+(setq gc-cons-threshold most-positive-fixnum)
 
 (menu-bar-mode -1)
 (scroll-bar-mode -1)
