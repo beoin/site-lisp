@@ -40,7 +40,8 @@
       '((fg-heading-1 "#A3C7D6")))
 
 ;; Files
-(setq view-read-only t)
+(defvar view-read-only t)
+(defvar view-scroll-auto-exit t)
 
 ;; Movement
 (setq set-mark-command-repeat-pop t)
