@@ -37,6 +37,7 @@
 	    (keymap-local-set "M-l" #'downcase-word-start)
 	    (keymap-local-set "M-u" #'upcase-word-start)
 	    (keymap-local-set "C-j" #'newline-above-below-point)
+	    (keymap-local-set "C-u C-k" #'kill-line-backward)
 	    (flyspell-mode +1)
 	    (display-line-numbers-mode -1)
 	    (setq buffer-face-mode-face '(:family "Cantarell" :height 140 :width regular))
