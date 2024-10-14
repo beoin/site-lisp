@@ -74,5 +74,8 @@
 ;; Location of "~" backup files
 (setq backup-directory-alist '(("." . "~/.emacs.d/backups")))
 
+;; Grep
+(setq grep-command  "grep -r --color=auto -nH --null -e" )
+
 (provide 'vars)
 ;;; vars.el ends here
