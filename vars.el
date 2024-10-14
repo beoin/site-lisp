@@ -36,8 +36,6 @@
 (global-display-line-numbers-mode -1)
 (fset 'yes-or-no-p 'y-or-n-p)
 (setq ring-bell-function 'ignore)
-(defvar modus-themes-common-palette-overrides
-      '((fg-heading-1 "#A3C7D6")))
 
 ;; Files
 (defvar view-read-only t)
