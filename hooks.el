@@ -18,7 +18,6 @@
 (add-hook 'clojure-mode-hook (defun clojure-hook () (lisp-hook)))
 (defun lisp-hook ()
   (paredit-mode)
-  (rainbow-blocks-mode)
   (rainbow-delimiters-mode)
   (prettify-symbols-mode))
 
