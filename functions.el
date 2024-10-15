@@ -72,8 +72,6 @@ KEY represents a $HOME directory"
 (defun status ()
   (interactive)
   (eshell-command "status"))
-(minibuffer-with-setup-hook 'status)
-
 
 (provide 'functions)
 ;;; functions.el ends here
