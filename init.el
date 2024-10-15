@@ -16,5 +16,8 @@
 (find-file-noselect "~/.config/sway/config")
 (find-file "~/Org/todo.org")
 
+(require 'doom-modeline)
+(doom-modeline-mode 1)
+
 (provide 'init)
 ;;; init.el ends here
