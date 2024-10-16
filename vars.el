@@ -79,5 +79,8 @@
 (defvar treesit-language-source-alist '((gomod "https://github.com/camdencheek/tree-sitter-go-mod")))
 (add-to-list 'auto-mode-alist '("\\.go\\'" . go-ts-mode))
 
+;; Ruby
+(add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
+
 (provide 'vars)
 ;;; vars.el ends here
