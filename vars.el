@@ -75,5 +75,9 @@
 ;; Grep
 (setq grep-command  "grep -r --color=auto -nH --null -e" )
 
+;; Go
+(defvar treesit-language-source-alist '((gomod "https://github.com/camdencheek/tree-sitter-go-mod")))
+(add-to-list 'auto-mode-alist '("\\.go\\'" . go-ts-mode))
+
 (provide 'vars)
 ;;; vars.el ends here
