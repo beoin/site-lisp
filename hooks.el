@@ -5,6 +5,8 @@
 
 ;;; Code:
 
+(add-hook 'go-ts-mode-hook 'eglot-ensure)
+
 (add-hook 'php-mode-hook (defun php-hook ()
 			   (subword-mode t)
 			   (setq-local flycheck-phpcs-standard "psr2")
