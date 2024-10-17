@@ -75,8 +75,13 @@
 ;; Grep
 (setq grep-command  "grep -r --color=auto -nH --null -e" )
 
+;; Tree Sitter
+(defvar treesit-language-source-alist
+  '((heex "https://github.com/phoenixframework/tree-sitter-heex")
+    (elixir "https://github.com/elixir-lang/tree-sitter-elixir")
+    (gomod "https://github.com/camdencheek/tree-sitter-go-mod")))
+
 ;; Go
-(defvar treesit-language-source-alist '((gomod "https://github.com/camdencheek/tree-sitter-go-mod")))
 (add-to-list 'auto-mode-alist '("\\.go\\'" . go-ts-mode))
 
 ;; Ruby
