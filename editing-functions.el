@@ -87,6 +87,13 @@ With argument, do this that many times."
     (end-of-line)
     (newline)))
 
+(defun display-prefix (arg)
+  "Display the value of the raw prefix arg."
+  (interactive "P")
+  (if (equal current-prefix-arg '(4))
+      (message "%s" (car arg))
+      (message "%s" arg)))
+
 
 (provide 'editing-functions)
 ;;; editing-functions.el ends here
