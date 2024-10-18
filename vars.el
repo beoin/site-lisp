@@ -87,5 +87,8 @@
 ;; Ruby
 (add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
 
+;; Elixir
+(add-to-list 'auto-mode-alist '("\\.exs\\'" . elixir-ts-mode))
+
 (provide 'vars)
 ;;; vars.el ends here
