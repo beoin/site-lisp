@@ -80,18 +80,12 @@ With argument, do this that many times."
     (beginning-of-line)
     (kill-line)))
 
-(defun newline-above-below-point ()
-  "Create a newline below point and move to it.
-If \\[universal-argument] is supplied newline is created above point."
+(defun open-line-below-point ()
+  "Create a newline below point and move to it."
   (interactive)
-  (if current-prefix-arg
-      (progn
-	(beginning-of-line)
-	(newline)
-	(forward-line -1))
-    (progn
-      (end-of-line)
-      (newline))))
+  (progn
+    (end-of-line)
+    (newline)))
 
 
 (provide 'editing-functions)

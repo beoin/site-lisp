@@ -10,10 +10,8 @@
 	    (keymap-local-set "C-c x" #'inf-elixir-set-repl)))
 
 (add-hook 'go-ts-mode-hook 'eglot-ensure)
-
 (add-hook 'find-function-after-hook #'view-mode-enter)
 (add-hook 'xref-backend-functions #'dumb-jump-xref-activate)
-
 (add-hook 'paredit-mode-hook (defun paredit-hook () (keymap-unset paredit-mode-map "M-r" t)))
 (add-hook 'emacs-lisp-mode-hook (defun elisp-hook ()(lisp-hook)))
 (add-hook 'clojure-mode-hook (defun clojure-hook () (lisp-hook)))
@@ -36,7 +34,7 @@
 	    (keymap-local-set "C-S-p" (lambda () (interactive) (org-next-visible-heading -1)))
 	    (keymap-local-set "M-l" #'downcase-word-start)
 	    (keymap-local-set "M-u" #'upcase-word-start)
-	    (keymap-local-set "C-j" #'newline-above-below-point)
+	    (keymap-local-set "C-j" #'open-line-below-point)
 	    (keymap-local-set "C-u C-k" #'kill-line-backward)
 	    (keymap-local-set "C-u <tab>" #'org-overview)
 	    (flyspell-mode +1)

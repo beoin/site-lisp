@@ -10,7 +10,7 @@
 ;(keymap-global-set "M-d" 'delete-word)
 ;(keymap-global-set "C-c e" 'delete-char)
 (keymap-global-set "C-." 'embark-act)
-(keymap-global-set "C-j" 'newline-above-below-point)
+;;(keymap-global-set "C-j" 'open-line-below-point)
 (keymap-global-set "C-x i" 'ibuffer-list-buffers)
 (keymap-global-set "C-c k" 'delete-current-line)
 (keymap-global-set "C-c r" 'replace-char)
