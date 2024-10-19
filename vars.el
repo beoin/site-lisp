@@ -68,6 +68,7 @@
 
 ;; Shell
 (defvar eshell-aliases-file "~/.emacs.d/eshell/alias")
+(defvar flycheck-sh-shellcheck-executable "/usr/bin/shellcheck")
 
 ;; Location of "~" backup files
 (setq backup-directory-alist '(("." . "~/.emacs.d/backups")))
