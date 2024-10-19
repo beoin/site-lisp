@@ -7,7 +7,7 @@
 
 (add-hook 'elixir-ts-mode-hook
 	  (defun elixir-hook ()
-	    (keymap-local-set "C-c x" #'inf-elixir-set-repl)))
+	    (keymap-local-set "C-c x" #'inf-elixir)))
 
 (add-hook 'go-ts-mode-hook 'eglot-ensure)
 (add-hook 'find-function-after-hook #'view-mode-enter)
