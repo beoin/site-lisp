@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: defmodule
+# key: dm
+# --
+defmodule $0
