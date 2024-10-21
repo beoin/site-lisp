@@ -4,4 +4,4 @@
 # --
 def ${1:function}($2) do
   $0
-end  
+end

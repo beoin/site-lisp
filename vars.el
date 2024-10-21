@@ -92,8 +92,9 @@
 (add-to-list 'auto-mode-alist '("\\.exs\\'" . elixir-ts-mode))
 (add-to-list 'auto-mode-alist '("\\.ex\\'" . elixir-ts-mode))
 
+;; Snippets
 (setq yas-snippet-dirs '("~/.emacs.d/lisp/snippets"))
-(yas-global-mode 1)
+(yas-global-mode)
 
 (provide 'vars)
 ;;; vars.el ends here
