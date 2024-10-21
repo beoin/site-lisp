@@ -9,7 +9,6 @@
 	  (defun elixir-hook ()
 	    (keymap-local-set "C-c x" #'inf-elixir)))
 
-(add-hook 'go-ts-mode-hook 'eglot-ensure)
 (add-hook 'find-function-after-hook #'view-mode-enter)
 (add-hook 'xref-backend-functions #'dumb-jump-xref-activate)
 (add-hook 'paredit-mode-hook (defun paredit-hook () (keymap-unset paredit-mode-map "M-r" t)))
