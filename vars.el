@@ -20,7 +20,7 @@
 (defvar org-startup-folded t)
 (defvar org-return-follows-link nil)
 (global-auto-revert-mode t)
-(defvar org-imenu-depth 3)
+(defvar org-imenu-depth 2)
 
 ;; Sessions
 (savehist-mode +1)
