@@ -2,4 +2,6 @@
 # name: defmodule
 # key: dm
 # --
-defmodule $0
+defmodule ${1:Module} do
+  $0
+end
