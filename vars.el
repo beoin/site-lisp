@@ -15,6 +15,7 @@
 ;; Org
 (defvar org-agenda-files "~/Org/agenda-files.org")
 (defvar org-directory "~/Org")
+(defvar org-default-notes-file (concat org-directory "/capture_notes.org"))
 (defvar org-use-tag-inheritance nil)
 (defvar org-hide-emphasis-markers t)
 (defvar org-startup-folded t)
@@ -36,6 +37,7 @@
 (global-display-line-numbers-mode -1)
 (fset 'yes-or-no-p 'y-or-n-p)
 (setq ring-bell-function 'ignore)
+(doom-modeline-mode 1)
 
 ;; Files
 (defvar view-read-only t)
@@ -95,6 +97,9 @@
 ;; Snippets
 (setq yas-snippet-dirs '("~/.emacs.d/lisp/snippets"))
 (yas-global-mode)
+
+;; Dired
+(lisp-extra-font-lock-global-mode 1)
 
 (provide 'vars)
 ;;; vars.el ends here

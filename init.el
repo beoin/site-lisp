@@ -16,11 +16,5 @@
 (find-file-noselect "~/.config/sway/config")
 (find-file "~/Org/todo.org")
 
-(require 'doom-modeline)
-(doom-modeline-mode 1)
-
-(require 'lisp-extra-font-lock)
-(lisp-extra-font-lock-global-mode 1)
-
 (provide 'init)
 ;;; init.el ends here

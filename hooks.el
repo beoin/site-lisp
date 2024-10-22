@@ -40,7 +40,6 @@
 	    (display-line-numbers-mode -1)
 	    (setq buffer-face-mode-face '(:family "Cantarell" :height 140 :width regular))
 	    (buffer-face-mode)
-	    ;(electric-pair-local-mode -1)
 	    ))
 (add-hook 'org-shiftup-final-hook 'windmove-up)
 (add-hook 'org-shiftleft-final-hook 'windmove-left)
