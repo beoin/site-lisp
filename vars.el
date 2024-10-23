@@ -101,5 +101,7 @@
 ;; Dired
 (lisp-extra-font-lock-global-mode 1)
 
+(setq large-file-warning-threshold 100000000)
+
 (provide 'vars)
 ;;; vars.el ends here

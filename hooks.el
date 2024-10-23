@@ -38,7 +38,7 @@
 	    (keymap-local-set "C-u <tab>" #'org-overview)
 	    (flyspell-mode +1)
 	    (display-line-numbers-mode -1)
-	    (setq buffer-face-mode-face '(:family "Cantarell" :height 140 :width regular))
+	    (setq buffer-face-mode-face '(:family "Cantarell" :height 140))
 	    (buffer-face-mode)
 	    ))
 (add-hook 'org-shiftup-final-hook 'windmove-up)
