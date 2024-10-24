@@ -84,12 +84,6 @@
     (elixir "https://github.com/elixir-lang/tree-sitter-elixir")
     (gomod "https://github.com/camdencheek/tree-sitter-go-mod")))
 
-;; Go
-(add-to-list 'auto-mode-alist '("\\.go\\'" . go-ts-mode))
-
-;; Ruby
-(add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
-
 ;; Elixir
 (add-to-list 'auto-mode-alist '("\\.exs\\'" . elixir-ts-mode))
 (add-to-list 'auto-mode-alist '("\\.ex\\'" . elixir-ts-mode))
