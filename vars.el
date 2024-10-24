@@ -103,5 +103,7 @@
 
 (setq large-file-warning-threshold 100000000)
 
+(global-hl-line-mode +1)
+
 (provide 'vars)
 ;;; vars.el ends here
