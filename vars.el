@@ -49,9 +49,6 @@
 ;; Custom File
 (setq custom-file (concat user-emacs-directory "custom.el"))
 
-;; Company
-(defvar company-idle-delay nil)
-
 ;; Programming
 (electric-pair-mode)
 (defvar xref-show-definitions-function #'xref-show-definitions-completing-read)
