@@ -96,5 +96,7 @@
 
 (global-hl-line-mode +1)
 
+(setq cursor-type 'box)
+
 (provide 'vars)
 ;;; vars.el ends here
