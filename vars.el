@@ -98,5 +98,7 @@
 
 (setq cursor-type 'box)
 
+(global-auto-revert-mode t)
+
 (provide 'vars)
 ;;; vars.el ends here
