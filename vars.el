@@ -100,5 +100,7 @@
 
 (global-auto-revert-mode t)
 
+(setq tab-always-indent 'complete)
+
 (provide 'vars)
 ;;; vars.el ends here
