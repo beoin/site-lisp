@@ -39,6 +39,7 @@
 (setq ring-bell-function 'ignore)
 (doom-modeline-mode 1)
 (setq cursor-type 'box)
+(setq require-final-newline t)
 
 ;; Files
 (defvar view-read-only t)
@@ -99,8 +100,6 @@
 
 (setq large-file-warning-threshold 100000000)
 (setq tab-always-indent 'complete)
-
-(setq require-final-newline t)
 
 (provide 'vars)
 ;;; vars.el ends here
