@@ -38,6 +38,7 @@
 (fset 'yes-or-no-p 'y-or-n-p)
 (setq ring-bell-function 'ignore)
 (doom-modeline-mode 1)
+(setq cursor-type 'box)
 
 ;; Files
 (defvar view-read-only t)
@@ -92,15 +93,14 @@
 ;; Dired
 (lisp-extra-font-lock-global-mode 1)
 
-(setq large-file-warning-threshold 100000000)
-
 (global-hl-line-mode +1)
-
-(setq cursor-type 'box)
 
 (global-auto-revert-mode t)
 
+(setq large-file-warning-threshold 100000000)
 (setq tab-always-indent 'complete)
+
+(setq require-final-newline t)
 
 (provide 'vars)
 ;;; vars.el ends here
