@@ -5,12 +5,16 @@
 
 ;; Search
 (setq lazy-highlight-initial-delay 5.00)
+(setq isearch-lazy-count t)
+(setq lazy-count-prefix-format nil)
+(setq lazy-count-suffix-format "   (%s/%s)")
 
 ;; Minibuffer
 (vertico-mode +1)
 (marginalia-mode +1)
 (setq completion-styles '(orderless basic)
       completion-category-overrides '((file (styles basic partial-completion))))
+(fset 'yes-or-no-p 'y-or-n-p)
 
 ;; Org
 (defvar org-agenda-files "~/Org/agenda-files.org")
@@ -27,20 +31,20 @@
 (savehist-mode +1)
 
 ;; UI
-(setq isearch-lazy-count t)
-(setq lazy-count-prefix-format nil)
-(setq lazy-count-suffix-format "   (%s/%s)")
 (setq tab-bar-show t)
-(blink-cursor-mode 0)
 (line-number-mode +1)
 (column-number-mode +1)
 (global-display-line-numbers-mode -1)
-(fset 'yes-or-no-p 'y-or-n-p)
 (setq ring-bell-function 'ignore)
-(doom-modeline-mode 1)
-(setq cursor-type 'box)
 (setq require-final-newline t)
 (global-hl-line-mode +1)
+
+;; Cursor
+(blink-cursor-mode 0)
+(setq cursor-type 'box)
+
+;; Modeline
+(doom-modeline-mode 1)
 
 ;; Files
 (defvar view-read-only t)
