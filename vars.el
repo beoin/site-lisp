@@ -40,6 +40,7 @@
 (doom-modeline-mode 1)
 (setq cursor-type 'box)
 (setq require-final-newline t)
+(global-hl-line-mode +1)
 
 ;; Files
 (defvar view-read-only t)
@@ -94,12 +95,14 @@
 ;; Dired
 (lisp-extra-font-lock-global-mode 1)
 
-(global-hl-line-mode +1)
-
-(global-auto-revert-mode t)
-
-(setq large-file-warning-threshold 100000000)
+;; Tabs
 (setq tab-always-indent 'complete)
+(setq-default indent-tabs-mode nil)
+(setq-default tab-width 8)
+
+;; Miscellaneous
+(global-auto-revert-mode t)
+(setq large-file-warning-threshold 100000000)
 
 (provide 'vars)
 ;;; vars.el ends here
