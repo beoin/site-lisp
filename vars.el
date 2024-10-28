@@ -81,8 +81,7 @@
 ;; Tree Sitter
 (defvar treesit-language-source-alist
   '((heex "https://github.com/phoenixframework/tree-sitter-heex")
-    (elixir "https://github.com/elixir-lang/tree-sitter-elixir")
-    (gomod "https://github.com/camdencheek/tree-sitter-go-mod")))
+    (elixir "https://github.com/elixir-lang/tree-sitter-elixir")))
 
 ;; Elixir
 (add-to-list 'auto-mode-alist '("\\.exs\\'" . elixir-ts-mode))
