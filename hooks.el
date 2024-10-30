@@ -65,7 +65,8 @@
 
 (add-hook 'prog-mode-hook
 	  (defun prog-hook ()
-	    (display-line-numbers-mode +1)))
+	    (display-line-numbers-mode +1)
+            (goggles-mode)))
 
 
 (provide 'hooks)

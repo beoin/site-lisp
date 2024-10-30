@@ -38,6 +38,7 @@
 (setq ring-bell-function 'ignore)
 (setq require-final-newline t)
 (global-hl-line-mode +1)
+(setq-default goggles-pulse t)
 
 ;; Cursor
 (blink-cursor-mode 0)
@@ -46,21 +47,23 @@
 ;; Modeline
 (doom-modeline-mode 1)
 
-;; Files
+;; Buffers
 (defvar view-read-only t)
 (defvar view-scroll-auto-exit t)
+
+;; Files
 (global-auto-revert-mode t)
 (setq large-file-warning-threshold 100000000)
 (save-place-mode 1)
-(recentf-mode 1)
 (defvar recentf-max-saved-items 50)
 (defvar recentf-max-menu-items 20)
-
-;; Movement
-(setq set-mark-command-repeat-pop t)
+(recentf-mode 1)
 
 ;; Custom File
 (setq custom-file (concat user-emacs-directory "custom.el"))
+
+;; Marks
+(setq set-mark-command-repeat-pop t)
 
 ;; Programming
 (electric-pair-mode)
@@ -113,8 +116,6 @@
 (setq blink-matching-paren 'jump)
 (setq show-paren-when-point-inside-paren t)
 (setq show-paren-style 'parenthesis)
-
-
 
 (provide 'vars)
 ;;; vars.el ends here
