@@ -40,7 +40,8 @@
 	    (display-line-numbers-mode -1)
 	    (setq buffer-face-mode-face '(:family "Cantarell" :height 140))
 	    (buffer-face-mode)
-	    ))
+            (goggles-mode)))
+
 (add-hook 'org-shiftup-final-hook 'windmove-up)
 (add-hook 'org-shiftleft-final-hook 'windmove-left)
 (add-hook 'org-shiftdown-final-hook 'windmove-down)
