@@ -49,6 +49,10 @@
 ;; Files
 (defvar view-read-only t)
 (defvar view-scroll-auto-exit t)
+(global-auto-revert-mode t)
+(setq large-file-warning-threshold 100000000)
+(save-place-mode 1)
+
 
 ;; Movement
 (setq set-mark-command-repeat-pop t)
@@ -108,9 +112,7 @@
 (setq show-paren-when-point-inside-paren t)
 (setq show-paren-style 'parenthesis)
 
-;; Miscellaneous
-(global-auto-revert-mode t)
-(setq large-file-warning-threshold 100000000)
+
 
 (provide 'vars)
 ;;; vars.el ends here
