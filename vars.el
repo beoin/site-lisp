@@ -52,7 +52,9 @@
 (global-auto-revert-mode t)
 (setq large-file-warning-threshold 100000000)
 (save-place-mode 1)
-
+(recentf-mode 1)
+(defvar recentf-max-saved-items 50)
+(defvar recentf-max-menu-items 20)
 
 ;; Movement
 (setq set-mark-command-repeat-pop t)
