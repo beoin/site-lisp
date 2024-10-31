@@ -25,6 +25,7 @@
 (defvar org-startup-folded t)
 (defvar org-return-follows-link nil)
 (global-auto-revert-mode t)
+(setq org-rainbow-tags-hash-start-index 10)
 
 ;; Imenu
 (defvar imenu-auto-rescan t)
