@@ -25,6 +25,9 @@
 (defvar org-startup-folded t)
 (defvar org-return-follows-link nil)
 (global-auto-revert-mode t)
+
+;; Imenu
+(defvar imenu-auto-rescan t)
 (defvar org-imenu-depth 2)
 
 ;; Sessions
