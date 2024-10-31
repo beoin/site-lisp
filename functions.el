@@ -75,7 +75,7 @@ KEY represents a $HOME directory"
 
 (defun derived-modes (mode)
   "Return a list of the ancestor modes that MODE is derived from.
-MODE must be a symbol such as 'org-mode"
+MODE must be a symbol"
   (let ((modes   ())
         (parent  nil))
     (while (setq parent (get mode 'derived-mode-parent))
