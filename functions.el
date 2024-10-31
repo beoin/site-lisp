@@ -73,5 +73,15 @@ KEY represents a $HOME directory"
   (interactive)
   (eshell-command "status"))
 
+(defun derived-modes (mode)
+  "Return a list of the ancestor modes that MODE is derived from.
+MODE must be a symbol such as 'org-mode"
+  (let ((modes   ())
+        (parent  nil))
+    (while (setq parent (get mode 'derived-mode-parent))
+      (push parent modes)
+      (setq mode parent))
+    (setq modes  (nreverse modes))))
+
 (provide 'functions)
 ;;; functions.el ends here
