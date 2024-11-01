@@ -25,7 +25,7 @@
 (defvar org-startup-folded t)
 (defvar org-return-follows-link nil)
 (global-auto-revert-mode t)
-(setq org-rainbow-tags-hash-start-index 10)
+(defvar org-rainbow-tags-hash-start-index 10)
 
 ;; Imenu
 (defvar imenu-auto-rescan t)
@@ -120,6 +120,11 @@
 (setq blink-matching-paren 'jump)
 (setq show-paren-when-point-inside-paren t)
 (setq show-paren-style 'parenthesis)
+
+;; Spell Checking
+(defvar ispell-program-name "aspell")
+(defvar ispell-personal-dictionary "~/.aspell.en.pws")
+
 
 (provide 'vars)
 ;;; vars.el ends here
