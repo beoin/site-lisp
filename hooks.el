@@ -55,8 +55,7 @@
 
 (add-hook 'sh-mode-hook
 	  (defun sh-hook ()
-	    (flymake-mode 1)
-	    (flymake-shellcheck-load)))
+	    (flycheck-mode)))
 
 (add-hook 'dired-mode-hook
 	  (defun dired-hook ()
