@@ -110,6 +110,9 @@
 
 ;; Dired
 (lisp-extra-font-lock-global-mode 1)
+(put 'dired-find-alternate-file 'disabled nil)
+(defvar dired-recursive-deletes 'always)
+(defvar dired-recursive-copies 'always)
 
 ;; Tabs
 (setq tab-always-indent 'complete)
