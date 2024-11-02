@@ -124,6 +124,7 @@
 ;; Spell Checking
 (defvar ispell-program-name "aspell")
 (defvar ispell-personal-dictionary "~/.aspell.en.pws")
+(defvar ispell-extra-args '("--sug-mode=ultra"))
 
 
 (provide 'vars)
