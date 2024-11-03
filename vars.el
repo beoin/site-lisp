@@ -43,6 +43,9 @@
 (setq require-final-newline t)
 (global-hl-line-mode +1)
 (setq-default goggles-pulse t)
+(setq scroll-margin 0
+      scroll-conservatively 100000
+      scroll-preserve-screen-position 1)
 
 ;; Cursor
 (blink-cursor-mode 0)
