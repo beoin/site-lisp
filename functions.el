@@ -83,5 +83,17 @@ MODE must be a symbol"
       (setq mode parent))
     (setq modes  (nreverse modes))))
 
+(defun ielm-window ()
+  "Launch an ielm session in other window."
+  (interactive)
+  (if (equal (one-window-p) t)
+      (progn
+        (split-window-horizontally)
+        (other-window 1)
+        (ielm))
+    (progn
+      (delete-other-windows)
+      (ielm-window))))
+
 (provide 'functions)
 ;;; functions.el ends here

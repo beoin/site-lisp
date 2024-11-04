@@ -1,4 +1,4 @@
-;;; init.el --- Entry point for config -*- lexical-binding: t; -*-
+;;; Init.el --- Entry point for config -*- lexical-binding: t; -*-
 ;;; Commentary:
 ;;; Code:
 
