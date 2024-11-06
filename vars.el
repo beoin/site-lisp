@@ -132,6 +132,8 @@
 (defvar ispell-personal-dictionary "~/.aspell.en.pws")
 (defvar ispell-extra-args '("--sug-mode=ultra"))
 
+;; Find file at point
+(defvar ffap-machine-p-known 'reject)
 
 (provide 'vars)
 ;;; vars.el ends here
