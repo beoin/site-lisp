@@ -15,6 +15,7 @@
 (setq completion-styles '(orderless basic)
       completion-category-overrides '((file (styles basic partial-completion))))
 (fset 'yes-or-no-p 'y-or-n-p)
+(setq enable-recursive-minibuffers t)
 
 ;; Org
 (defvar org-agenda-files "~/Org/agenda-files.org")
@@ -108,7 +109,7 @@
 (add-to-list 'auto-mode-alist '("\\.ex\\'" . elixir-ts-mode))
 
 ;; Snippets
-(setq yas-snippet-dirs '("~/.emacs.d/lisp/snippets"))
+(defvar yas-snippet-dirs '("~/.emacs.d/lisp/snippets"))
 (yas-global-mode)
 
 ;; Dired
