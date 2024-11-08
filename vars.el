@@ -36,6 +36,7 @@
 (savehist-mode +1)
 
 ;; UI
+(defvar which-func-update-delay 1.0)
 (setq tab-bar-show t)
 (line-number-mode +1)
 (column-number-mode +1)
