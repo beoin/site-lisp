@@ -67,6 +67,7 @@
 (defvar recentf-max-saved-items 50)
 (defvar recentf-max-menu-items 20)
 (recentf-mode 1)
+(defvar find-file-visit-truename t)
 
 ;; Custom File
 (setq custom-file (concat user-emacs-directory "custom.el"))
