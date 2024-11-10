@@ -90,6 +90,7 @@
 (put 'set-goal-column 'disabled nil)
 (delete-selection-mode t)
 (which-function-mode t)
+(setq ad-redefinition-action 'error)
 
 ;; Shell
 (defvar eshell-aliases-file "~/.emacs.d/eshell/alias")
