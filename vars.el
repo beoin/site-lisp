@@ -14,7 +14,7 @@
 (marginalia-mode +1)
 (setq completion-styles '(orderless basic)
       completion-category-overrides '((file (styles basic partial-completion))))
-(fset 'yes-or-no-p 'y-or-n-p)
+(setq use-short-answers t)
 (setq enable-recursive-minibuffers t)
 
 ;; Org
