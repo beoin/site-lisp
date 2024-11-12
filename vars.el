@@ -104,16 +104,10 @@
 
 ;; Tree Sitter
 (defvar treesit-language-source-alist
-  '((heex "https://github.com/phoenixframework/tree-sitter-heex")
-    (elixir "https://github.com/elixir-lang/tree-sitter-elixir")
-    (zig "https://github.com/maxxnino/tree-sitter-zig")))
+  '((zig "https://github.com/maxxnino/tree-sitter-zig")))
 
 ;; Zig
 (add-to-list 'auto-mode-alist '("\\.zig\\'" . zig-ts-mode))
-
-;; Elixir
-(add-to-list 'auto-mode-alist '("\\.exs\\'" . elixir-ts-mode))
-(add-to-list 'auto-mode-alist '("\\.ex\\'" . elixir-ts-mode))
 
 ;; Snippets
 (defvar yas-snippet-dirs '("~/.emacs.d/lisp/snippets"))
