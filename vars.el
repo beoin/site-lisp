@@ -48,6 +48,8 @@
 (setq scroll-margin 0
       scroll-conservatively 100000
       scroll-preserve-screen-position 1)
+(defvar modus-themes-common-palette-overrides
+      '((fg-heading-1 "#A3C7D6")))
 
 ;; Cursor
 (blink-cursor-mode 0)
