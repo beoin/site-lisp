@@ -111,7 +111,10 @@
 (defvar treesit-font-lock-level 4)
 
 ;; Zig
-(add-to-list 'auto-mode-alist '("\\.zig\\'" . zig-mode))
+(add-to-list 'auto-mode-alist '("\\.zig\\'" . zig-ts-mode))
+
+;; Compilation
+(defvar compilation-always-kill t)
 
 ;; Snippets
 (defvar yas-snippet-dirs '("~/.emacs.d/lisp/snippets"))
