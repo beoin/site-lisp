@@ -5,6 +5,11 @@
 
 ;;; Code:
 
+(add-hook 'zig-ts-mode-hook
+	  (defun zig-hook ()
+	    (keymap-local-set "<f9>" #'zig-compile)
+	    (keymap-local-set "<f7>" #'goto-line)))
+
 (add-hook 'find-function-after-hook #'view-mode-enter)
 (add-hook 'xref-backend-functions #'dumb-jump-xref-activate)
 
