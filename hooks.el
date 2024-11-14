@@ -5,10 +5,6 @@
 
 ;;; Code:
 
-(add-hook 'elixir-ts-mode-hook
-	  (defun elixir-hook ()
-	    (keymap-local-set "C-c x" #'inf-elixir)))
-
 (add-hook 'find-function-after-hook #'view-mode-enter)
 (add-hook 'xref-backend-functions #'dumb-jump-xref-activate)
 
