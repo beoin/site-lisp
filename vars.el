@@ -71,6 +71,8 @@
 (defvar recentf-max-menu-items 20)
 (recentf-mode 1)
 (defvar find-file-visit-truename t)
+(setq backup-directory-alist '(("." . "~/.emacs.d/backups")))
+(setq delete-by-moving-to-trash t)
 
 ;; Custom File
 (setq custom-file (concat user-emacs-directory "custom.el"))
@@ -98,9 +100,6 @@
 ;; Shell
 (defvar eshell-aliases-file "~/.emacs.d/eshell/alias")
 (defvar flycheck-sh-shellcheck-executable "/usr/bin/shellcheck")
-
-;; Location of "~" backup files
-(setq backup-directory-alist '(("." . "~/.emacs.d/backups")))
 
 ;; Grep
 (setq grep-command  "grep -r --color=auto -nH --null -e" )
