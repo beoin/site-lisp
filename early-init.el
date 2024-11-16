@@ -3,11 +3,11 @@
 ;;; Commentary:
 ;;; Code:
 (setq gc-cons-threshold most-positive-fixnum)
-
 (setq load-prefer-newer t)
 (set-language-environment "UTF-8")
 (setq default-input-method nil)
 (setq inhibit-compacting-font-caches t)
+(setq lisp-eval-depth-reserve 300)
 
 ;; UI
 (menu-bar-mode -1)
