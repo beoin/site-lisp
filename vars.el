@@ -16,6 +16,7 @@
       completion-category-overrides '((file (styles basic partial-completion))))
 (setq use-short-answers t)
 (setq enable-recursive-minibuffers t)
+(setq kill-do-not-save-duplicates t)
 
 ;; Org
 (defvar org-agenda-files "~/Org/agenda-files.org")
