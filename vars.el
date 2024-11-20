@@ -125,6 +125,7 @@
 (put 'dired-find-alternate-file 'disabled nil)
 (defvar dired-recursive-deletes 'always)
 (defvar dired-recursive-copies 'always)
+(defvar dired-create-destination-dirs 'ask)
 
 ;; Tabs
 (setq tab-always-indent 'complete)

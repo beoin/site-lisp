@@ -14,14 +14,20 @@
 	    (keymap-local-set "C-M-b" #'zig-beginning-of-defun)))
 
 (add-hook 'find-function-after-hook #'view-mode-enter)
+
 (add-hook 'xref-backend-functions #'dumb-jump-xref-activate)
 
-(add-hook 'paredit-mode-hook (defun paredit-hook () (keymap-unset paredit-mode-map "M-r" t)))
-(add-hook 'clojure-mode-hook (defun clojure-hook () (lisp-hook)))
+(add-hook 'paredit-mode-hook (defun paredit-hook ()
+                               (keymap-unset paredit-mode-map "M-r" t)))
+
+(add-hook 'clojure-mode-hook (defun clojure-hook ()
+                               (lisp-hook)))
+
 (add-hook 'emacs-lisp-mode-hook
           (defun elisp-hook ()
             (lisp-hook)
             (keymap-local-set "C-c x" #'ielm-window)))
+
 (defun lisp-hook ()
   (paredit-mode)
   (rainbow-delimiters-mode)
