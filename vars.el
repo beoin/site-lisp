@@ -17,6 +17,7 @@
 (setq use-short-answers t)
 (setq enable-recursive-minibuffers t)
 (setq kill-do-not-save-duplicates t)
+(defvar vertico-count 15)
 
 ;; Org
 (defvar org-agenda-files "~/Org/agenda-files.org")
