@@ -74,6 +74,7 @@
 (defvar find-file-visit-truename t)
 (setq backup-directory-alist '(("." . "~/.emacs.d/backups")))
 (setq delete-by-moving-to-trash t)
+(setq comment-empty-lines t)
 
 ;; Custom File
 (setq custom-file (concat user-emacs-directory "custom.el"))
