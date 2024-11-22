@@ -53,6 +53,8 @@
       scroll-preserve-screen-position 1)
 (defvar modus-themes-common-palette-overrides
       '((fg-heading-1 "#A3C7D6")))
+(defvar display-line-numbers-grow-only t)
+(defvar display-line-numbers-width 2)
 
 ;; Cursor
 (blink-cursor-mode 0)
