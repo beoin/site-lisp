@@ -66,7 +66,7 @@
 ;; Buffers
 (defvar view-read-only t)
 (defvar view-scroll-auto-exit t)
-(defvar buffer-old-time 24)
+(defvar ibuffer-old-time 24)
 (defvar switch-to-buffer-in-dedicated-window 'pop)
 (defvar switch-to-buffer-obey-display-actions t)
 
