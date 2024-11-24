@@ -29,6 +29,7 @@
 (defvar org-return-follows-link nil)
 (global-auto-revert-mode t)
 (defvar org-rainbow-tags-hash-start-index 10)
+(defvar org-return-follows-link t)
 
 ;; Imenu
 (defvar imenu-auto-rescan t)
