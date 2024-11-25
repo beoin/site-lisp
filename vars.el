@@ -26,10 +26,10 @@
 (defvar org-use-tag-inheritance nil)
 (defvar org-hide-emphasis-markers t)
 (defvar org-startup-folded t)
-(defvar org-return-follows-link nil)
 (global-auto-revert-mode t)
 (defvar org-rainbow-tags-hash-start-index 10)
 (defvar org-return-follows-link t)
+(defvar org-link-descriptive t)
 
 ;; Imenu
 (defvar imenu-auto-rescan t)

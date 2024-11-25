@@ -55,7 +55,8 @@
 	    (setq buffer-face-mode-face '(:family "Cantarell" :height 140))
 	    (buffer-face-mode)
             (org-rainbow-tags-mode)
-            (goggles-mode)))
+            (goggles-mode)
+            (org-indent-mode)))
 
 (add-hook 'org-shiftup-final-hook 'windmove-up)
 (add-hook 'org-shiftleft-final-hook 'windmove-left)
