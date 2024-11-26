@@ -70,6 +70,7 @@
 (defvar ibuffer-old-time 24)
 (defvar switch-to-buffer-in-dedicated-window 'pop)
 (defvar switch-to-buffer-obey-display-actions t)
+(defvar ibuffer-movement-cycle nil)
 
 ;; Files
 (global-auto-revert-mode t)
