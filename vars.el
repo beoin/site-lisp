@@ -49,9 +49,9 @@
 (setq require-final-newline t)
 (global-hl-line-mode +1)
 (setq-default goggles-pulse t)
-(setq scroll-margin 0
-      scroll-conservatively 100000
-      scroll-preserve-screen-position 1)
+(setq scroll-margin 0)
+(setq scroll-conservatively 100000)
+(setq scroll-preserve-screen-position 1)
 (defvar modus-themes-common-palette-overrides
       '((fg-heading-1 "#A3C7D6")))
 (defvar display-line-numbers-grow-only t)
