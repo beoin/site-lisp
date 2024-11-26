@@ -49,11 +49,13 @@
 (setq require-final-newline t)
 (global-hl-line-mode +1)
 (setq-default goggles-pulse t)
+(defvar display-line-numbers-grow-only t)
+(defvar display-line-numbers-width 2)
+
+;; Scrolling
 (setq scroll-margin 0)
 (setq scroll-conservatively 100000)
 (setq scroll-preserve-screen-position 1)
-(defvar display-line-numbers-grow-only t)
-(defvar display-line-numbers-width 2)
 
 ;; Cursor
 (blink-cursor-mode 0)
