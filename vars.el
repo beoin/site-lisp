@@ -139,7 +139,7 @@
 (defvar dired-deletion-confirmer 'y-or-n-p)
 (setq dired-guess-shell-alist-user '(("\.pdf$" "xpdf")
                                      ("\.html$" "firefox")
-                                     ("\.mp3$" "mpv")))
+                                     ("\.mp3$\\|.mp4$\\|.mkv$\\|" "mpv")))
 
 ;; Tabs
 (setq tab-always-indent 'complete)
