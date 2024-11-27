@@ -137,6 +137,9 @@
 (defvar dired-create-destination-dirs 'ask)
 (defvar dired-ls-F-marks-symlinks t)
 (defvar dired-deletion-confirmer 'y-or-n-p)
+(setq dired-guess-shell-alist-user '(("\.pdf$" "xpdf")
+                                     ("\.html$" "firefox")
+                                     ("\.mp3$" "mpv")))
 
 ;; Tabs
 (setq tab-always-indent 'complete)
