@@ -135,6 +135,8 @@
 (defvar dired-recursive-deletes 'always)
 (defvar dired-recursive-copies 'always)
 (defvar dired-create-destination-dirs 'ask)
+(defvar dired-ls-F-marks-symlinks t)
+(defvar dired-deletion-confirmer 'y-or-n-p)
 
 ;; Tabs
 (setq tab-always-indent 'complete)
