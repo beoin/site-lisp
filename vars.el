@@ -30,6 +30,10 @@
 (defvar org-rainbow-tags-hash-start-index 10)
 (defvar org-return-follows-link t)
 (defvar org-link-descriptive t)
+(defvar org-cycle-separator-lines 0)
+(defvar org-ellipsis "…")
+(defvar org-fontify-quote-and-verse-blocks t)
+(defvar org-pretty-entities t)
 
 ;; Imenu
 (defvar imenu-auto-rescan t)
