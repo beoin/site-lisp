@@ -99,6 +99,7 @@
 (defvar xref-show-definitions-function #'xref-show-definitions-completing-read)
 (defvar flymake-shellcheck-path "usr/bin/shellcheck")
 (global-flycheck-mode +1)
+(setq prettify-symbols-unprettify-at-point t)
 
 ;; Version Control
 (setq vc-follow-symlinks nil)
