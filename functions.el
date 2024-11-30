@@ -118,5 +118,13 @@ MODE must be a symbol"
     (start-process-shell-command "file-path" nil cmd)
     (message "%s installed" file-name)))
 
+(defun delete-frame-or-quit ()
+  "Delete the selected frame & kill terminal buffers. If the last frame, kill Emacs."
+  (interactive)
+  (kill-matching-buffers "*shell" nil t)
+  (when (condition-case nil (delete-frame)
+          (error (save-buffers-kill-emacs))))
+  (select-frame-set-input-focus (selected-frame)))
+
 (provide 'functions)
 ;;; functions.el ends here
