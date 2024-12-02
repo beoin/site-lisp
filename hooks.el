@@ -14,6 +14,7 @@
 	    (keymap-local-set "C-M-b" #'zig-beginning-of-defun)))
 
 (add-hook 'find-function-after-hook #'view-mode-enter)
+(add-hook 'Info-selection-hook 'info-colors-fontify-node)
 
 (add-hook 'xref-backend-functions #'dumb-jump-xref-activate)
 
