@@ -18,6 +18,7 @@
 (setq enable-recursive-minibuffers t)
 (setq kill-do-not-save-duplicates t)
 (defvar vertico-count 15)
+(which-key-mode)
 
 ;; Org
 (defvar org-agenda-files "~/Org/agenda-files.org")
