@@ -4,7 +4,7 @@
 ;;; Code:
 
 (keymap-global-set "M-<backspace>" 'backward-delete-word)
-(keymap-global-set "C-x l" (lambda()(interactive)(dired "~/.emacs.d/lisp")))
+(keymap-global-set "C-x l" (defun dired-site-lisp()(interactive)(dired "~/.emacs.d/lisp")))
 (keymap-global-set "C-c m" 'move-to-line-middle)
 (keymap-global-set "C-." 'embark-act)
 (keymap-global-set "C-x i" 'ibuffer-list-buffers)
@@ -16,7 +16,7 @@
 (keymap-global-set "S-<down>" 'windmove-down)
 (keymap-global-set "C-c i" 'crux-find-user-init-file)
 (keymap-global-set "C-c s" 'status)
-(keymap-global-set "C-c t" (lambda()(interactive)(find-file "~/Org/todo.org")))
+(keymap-global-set "C-c t" (defun todo()(interactive)(find-file "~/Org/todo.org")))
 (keymap-global-set "C-c v" 'view-mode)
 (keymap-global-set "M-o" 'other-window)
 (keymap-global-set "C-c l" 'comment-or-uncomment-region)
