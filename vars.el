@@ -19,6 +19,8 @@
 (setq kill-do-not-save-duplicates t)
 (defvar vertico-count 15)
 (which-key-mode)
+(which-key-setup-minibuffer)
+(setq max-mini-window-height 10.00)
 
 ;; Org
 (defvar org-agenda-files "~/Org/agenda-files.org")
