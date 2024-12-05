@@ -167,6 +167,10 @@
 (defvar ispell-program-name "aspell")
 (defvar ispell-personal-dictionary "~/.aspell.en.pws")
 (defvar ispell-extra-args '("--sug-mode=ultra"))
+(defvar flyspell-abbrev-p t)
+(defvar flyspell-use-global-abbrev-table-p) t
+(defvar flyspell-issue-message-flag nil)
+(defvar flyspell-issue-welcome-flag nil)
 
 ;; Find file at point
 (defvar ffap-machine-p-known 'reject)
