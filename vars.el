@@ -91,9 +91,13 @@
 (defvar recentf-max-menu-items 20)
 (recentf-mode 1)
 (defvar find-file-visit-truename t)
-(setq backup-directory-alist '(("." . "~/.emacs.d/backups")))
 (setq delete-by-moving-to-trash t)
 (setq comment-empty-lines t)
+
+;; Backups
+(setq backup-directory-alist '(("." . "~/.emacs.d/backups")))
+(setq version-control t)
+(setq delete-old-versions t)
 
 ;; Custom File
 (setq custom-file (concat user-emacs-directory "custom.el"))
@@ -149,10 +153,11 @@
 (defvar dired-create-destination-dirs 'ask)
 (defvar dired-ls-F-marks-symlinks t)
 (defvar dired-deletion-confirmer 'y-or-n-p)
-(defvar dired-guess-shell-alist-user '(("\.pdf$" "xpdf")
-                                     ("\.html$" "firefox")
-                                     ("\.mp3$\\|.mp4$\\|.mkv$\\|" "mpv")
-                                     ("\.epub$\\|.mobi$\\|.azw3$|" "ebook-viewer")))
+(defvar dired-guess-shell-alist-user
+  '(("\.pdf$" "xpdf")
+    ("\.html$" "firefox")
+    ("\.mp3$\\|.mp4$\\|.mkv$\\|" "mpv")
+    ("\.epub$\\|.mobi$\\|.azw3$|" "ebook-viewer")))
 
 ;; Tabs
 (setq tab-always-indent 'complete)
