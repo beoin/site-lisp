@@ -93,6 +93,7 @@
 (defvar find-file-visit-truename t)
 (setq delete-by-moving-to-trash t)
 (setq comment-empty-lines t)
+(setq find-file-suppress-same-file-warnings t)
 
 ;; Backups
 (setq backup-directory-alist '(("." . "~/.emacs.d/backups")))
@@ -174,7 +175,7 @@
 (defvar ispell-personal-dictionary "~/.aspell.en.pws")
 (defvar ispell-extra-args '("--sug-mode=ultra"))
 (defvar flyspell-abbrev-p t)
-(defvar flyspell-use-global-abbrev-table-p) t
+(defvar flyspell-use-global-abbrev-table-p t)
 (defvar flyspell-issue-message-flag nil)
 (defvar flyspell-issue-welcome-flag nil)
 
