@@ -58,6 +58,7 @@
 (setq-default goggles-pulse t)
 (defvar display-line-numbers-grow-only t)
 (defvar display-line-numbers-width 2)
+(setq confirm-kill-emacs #'yes-or-no-p)
 
 ;; Frames
 (setq-default window-resize-pixelwise t)
