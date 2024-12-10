@@ -48,17 +48,19 @@
 ;; UI
 (defvar truncate-string-ellipsis "…")
 (defvar which-func-update-delay 1.0)
-(setq tab-bar-show t)
 (line-number-mode +1)
 (column-number-mode +1)
 (global-display-line-numbers-mode -1)
 (setq ring-bell-function 'ignore)
-(setq require-final-newline t)
 (global-hl-line-mode +1)
 (setq-default goggles-pulse t)
 (defvar display-line-numbers-grow-only t)
 (defvar display-line-numbers-width 2)
+
+;; Editor
 (setq confirm-kill-emacs #'yes-or-no-p)
+(delete-selection-mode t)
+(which-function-mode t)
 
 ;; Frames
 (setq-default window-resize-pixelwise t)
@@ -120,9 +122,12 @@
 (put 'upcase-region 'disabled nil)
 (put 'downcase-region 'disabled nil)
 (put 'set-goal-column 'disabled nil)
-(delete-selection-mode t)
-(which-function-mode t)
 (setq ad-redefinition-action 'error)
+(setq-default fill-column 80)
+(setq-default word-wrap t)
+(setq-default truncate-lines t)
+(setq sentence-end-double-space nil)
+(setq require-final-newline t)
 
 ;; Shell
 (defvar eshell-aliases-file "~/.emacs.d/eshell/alias")
@@ -161,6 +166,7 @@
     ("\.epub$\\|.mobi$\\|.azw3$|" "ebook-viewer")))
 
 ;; Tabs
+(setq tab-bar-show t)
 (setq tab-always-indent 'complete)
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 8)
