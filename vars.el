@@ -51,7 +51,6 @@
 (line-number-mode +1)
 (column-number-mode +1)
 (global-display-line-numbers-mode -1)
-(setq ring-bell-function 'ignore)
 (global-hl-line-mode +1)
 (setq-default goggles-pulse t)
 (defvar display-line-numbers-grow-only t)
@@ -60,9 +59,10 @@
 ;; Editor
 (delete-selection-mode t)
 (which-function-mode t)
+(setq confirm-kill-emacs #'yes-or-no-p)
 
 ;; UX
-(setq confirm-kill-emacs #'yes-or-no-p)
+(setq ring-bell-function 'ignore)
 (setq mouse-yank-at-point t)
 
 ;; Frames
