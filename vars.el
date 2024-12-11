@@ -64,6 +64,8 @@
 ;; UX
 (setq ring-bell-function 'ignore)
 (setq mouse-yank-at-point t)
+(setq confirm-nonexistent-file-or-buffer nil)
+(setq visible-bell nil)
 
 ;; Frames
 (setq-default window-resize-pixelwise t)
@@ -77,6 +79,7 @@
 ;; Cursor
 (blink-cursor-mode 0)
 (setq cursor-type 'box)
+(setq x-stretch-cursor nil)
 
 ;; Modeline
 (doom-modeline-mode 1)
