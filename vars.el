@@ -58,9 +58,12 @@
 (defvar display-line-numbers-width 2)
 
 ;; Editor
-(setq confirm-kill-emacs #'yes-or-no-p)
 (delete-selection-mode t)
 (which-function-mode t)
+
+;; UX
+(setq confirm-kill-emacs #'yes-or-no-p)
+(setq mouse-yank-at-point t)
 
 ;; Frames
 (setq-default window-resize-pixelwise t)
