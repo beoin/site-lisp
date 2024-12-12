@@ -2,7 +2,7 @@
 ;;; Commentary:
 
 ;;; Code:
-
+ 
 ;; Search
 (setq lazy-highlight-initial-delay 5.00)
 (setq isearch-lazy-count t)
@@ -149,6 +149,9 @@
 
 ;; Zig
 (add-to-list 'auto-mode-alist '("\\.zig\\'" . zig-ts-mode))
+
+;; Rust
+(add-to-list 'auto-mode-alist '("\\.rs\\'" . rust-ts-mode))
 
 ;; Compilation
 (defvar compilation-always-kill t)
