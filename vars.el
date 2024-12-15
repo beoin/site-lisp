@@ -22,22 +22,6 @@
 (which-key-setup-minibuffer)
 (setq max-mini-window-height 10.00)
 
-;; Org
-(defvar org-agenda-files "~/Org/agenda-files.org")
-(defvar org-directory "~/Org")
-(defvar org-default-notes-file (concat org-directory "/capture_notes.org"))
-(defvar org-use-tag-inheritance nil)
-(defvar org-hide-emphasis-markers t)
-(defvar org-startup-folded t)
-(global-auto-revert-mode t)
-(defvar org-rainbow-tags-hash-start-index 10)
-(defvar org-return-follows-link t)
-(defvar org-link-descriptive t)
-(defvar org-cycle-separator-lines 0)
-(defvar org-ellipsis "…")
-(defvar org-fontify-quote-and-verse-blocks t)
-(defvar org-pretty-entities t)
-
 ;; Imenu
 (defvar imenu-auto-rescan t)
 (defvar org-imenu-depth 2)

@@ -9,6 +9,7 @@
 (require 'editing-functions)
 (require 'hooks)
 (require 'keybindings)
+(require 'org-mode-conf)
 
 (load custom-file)
 

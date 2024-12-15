@@ -50,28 +50,6 @@
 (add-hook 'ielm-mode-hook
           (defun ielm-hook () (keymap-local-set "C-j" #'newline)))
 
-(add-hook 'org-mode-hook
-	  (defun org-hook ()
-	    (keymap-local-set "C-S-n" #'org-next-visible-heading)
-	    (keymap-local-set "C-S-p" (lambda () (interactive) (org-next-visible-heading -1)))
-	    (keymap-local-set "M-l" #'downcase-word-start)
-	    (keymap-local-set "M-u" #'upcase-word-start)
-	    (keymap-local-set "C-j" #'open-line-below-point)
-	    (keymap-local-set "C-u C-k" #'kill-line-backward)
-	    (keymap-local-set "C-u <tab>" #'org-overview)
-	    (flyspell-mode +1)
-	    (display-line-numbers-mode -1)
-	    (setq buffer-face-mode-face '(:family "Cantarell" :height 140))
-	    (buffer-face-mode)
-            (org-rainbow-tags-mode)
-            (goggles-mode)
-            (org-indent-mode)))
-
-(add-hook 'org-shiftup-final-hook 'windmove-up)
-(add-hook 'org-shiftleft-final-hook 'windmove-left)
-(add-hook 'org-shiftdown-final-hook 'windmove-down)
-(add-hook 'org-shiftright-final-hook 'windmove-right)
-
 (add-hook 'markdown-mode-hook
 	  (defun markdown-hook ()
 	    (keymap-local-set "C-S-p" #'markdown-previous-visible-heading)
