@@ -1,4 +1,4 @@
-;; org-mode-conf.el --- Variable settings.  -*- lexical-binding: t -*-
+;; org-mode-conf.el --- org-mode config.  -*- lexical-binding: t -*-
 ;;; Commentary:
 
 ;;; Code:
@@ -18,7 +18,7 @@
 (defvar org-ellipsis "…")
 (defvar org-fontify-quote-and-verse-blocks t)
 (defvar org-pretty-entities t)
-
+(defvar org-goto-interface 'outline-path-completion)
 
 ;; Hooks
 (add-hook 'org-mode-hook
