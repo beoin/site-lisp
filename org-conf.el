@@ -1,4 +1,4 @@
-;; org-mode-conf.el --- org-mode config.  -*- lexical-binding: t -*-
+;; org-conf.el --- org-mode config.  -*- lexical-binding: t -*-
 ;;; Commentary:
 
 ;;; Code:
@@ -43,5 +43,5 @@
 (add-hook 'org-shiftdown-final-hook 'windmove-down)
 (add-hook 'org-shiftright-final-hook 'windmove-right)
 
-(provide 'org-mode-conf)
-;;; org-mode-conf.el ends here
+(provide 'org-conf)
+;;; org-conf.el ends here
