@@ -148,20 +148,6 @@
 (defvar yas-snippet-dirs '("~/.emacs.d/lisp/snippets"))
 (yas-global-mode)
 
-;; Dired
-(lisp-extra-font-lock-global-mode 1)
-(put 'dired-find-alternate-file 'disabled nil)
-(defvar dired-recursive-deletes 'always)
-(defvar dired-recursive-copies 'always)
-(defvar dired-create-destination-dirs 'ask)
-(defvar dired-ls-F-marks-symlinks t)
-(defvar dired-deletion-confirmer 'y-or-n-p)
-(defvar dired-guess-shell-alist-user
-  '(("\.pdf$" "xpdf")
-    ("\.html$" "firefox")
-    ("\.mp3$\\|.mp4$\\|.mkv$\\|" "mpv")
-    ("\.epub$\\|.mobi$\\|.azw3$|" "ebook-viewer")))
-
 ;; Tabs
 (setq tab-bar-show t)
 (setq tab-always-indent 'complete)

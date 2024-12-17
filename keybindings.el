@@ -4,7 +4,6 @@
 ;;; Code:
 
 (keymap-global-set "M-<backspace>" 'backward-delete-word)
-(keymap-global-set "C-x l" (defun dired-site-lisp()(interactive)(dired "~/.emacs.d/lisp")))
 (keymap-global-set "C-c m" 'move-to-line-middle)
 (keymap-global-set "C-." 'embark-act)
 (keymap-global-set "C-x i" 'ibuffer-list-buffers)
@@ -21,13 +20,10 @@
 (keymap-global-set "M-o" 'other-window)
 (keymap-global-set "C-c l" 'comment-or-uncomment-region)
 (keymap-unset global-map "C-x d")
-(global-set-key (kbd "C-x d") 'dired-jump)
-(global-set-key (kbd "C-x C-f") 'dired)
 (global-set-key (kbd "C-c d") 'crux-duplicate-current-line-or-region)
 (global-set-key (kbd "M-z") 'zap-up-to-char)
 (global-set-key (kbd "M-!") 'eshell-command)
 (keymap-global-set "C-a" 'crux-move-beginning-of-line)
-(keymap-global-set "C-c o" 'dired-common-dirs)
 (keymap-global-set "M-c" 'capitalise-word)
 (keymap-unset global-map "C-x m")
 (keymap-global-set "C-x m e" 'eshell)

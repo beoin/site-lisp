@@ -10,6 +10,7 @@
 (require 'hooks)
 (require 'keybindings)
 (require 'org-mode-conf)
+(require 'dired-conf)
 
 (load custom-file)
 
