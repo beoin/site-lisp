@@ -126,6 +126,9 @@
 ;; Grep
 (setq grep-command  "grep -r --color=auto -nH --null -e" )
 
+;; Find
+(setq find-name-arg "-iname")
+
 ;; Tree Sitter
 (defvar treesit-language-source-alist
   '((zig "https://github.com/maxxnino/tree-sitter-zig")))
