@@ -99,11 +99,12 @@
 (setq set-mark-command-repeat-pop t)
 
 ;; Programming
-(electric-pair-mode)
+(electric-pair-mode +1)
 (defvar xref-show-definitions-function #'xref-show-definitions-completing-read)
 (defvar flymake-shellcheck-path "usr/bin/shellcheck")
 (global-flycheck-mode +1)
 (setq prettify-symbols-unprettify-at-point t)
+(add-to-list 'electric-pair-pairs '((?\< . ?\>)))
 
 ;; Version Control
 (setq vc-follow-symlinks nil)
