@@ -104,7 +104,11 @@
 (defvar flymake-shellcheck-path "usr/bin/shellcheck")
 (global-flycheck-mode +1)
 (setq prettify-symbols-unprettify-at-point t)
-(add-to-list 'electric-pair-pairs '((?\< . ?\>)))
+(setq electric-pair-pairs '((?\< . ?\>)
+                            (34 . 34)
+                            (8216 . 8217)
+                            (8220 . 8221)))
+
 
 ;; Version Control
 (setq vc-follow-symlinks nil)
