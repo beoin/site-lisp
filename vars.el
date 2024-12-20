@@ -137,11 +137,8 @@
 
 ;; Tree Sitter
 (defvar treesit-language-source-alist
-  '((zig "https://github.com/maxxnino/tree-sitter-zig")))
+  '())
 (defvar treesit-font-lock-level 4)
-
-;; Zig
-(add-to-list 'auto-mode-alist '("\\.zig\\'" . zig-ts-mode))
 
 ;; Compilation
 (defvar compilation-always-kill t)

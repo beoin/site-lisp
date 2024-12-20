@@ -5,14 +5,6 @@
 
 ;;; Code:
 
-(add-hook 'zig-ts-mode-hook
-	  (defun zig-hook ()
-	    (keymap-local-set "<f9>" #'zig-compile)
-	    (keymap-local-set "<f7>" #'goto-line)
-	    (keymap-local-set "C-c f" #'zig-format-buffer)
-	    (keymap-local-set "C-M-f" #'zig-end-of-defun)
-	    (keymap-local-set "C-M-b" #'zig-beginning-of-defun)))
-
 (add-hook 'find-function-after-hook #'view-mode-enter)
 (add-hook 'Info-selection-hook 'info-colors-fontify-node)
 
