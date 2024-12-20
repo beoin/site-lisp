@@ -15,6 +15,7 @@
 (keymap-global-set "S-<down>" 'windmove-down)
 (keymap-global-set "C-c i" 'crux-find-user-init-file)
 (keymap-global-set "C-c s" 'status)
+(keymap-global-set "C-c S" 'scratch-buffer)
 (keymap-global-set "C-c t" (defun todo()(interactive)(find-file "~/Org/todo.org")))
 (keymap-global-set "C-c v" 'view-mode)
 (keymap-global-set "M-o" 'other-window)
