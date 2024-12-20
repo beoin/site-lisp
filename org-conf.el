@@ -17,7 +17,7 @@
 (defvar org-cycle-separator-lines 0)
 (defvar org-ellipsis "…")
 (defvar org-fontify-quote-and-verse-blocks t)
-(defvar org-pretty-entities t)
+(defvar org-pretty-entities nil)
 (defvar org-goto-interface 'outline-path-completion)
 
 ;; Hooks
