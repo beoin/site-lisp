@@ -143,10 +143,6 @@
 ;; Zig
 (add-to-list 'auto-mode-alist '("\\.zig\\'" . zig-ts-mode))
 
-;; Rust
-(add-to-list 'auto-mode-alist '("\\.rs\\'" . rust-ts-mode))
-(require 'rust-mode)
-
 ;; Compilation
 (defvar compilation-always-kill t)
 

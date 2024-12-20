@@ -5,14 +5,6 @@
 
 ;;; Code:
 
-(with-eval-after-load 'rust-ts-mode
-  (add-hook 'flycheck-mode-hook #'flycheck-rust-setup))
-
-(add-hook 'rust-ts-mode-hook
-          (defun rust-hook ()
-            (keymap-local-set "<f7>" #'goto-line)
-            (keymap-local-set "C-c f" #'rust-format-buffer)))
-
 (add-hook 'zig-ts-mode-hook
 	  (defun zig-hook ()
 	    (keymap-local-set "<f9>" #'zig-compile)
