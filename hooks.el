@@ -32,7 +32,9 @@
 	    (eshell/addpath (concat (getenv "HOME") "/bin"))))
 
 (add-hook 'ielm-mode-hook
-          (defun ielm-hook () (keymap-local-set "C-j" #'newline)))
+          (defun ielm-hook ()
+            (lisp-hook)
+            (keymap-local-set "C-j" #'newline)))
 
 (add-hook 'markdown-mode-hook
 	  (defun markdown-hook ()
