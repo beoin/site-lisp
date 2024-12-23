@@ -3,6 +3,7 @@
 ;;; Commentary:
 ;;; Code:
 (setq gc-cons-threshold most-positive-fixnum)
+(setq garbage-collection-messages t)
 (setq load-prefer-newer t)
 (set-language-environment "UTF-8")
 (setq default-input-method nil)
