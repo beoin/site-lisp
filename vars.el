@@ -171,5 +171,8 @@
 ;; Find file at point
 (defvar ffap-machine-p-known 'reject)
 
+;; PDF
+(pdf-tools-install)
+
 (provide 'vars)
 ;;; vars.el ends here
