@@ -11,6 +11,7 @@
 (defvar dired-create-destination-dirs 'ask)
 (defvar dired-ls-F-marks-symlinks t)
 (defvar dired-deletion-confirmer 'y-or-n-p)
+(defvar dired-dwim-target t)
 (defvar dired-guess-shell-alist-user
   '(("\.pdf$" "xpdf")
     ("\.html$" "firefox")
