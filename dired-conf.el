@@ -26,6 +26,18 @@
 	    (dired-omit-mode t)
 	    (diredfl-global-mode t)))
 
+;; Functions
+(defun dired-common-dirs (key)
+"A function in progesss. Open locations which are known to you in the file system.
+KEY represents a $HOME directory"
+  (interactive "sr ~/remote, o ~/Org, b ~/bin, s ~/src, dw ~/Downloads, dk ~/Desktop: ")
+  (cond ((equal key "r") (dired-other-window "~/remote"))
+	       ((equal key "o") (dired-other-window "~/Org"))
+	       ((equal key "b") (dired-other-window "~/bin"))
+	       ((equal key "s") (dired-other-window "~/src"))
+	       ((equal key "dw") (dired-other-window "~/Downloads"))
+	       ((equal key "dk") (dired-other-window "~/Desktop"))))
+
 ;; Keybindings
 (keymap-global-set "C-x l" (defun dired-site-lisp()(interactive)(dired "~/.emacs.d/lisp")))
 (global-set-key (kbd "C-x d") 'dired-jump)
