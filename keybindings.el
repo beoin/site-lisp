@@ -6,7 +6,6 @@
 (keymap-global-set "M-<backspace>" 'backward-delete-word)
 (keymap-global-set "C-c m" 'move-to-line-middle)
 (keymap-global-set "C-." 'embark-act)
-(keymap-global-set "C-x i" 'ibuffer-list-buffers)
 (keymap-global-set "C-c k" 'delete-current-line)
 (keymap-global-set "C-c r" 'replace-char)
 (keymap-global-set "S-<right>" 'windmove-right)

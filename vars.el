@@ -9,19 +9,6 @@
 (setq lazy-count-prefix-format nil)
 (setq lazy-count-suffix-format "   (%s/%s)")
 
-;; Minibuffer
-(vertico-mode +1)
-(marginalia-mode +1)
-(setq completion-styles '(orderless basic)
-      completion-category-overrides '((file (styles basic partial-completion))))
-(setq use-short-answers t)
-(setq enable-recursive-minibuffers t)
-(setq kill-do-not-save-duplicates t)
-(defvar vertico-count 15)
-(which-key-mode)
-(which-key-setup-minibuffer)
-(setq max-mini-window-height 10.00)
-
 ;; Imenu
 (defvar imenu-auto-rescan t)
 (defvar org-imenu-depth 2)
@@ -67,14 +54,6 @@
 
 ;; Modeline
 (doom-modeline-mode 1)
-
-;; Buffers
-(defvar view-read-only t)
-(defvar view-scroll-auto-exit t)
-(defvar ibuffer-old-time 24)
-(defvar switch-to-buffer-in-dedicated-window 'pop)
-(defvar switch-to-buffer-obey-display-actions t)
-(defvar ibuffer-movement-cycle nil)
 
 ;; Files
 (global-auto-revert-mode t)
