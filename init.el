@@ -11,6 +11,7 @@
 (require 'keybindings)
 (require 'org-conf)
 (require 'dired-conf)
+(require 'buffers-conf)
 
 (load custom-file)
 

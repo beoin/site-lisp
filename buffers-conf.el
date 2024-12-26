@@ -29,5 +29,5 @@
 ;;Keybindings
 (keymap-global-set "C-x B" 'ibuffer-list-buffers)
 
-(provide 'buffer-conf)
+(provide 'buffers-conf)
 ;;; buffers-conf.el ends here
