@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: defmodule
-# key: dm
-# --
-defmodule ${1:Module} do
-  $0
-end
