@@ -8,6 +8,10 @@
 (add-to-list 'auto-mode-alist '("\\.scrbl\\'" . racket-hash-lang-mode))
 
 ;; Hooks
+(add-hook 'racket-hash-lang-mode-hook
+          (defun racket-hash-lang-hook ()
+            (setq-local racket-xp-add-binding-faces t)))
+
 (add-hook 'paredit-mode-hook
           (defun paredit-hook ()
             (keymap-unset paredit-mode-map "M-r" t)
