@@ -8,6 +8,10 @@
 (add-to-list 'auto-mode-alist '("\\.scrbl\\'" . racket-hash-lang-mode))
 
 ;; Hooks
+(add-hook 'racket-mode-hook
+          (defun racket-hook ()
+            (lisp-hook)))
+
 (add-hook 'racket-hash-lang-mode-hook
           (defun racket-hash-lang-hook ()
             (setq-local racket-xp-add-binding-faces t)))
