@@ -12,12 +12,15 @@
 (require 'org-conf)
 (require 'dired-conf)
 (require 'buffers-conf)
+(require 'lisp-conf)
 
 (load custom-file)
 
 (find-file-noselect "~/.bashrc")
 (find-file-noselect "~/.config/sway/config")
 (find-file "~/Org/todo.org")
+
+(pdf-tools-install)
 
 (provide 'init)
 ;;; init.el ends here
