@@ -83,29 +83,6 @@ MODE must be a symbol"
       (delete-other-windows)
       (ielm-window))))
 
-(defun zig-make-project (b-or-l name)
-  "Create a new zig project."
-  (interactive "s init-exe (b) or int-lib (l) : \nsProject Name: ")
-  (letrec 
-      ((ex (cond ((equal b-or-l "b") "init-exe")
-		 ((equal b-or-l "l") "init-lib")))
-       (path (format "~/src/zig/%s" name))
-       (cmd  (format "zig %s" ex)))
-    (mkdir path)
-    (cd path)
-    (copy-file "~/Resources/dumbjump" (format "%s/.dumpjump" path))
-    (start-process-shell-command "zig init" nil cmd)
-    (message "%s %s project created" ex name)))
-
-(defun zig-install ()
-  "Place zig executable on the system path via a symbolic link."
-  (interactive)
-  (letrec ((path (string-trim-right (file-name-directory (buffer-file-name)) "/src/" ) )
-	   (file-name (car (last (split-string path "/"))))
-	   (cmd (format "ln -sf %s/zig-out/bin/%s ~/.local/bin/" path file-name)))
-    (start-process-shell-command "file-path" nil cmd)
-    (message "%s installed" file-name)))
-
 (defun delete-frame-or-quit ()
   "Delete the selected frame & kill terminal buffers. If the last frame, kill Emacs."
   (interactive)
