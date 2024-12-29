@@ -26,6 +26,7 @@
 (setq-default goggles-pulse t)
 (defvar display-line-numbers-grow-only t)
 (defvar display-line-numbers-width 2)
+(setq use-dialog-box nil)
 
 ;; Editor
 (delete-selection-mode t)
