@@ -13,6 +13,7 @@
 (require 'dired-conf)
 (require 'buffers-conf)
 (require 'lisp-conf)
+(require 'go-conf)
 
 (load custom-file)
 

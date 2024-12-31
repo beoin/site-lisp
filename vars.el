@@ -151,8 +151,5 @@
 ;; Find file at point
 (defvar ffap-machine-p-known 'reject)
 
-;; Go
-(add-to-list 'auto-mode-alist '("\\.go\\'" . go-ts-mode))
-
 (provide 'vars)
 ;;; vars.el ends here
