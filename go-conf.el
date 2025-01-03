@@ -10,7 +10,7 @@
 (add-to-list 'auto-mode-alist '("\\.go\\'" . go-ts-mode))
 
 ;; Hooks
-(add-hook 'go-ts-mode
+(add-hook 'go-ts-mode-hook
           (defun go-hook ()
             (keymap-local-set "C-c f" #'gofmt)
             (keymap-local-set "<f7>" #'goto-line)))
