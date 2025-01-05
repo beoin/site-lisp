@@ -12,6 +12,7 @@
 (defvar dired-ls-F-marks-symlinks t)
 (defvar dired-deletion-confirmer 'y-or-n-p)
 (defvar dired-dwim-target t)
+(setq dired-listing-switches "-al --group-directories-first" )
 (defvar dired-guess-shell-alist-user
   '(("\.pdf$" "xpdf")
     ("\.html$" "firefox")
