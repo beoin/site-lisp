@@ -7,6 +7,11 @@
 ;; Vars
 (add-to-list 'auto-mode-alist '("\\.scrbl\\'" . racket-hash-lang-mode))
 
+;; Paren Matching
+(setq blink-matching-paren 'jump)
+(setq show-paren-when-point-inside-paren t)
+(setq show-paren-style 'parenthesis)
+
 ;; Hooks
 (add-hook 'racket-mode-hook
           (defun racket-hook ()

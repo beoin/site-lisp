@@ -135,11 +135,6 @@
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 8)
 
-;; Paren Matching
-(setq blink-matching-paren 'jump)
-(setq show-paren-when-point-inside-paren t)
-(setq show-paren-style 'parenthesis)
-
 ;; Spell Checking
 (defvar ispell-program-name "aspell")
 (defvar ispell-personal-dictionary "~/.aspell.en.pws")
