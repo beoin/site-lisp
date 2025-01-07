@@ -118,8 +118,7 @@
 (setq find-name-arg "-iname")
 
 ;; Tree Sitter
-(defvar treesit-language-source-alist
-  '())
+(defvar treesit-language-source-alist '())
 (defvar treesit-font-lock-level 4)
 
 ;; Compilation

@@ -8,7 +8,7 @@
 (defvar view-scroll-auto-exit t)
 (defvar switch-to-buffer-in-dedicated-window 'pop)
 (defvar switch-to-buffer-obey-display-actions t)
-(setq display-buffer-alist '((".*" display-buffer-pop-up-window)))
+(setq display-buffer-alist nil)
 
 ;; Ibuffer
 (defvar ibuffer-movement-cycle nil)
