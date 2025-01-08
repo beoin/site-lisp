@@ -14,11 +14,13 @@
 (defvar dired-dwim-target t)
 (defvar dired-clean-confirm-killing-deleted-buffers nil)
 (setq dired-listing-switches "-al --group-directories-first" )
+(defvar dired-guess-shell-znew-switches "-KPv")
 (defvar dired-guess-shell-alist-user
   '(("\.pdf$" "xpdf")
     ("\.html$" "firefox")
     ("\.mp3$\\|.mp4$\\|.mkv$\\|" "mpv")
     ("\.epub$\\|.mobi$\\|.azw3$|" "ebook-viewer")))
+
 
 ;; Hooks
 (add-hook 'dired-mode-hook
