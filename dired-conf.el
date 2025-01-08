@@ -6,6 +6,7 @@
 ;; Vars
 (lisp-extra-font-lock-global-mode 1)
 (put 'dired-find-alternate-file 'disabled nil)
+(setq dired-listing-switches "-sh --group-directories-first")
 (defvar dired-recursive-deletes 'always)
 (defvar dired-recursive-copies 'always)
 (defvar dired-create-destination-dirs 'ask)
@@ -13,7 +14,6 @@
 (defvar dired-deletion-confirmer 'y-or-n-p)
 (defvar dired-dwim-target t)
 (defvar dired-clean-confirm-killing-deleted-buffers nil)
-(setq dired-listing-switches "-al --group-directories-first" )
 (defvar dired-guess-shell-znew-switches "-KPv")
 (defvar dired-guess-shell-alist-user
   '(("\.pdf$" "xpdf")
