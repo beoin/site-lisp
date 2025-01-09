@@ -25,7 +25,8 @@
           (defun paredit-hook ()
             (keymap-unset paredit-mode-map "M-r" t)
             (keymap-local-set "M-[" #'paredit-wrap-square)
-            (keymap-local-set "M-{" #'paredit-wrap-curly)))
+            (keymap-local-set "M-{" #'paredit-wrap-curly)
+            (keymap-local-set "{" #'paredit-open-curly)))
 
 (add-hook 'clojure-mode-hook
           (defun clojure-hook ()
