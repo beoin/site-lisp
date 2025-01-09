@@ -91,7 +91,8 @@
 (setq electric-pair-pairs '((?\< . ?\>)
                             (34 . 34)
                             (8216 . 8217)
-                            (8220 . 8221)))
+                            (8220 . 8221)
+                            (?\{ . ?\})))
 
 ;; Version Control
 (setq vc-follow-symlinks nil)
