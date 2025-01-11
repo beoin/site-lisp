@@ -41,8 +41,6 @@
 (global-set-key (kbd "C-c B") 'search-book)
 (global-set-key (kbd "C-c p") 'search-archwiki)
 (keymap-global-set "C-x e" 'emacs-version)
-(keymap-global-set "C-c c" 'compile)
-
 
 (provide 'keybindings)
 ;;; keybindings.el ends here

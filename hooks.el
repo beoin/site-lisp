@@ -26,8 +26,8 @@
 (add-hook 'prog-mode-hook
 	  (defun prog-hook ()
 	    (display-line-numbers-mode +1)
-            (goggles-mode)))
-
+            (goggles-mode)
+            (keymap-local-set "C-c c" #'compile)))
 
 (provide 'hooks)
 ;;; hooks.el ends here.
