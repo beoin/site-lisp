@@ -29,5 +29,9 @@
             (goggles-mode)
             (keymap-local-set "C-c c" #'compile)))
 
+(add-hook 'text-mode-hook
+          (defun text-hook ()
+            (display-line-numbers-mode +1)))
+
 (provide 'hooks)
 ;;; hooks.el ends here.

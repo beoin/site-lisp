@@ -143,6 +143,7 @@
 (defvar flyspell-use-global-abbrev-table-p t)
 (defvar flyspell-issue-message-flag nil)
 (defvar flyspell-issue-welcome-flag nil)
+(add-to-list 'auto-mode-alist '("\\.pws\\'" . text-mode))
 
 ;; Find file at point
 (defvar ffap-machine-p-known 'reject)
