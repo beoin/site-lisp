@@ -131,5 +131,10 @@ MODE must be a symbol"
           (kill-buffer buffer)
           (message "File '%s' successfully removed" filename)))))
 
+(defun read-char-as-string (&optional PROMPT)
+  "Reads a char from minibuffer as a string value"
+  (let ((key (read-key PROMPT)))
+    (char-to-string (if (characterp key) key 27))))
+
 (provide 'functions)
 ;;; functions.el ends here
