@@ -6,11 +6,11 @@
 (defun replace-char ()
   "Replace the char at point."
   (interactive)
-  (setq c (read-key))
-  (progn
-    (delete-char 1)
-    (insert c)
-    (backward-char)))
+  (let ((c (read-key)))
+    (progn
+      (delete-char 1)
+      (insert c)
+      (backward-char))))
 
 ;;https://gist.github.com/VernonGrant/1341a3bdcded3fc3a3741427f706ca85
 ;; Zap up to char quickly.
