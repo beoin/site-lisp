@@ -59,7 +59,9 @@ Variant of the builtin \"downcase-word\"."
   "Upcase from the beginning of the word at point.
 Variant of the builtin \"upcase-word\""
   (interactive)
-  (upcase-word -1))
+  (if (equal " " (string (preceding-char)))
+      (upcase-word 1)
+      (upcase-word -1)))
 
 (defun delete-word (arg)
   "Delete characters forward until encountering the end of a word.
