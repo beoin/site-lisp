@@ -21,7 +21,7 @@
 (keymap-global-set "C-c l" 'comment-or-uncomment-region)
 (keymap-unset global-map "C-x d")
 (global-set-key (kbd "C-c d") 'crux-duplicate-current-line-or-region)
-(global-set-key (kbd "M-z") 'zap-up-to-char)
+;;(global-set-key (kbd "M-z") 'zap-up-to-char)
 (global-set-key (kbd "M-!") 'eshell-command)
 (keymap-global-set "C-a" 'crux-move-beginning-of-line)
 (keymap-global-set "M-c" 'capitalise-word)
