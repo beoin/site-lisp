@@ -45,7 +45,8 @@
 (defun lisp-hook ()
   (paredit-mode)
   (rainbow-delimiters-mode)
-  (prettify-symbols-mode))
+  (prettify-symbols-mode)
+  (keymap-local-set "<f7>" #'imenu))
 
 (provide 'lisp-conf)
 ;;; lisp-conf.el ends here
