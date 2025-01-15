@@ -31,6 +31,7 @@
 	    (keymap-local-set "C-u C-k" #'kill-line-backward)
 	    (keymap-local-set "C-u <tab>" #'org-overview)
 	    (keymap-local-set "<f7>" #'imenu)
+            (keymap-local-set "C-c h" #'org-toggle-heading)
             (flyspell-mode +1)
 	    (display-line-numbers-mode -1)
 	    (setq buffer-face-mode-face '(:family "Cantarell" :height 140))
