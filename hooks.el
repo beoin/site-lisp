@@ -29,6 +29,10 @@
             (goggles-mode)
             (keymap-local-set "C-c c" #'compile)))
 
+(add-hook 'view-mode-hook
+          (defun view-hook ()
+            (keymap-local-set "<return>"  #'org-return)))
+
 (add-hook 'text-mode-hook
           (defun text-hook ()
             (display-line-numbers-mode +1)))
