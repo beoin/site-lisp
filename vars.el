@@ -1,4 +1,4 @@
-;; vars.el --- Variable settings.  -*- lexical-binding: t -*-
+1;; vars.el --- Variable settings.  -*- lexical-binding: t -*-
 ;;; Commentary:
 
 ;;; Code:
@@ -111,6 +111,7 @@
 ;; Shell
 (defvar eshell-aliases-file "~/.emacs.d/eshell/alias")
 (defvar flycheck-sh-shellcheck-executable "/usr/bin/shellcheck")
+(setq major-mode-remap-alist '((sh-mode . bash-ts-mode)))
 
 ;; Grep
 (setq grep-command  "grep -r --color=auto -nH --null -e" )
