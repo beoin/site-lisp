@@ -6,6 +6,7 @@
 
 ;; Vars
 (add-to-list 'auto-mode-alist '("\\.scrbl\\'" . racket-hash-lang-mode))
+(defvar inferior-lisp-program "/usr/bin/sbcl")
 
 ;; Paren Matching
 (setq blink-matching-paren 'jump)
