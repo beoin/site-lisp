@@ -6,7 +6,7 @@
 (defun replace-char ()
   "Replace the char at point."
   (interactive)
-  (let ((c (read-key)))
+  (let ((c (read-char "Replace with: ")))
     (progn
       (delete-char 1)
       (insert c)
