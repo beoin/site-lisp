@@ -43,6 +43,10 @@
             (lisp-hook)
             (keymap-local-set "C-j" #'newline)))
 
+(add-hook 'sly-mode-hook
+          (defun sly-hook ()
+            (lisp-hook)))
+
 (defun lisp-hook ()
   (paredit-mode)
   (rainbow-delimiters-mode)
