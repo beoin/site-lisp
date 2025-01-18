@@ -47,11 +47,16 @@
           (defun sly-hook ()
             (lisp-hook)))
 
+(add-hook 'sly-mrepl-mode-hook
+          (defun sly-repl-hook ()
+            (keymap-local-set "<return>" #'sly-mrepl-return)))
+
 (defun lisp-hook ()
   (paredit-mode)
   (rainbow-delimiters-mode)
   (prettify-symbols-mode)
   (keymap-local-set "<f7>" #'imenu))
+
 
 (provide 'lisp-conf)
 ;;; lisp-conf.el ends here
