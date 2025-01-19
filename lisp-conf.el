@@ -7,6 +7,7 @@
 ;; Vars
 (add-to-list 'auto-mode-alist '("\\.scrbl\\'" . racket-hash-lang-mode))
 (defvar inferior-lisp-program "/usr/bin/sbcl")
+(defvar delete-pair-blink-delay 0.25)
 
 ;; Paren Matching
 (setq blink-matching-paren 'jump)
