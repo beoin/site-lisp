@@ -61,7 +61,9 @@ Variant of the builtin \"upcase-word\""
   (interactive)
   (if (equal " " (string (preceding-char)))
       (upcase-word 1)
-      (upcase-word -1)))
+    (progn
+      (backward-word)
+      (upcase-word 1))))
 
 (defun delete-word (arg)
   "Delete characters forward until encountering the end of a word.
