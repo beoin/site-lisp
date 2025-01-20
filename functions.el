@@ -136,13 +136,11 @@ MODE must be a symbol"
   (let ((key (read-key PROMPT)))
     (char-to-string (if (characterp key) key 27))))
 
-(defun lookup-word-at-point ()
-  "Lookup the word at point."
-  (interactive)
-  (let ((url "https://www.google.com/search?hl=en&q=define ")
-        (word (mark-word)))
-    (search-query url word)
-    (keyboard-quit)))
+(defun lookup-word-at-point (word)
+  "Lookup the WORD at point."
+  (interactive (list (current-word)))
+  (let ((url "https://www.google.com/search?hl=en&q=define+"))
+    (browse-url (concat url word))))
 
 (provide 'functions)
 ;;; functions.el ends here
