@@ -132,9 +132,17 @@ MODE must be a symbol"
           (message "File '%s' successfully removed" filename)))))
 
 (defun read-char-as-string (&optional PROMPT)
-  "Reads a char from minibuffer as a string value"
+  "Read a char from minibuffer as a string value."
   (let ((key (read-key PROMPT)))
     (char-to-string (if (characterp key) key 27))))
+
+(defun lookup-word-at-point ()
+  "Lookup the word at point."
+  (interactive)
+  (let ((url "https://www.google.com/search?hl=en&q=define ")
+        (word (mark-word)))
+    (search-query url word)
+    (keyboard-quit)))
 
 (provide 'functions)
 ;;; functions.el ends here
