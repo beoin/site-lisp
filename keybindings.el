@@ -18,6 +18,7 @@
 (keymap-global-set "C-c t" (defun todo()(interactive)(find-file "~/Org/todo.org")))
 (keymap-global-set "C-c v" 'view-mode)
 (keymap-global-set "M-o" 'other-window)
+(keymap-global-set "M-u" 'upcase-word-start)
 (keymap-global-set "C-c l" 'comment-or-uncomment-region)
 (keymap-unset global-map "C-x d")
 (global-set-key (kbd "C-c d") 'crux-duplicate-current-line-or-region)
