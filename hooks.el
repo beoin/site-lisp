@@ -33,5 +33,9 @@
           (defun text-hook ()
             (display-line-numbers-mode +1)))
 
+(add-hook 'outline-minor-mode-hook
+          (defun outline-hook ()
+            (outline-cycle-buffer)))
+
 (provide 'hooks)
 ;;; hooks.el ends here.
