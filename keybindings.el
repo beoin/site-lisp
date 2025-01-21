@@ -35,7 +35,7 @@
 (global-set-key (kbd "C-c U") 'search-github)
 (global-set-key (kbd "C-c u") 'search-github-ext)
 (global-set-key (kbd "C-c W") 'search-wikipedia)
-(global-set-key (kbd "C-c w") 'search-define)
+(global-set-key (kbd "C-c w") #'lookup-word-at-point)
 (global-set-key (kbd "C-c g") 'search-duckduckgo)
 (global-set-key (kbd "C-c G") 'search-google)
 (global-set-key (kbd "C-c y") 'search-youtube)
