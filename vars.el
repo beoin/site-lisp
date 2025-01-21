@@ -1,8 +1,8 @@
-1;; vars.el --- Variable settings.  -*- lexical-binding: t -*-
+;;; vars.el --- Variable settings.  -*- lexical-binding: t -*-
 ;;; Commentary:
 
 ;;; Code:
- 
+
 ;; Search
 (setq lazy-highlight-initial-delay 5.00)
 (setq isearch-lazy-count t)

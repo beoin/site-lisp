@@ -35,6 +35,7 @@
 
 (add-hook 'outline-minor-mode-hook
           (defun outline-hook ()
+            (defvar outline-minor-mode-cycle t)
             (outline-cycle-buffer)))
 
 (provide 'hooks)
