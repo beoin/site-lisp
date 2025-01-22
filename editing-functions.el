@@ -106,5 +106,13 @@ With argument, do this that many times."
           ((equal 46 ch) t)
           (t nil))))
 
+(defun beginning-of-word-p ()
+  "Predicate to determine if the point is at the beginning of a word."
+  (let ((ch (preceding-char)))
+    (cond ((equal 32 ch) t)
+          ((equal 10 ch) t)
+          ((equal 34 ch) t)
+          (t nil))))
+
 (provide 'editing-functions)
 ;;; editing-functions.el ends here
