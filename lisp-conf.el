@@ -52,6 +52,10 @@
           (defun sly-repl-hook ()
             (keymap-local-set "<return>" #'sly-mrepl-return)))
 
+(add-hook 'eval-expression-minibuffer-setup-hook
+          (defun eval-hook ()
+            (paredit-mode)))
+
 (defun lisp-hook ()
   (paredit-mode)
   (rainbow-delimiters-mode)
