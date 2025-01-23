@@ -59,7 +59,7 @@ Variant of the builtin \"downcase-word\"."
   "Upcase from the beginning of the word at point.
 Variant of the builtin \"upcase-word\""
   (interactive)
-  (if (equal " " (string (preceding-char)))
+  (if (beginning-of-word-p)
       (upcase-word 1)
     (progn
       (backward-word)
