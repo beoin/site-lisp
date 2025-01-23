@@ -54,7 +54,8 @@
 
 (add-hook 'eval-expression-minibuffer-setup-hook
           (defun eval-hook ()
-            (paredit-mode)))
+            (paredit-mode)
+            (keymap-local-set "<return>" #'read--expression-try-read)))
 
 (defun lisp-hook ()
   (paredit-mode)
