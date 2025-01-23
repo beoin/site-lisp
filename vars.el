@@ -11,8 +11,9 @@
 
 ;; Imenu
 (defvar imenu-auto-rescan t)
-(defvar org-imenu-depth 1)
+(defvar org-imenu-depth 2)
 (defvar imenu-use-popup-menu nil)
+(defvar imenu-flatten 'prefix)
 
 ;; Sessions
 (savehist-mode +1)
