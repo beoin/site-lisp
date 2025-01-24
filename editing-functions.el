@@ -21,7 +21,6 @@ C: The character to zap up to."
                    ((symbolp p) -1)
                    (t p))))
     (zap-up-to-char cnt c)))
-(define-key global-map (kbd "M-z") 'quick-zap-up-to-char)
 
 (defun delete-current-line ()
   "Delete the current line."
