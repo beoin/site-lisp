@@ -4,6 +4,7 @@
 ;;; Code:
 
 ;; Vars
+(defvar org-ctrl-k-protect-subtree 'query)
 (defvar org-agenda-files "~/Org/agenda-files.org")
 (defvar org-directory "~/Org")
 (defvar org-default-notes-file (concat org-directory "/capture_notes.org"))
