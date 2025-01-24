@@ -43,9 +43,10 @@ KEY represents a $HOME directory"
 	       ((equal key "dk") (dired-other-window "~/Desktop"))))
 
 ;; Keybindings
+(keymap-global-unset "C-x d")
 (keymap-global-set "C-x l" (defun dired-site-lisp()(interactive)(dired "~/.emacs.d/lisp")))
-(global-set-key (kbd "C-x d") 'dired-jump)
-(global-set-key (kbd "C-x C-f") 'dired)
+(keymap-global-set "C-x d" 'dired-jump)
+(keymap-global-set "C-x C-f" 'dired)
 (keymap-global-set "C-c o" 'dired-common-dirs)
 
 (provide 'dired-conf)
