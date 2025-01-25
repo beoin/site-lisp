@@ -32,7 +32,6 @@
 
 ;; Editor
 (delete-selection-mode t)
-(global-auto-revert-mode t)
 (which-function-mode t)
 (setq confirm-kill-emacs #'yes-or-no-p)
 
