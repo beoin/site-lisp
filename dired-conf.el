@@ -4,7 +4,6 @@
 ;;; Code:
 
 ;; Vars
-(lisp-extra-font-lock-global-mode 1)
 (put 'dired-find-alternate-file 'disabled nil)
 (setq dired-listing-switches "-sh --group-directories-first")
 (defvar dired-recursive-deletes 'always)
