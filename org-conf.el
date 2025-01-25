@@ -11,7 +11,6 @@
 (defvar org-use-tag-inheritance nil)
 (defvar org-hide-emphasis-markers t)
 (defvar org-startup-folded t)
-(global-auto-revert-mode t)
 (defvar org-rainbow-tags-hash-start-index 10)
 (defvar org-return-follows-link nil)
 (defvar org-link-descriptive t)

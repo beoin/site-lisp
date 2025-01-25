@@ -40,5 +40,3 @@
 
 (provide 'keybindings)
 ;;; keybindings.el ends here
-
-
