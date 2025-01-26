@@ -26,6 +26,7 @@
 	  (defun dired-hook ()
 	    (keymap-local-set "c" #'dired-create-empty-file)
             (dired-omit-mode t)
+            (hl-line-mode)
 	    (diredfl-global-mode t)))
 
 ;; Functions

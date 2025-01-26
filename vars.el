@@ -22,7 +22,6 @@
 (defvar truncate-string-ellipsis "…")
 (defvar which-func-update-delay 1.0)
 (column-number-mode +1)
-(global-hl-line-mode +1)
 (setq-default goggles-pulse t)
 (defvar display-line-numbers-grow-only t)
 (defvar display-line-numbers-width 2)

@@ -27,6 +27,7 @@
 	  (defun prog-hook ()
 	    (display-line-numbers-mode +1)
             (goggles-mode)
+            (hl-line-mode)
             (keymap-local-set "C-c c" #'compile)))
 
 (add-hook 'text-mode-hook
