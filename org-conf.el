@@ -30,7 +30,6 @@
 	    (keymap-local-set "<f7>" #'imenu)
             (keymap-local-set "C-c h" #'org-toggle-heading)
             (flyspell-mode +1)
-	    (display-line-numbers-mode -1)
 	    (setq buffer-face-mode-face '(:family "Cantarell" :height 140))
 	    (buffer-face-mode)
             (org-rainbow-tags-mode)

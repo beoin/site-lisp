@@ -30,8 +30,7 @@
             (keymap-local-set "C-c c" #'compile)))
 
 (add-hook 'text-mode-hook
-          (defun text-hook ()
-            (display-line-numbers-mode +1)))
+          (defun text-hook ()))
 
 (add-hook 'outline-minor-mode-hook
           (defun outline-hook ()
