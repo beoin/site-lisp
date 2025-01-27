@@ -5,7 +5,6 @@
 ;;; Code:
 
 ;; Vars
-(lisp-extra-font-lock-global-mode 1)
 (add-to-list 'auto-mode-alist '("\\.scrbl\\'" . racket-hash-lang-mode))
 (defvar inferior-lisp-program "/usr/bin/sbcl")
 (defvar delete-pair-blink-delay 0.25)
@@ -62,6 +61,7 @@
   (paredit-mode)
   (rainbow-delimiters-mode)
   (prettify-symbols-mode)
+  (lisp-extra-font-lock-mode)
   (keymap-local-set "<f7>" #'imenu))
 
 
