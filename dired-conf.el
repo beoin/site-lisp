@@ -27,7 +27,7 @@
 	    (keymap-local-set "c" #'dired-create-empty-file)
             (dired-omit-mode t)
             (hl-line-mode)
-	    (diredfl-global-mode t)))
+	    (diredfl-mode t)))
 
 ;; Functions
 (defun dired-common-dirs (key)
