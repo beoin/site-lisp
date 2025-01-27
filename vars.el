@@ -125,7 +125,6 @@
 
 ;; Snippets
 (defvar yas-snippet-dirs '("~/.emacs.d/lisp/snippets"))
-(yas-global-mode)
 
 ;; Tabs
 (setq tab-bar-show t)
