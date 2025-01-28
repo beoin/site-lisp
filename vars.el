@@ -32,6 +32,11 @@
 (which-function-mode t)
 (setq confirm-kill-emacs #'yes-or-no-p)
 
+;; Documentation
+(defvar help-clean-buttons t)
+(defvar help-window-keep-selected t)
+(defvar help-window-select t)
+
 ;; UX
 (setq ring-bell-function 'ignore)
 (setq mouse-yank-at-point t)
