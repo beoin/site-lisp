@@ -42,7 +42,8 @@
 (add-hook 'ielm-mode-hook
           (defun ielm-hook ()
             (lisp-hook)
-            (keymap-local-set "C-j" #'newline)))
+            (keymap-local-set "C-j" #'newline)
+            (keymap-local-set "<return>" #'ielm-return)))
 
 (add-hook 'sly-mode-hook
           (defun sly-hook ()
