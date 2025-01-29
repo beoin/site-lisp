@@ -13,6 +13,8 @@
 ;; Ibuffer
 (defvar ibuffer-movement-cycle nil)
 (defvar ibuffer-old-time 24)
+(defvar ibuffer-default-sorting-mode 'alphabetic)
+(defvar ibuffer-expert nil)
 
 ;; Minibuffer
 (vertico-mode +1)
