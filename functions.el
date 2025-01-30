@@ -42,7 +42,6 @@ PROMPT sets the `read-string prompt."
 (install-search-engine "book" "https://www.amazon.com/s?k=" "Book: ")
 (install-search-engine "archwiki" "https://wiki.archlinux.org/index.php?search=" "Arch Wiki: ")
 
-;;https://emacs.stackexchange.com/questions/5371/how-to-change-emacs-windows-from-vertical-split-to-horizontal-split
 (defun window-split-toggle ()
   "Toggle between horizontal and vertical split with two windows."
   (interactive)
@@ -70,18 +69,6 @@ MODE must be a symbol"
       (push parent modes)
       (setq mode parent))
     (setq modes  (nreverse modes))))
-
-(defun ielm-window ()
-  "Launch an ielm session in other window."
-  (interactive)
-  (if (equal (one-window-p) t)
-      (progn
-        (split-window-horizontally)
-        (other-window 1)
-        (ielm))
-    (progn
-      (delete-other-windows)
-      (ielm-window))))
 
 (defun delete-frame-or-quit ()
   "Delete the selected frame & kill terminal buffers. If the last frame, kill Emacs."

@@ -65,6 +65,18 @@
   (lisp-extra-font-lock-mode)
   (keymap-local-set "<f7>" #'imenu))
 
+;; Functions
+(defun ielm-window ()
+  "Launch an ielm session in other window."
+  (interactive)
+  (if (equal (one-window-p) t)
+      (progn
+        (split-window-horizontally)
+        (other-window 1)
+        (ielm))
+    (progn
+      (delete-other-windows)
+      (ielm-window))))
 
 (provide 'lisp-conf)
 ;;; lisp-conf.el ends here
