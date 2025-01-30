@@ -15,6 +15,12 @@ Takes a String NODE-NAME, used search to documentation tree."
   "Serach Github with a TERM and extension EXT."
   (interactive "sGithub Term: \nsExt: ")
   (browse-url (format "https://github.com/search?q=%s+path:*.%s" term ext)))
+
+(defun search-google-books (book)
+  "Serach for a BOOK with Google Books."
+  (interactive "sBook: ")
+  (browse-url
+   (format "https://www.google.com/search?udm=36&q=%s" (string-replace " " "+" book))))
   
 (defun search-query (query-url prompt)
   "Open the search url constructed with the QUERY-URL.
