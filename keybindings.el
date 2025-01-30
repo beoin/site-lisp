@@ -35,7 +35,7 @@
 (keymap-global-set "C-c g" 'search-duckduckgo)
 (keymap-global-set "C-c G" 'search-google)
 (keymap-global-set "C-c y" 'search-youtube)
-(keymap-global-set "C-c B" 'search-book)
+(keymap-global-set "C-c B" 'search-google-books)
 (keymap-global-set "C-c p" 'search-archwiki)
 
 (provide 'keybindings)
