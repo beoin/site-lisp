@@ -38,5 +38,9 @@
           (defun outline-hook ()
             (outline-cycle-buffer 1)))
 
+(add-hook 'diff-mode-hook
+          (defun diff-hook ()
+            (keymap-local-unset "M-o")))
+
 (provide 'hooks)
 ;;; hooks.el ends here.
