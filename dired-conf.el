@@ -5,7 +5,7 @@
 
 ;; Vars
 (put 'dired-find-alternate-file 'disabled nil)
-(setq dired-listing-switches "-sh --group-directories-first")
+(setq dired-listing-switches "-go --group-directories-first")
 (defvar dired-recursive-deletes 'always)
 (defvar dired-recursive-copies 'always)
 (defvar dired-create-destination-dirs 'ask)
