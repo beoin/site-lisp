@@ -17,8 +17,8 @@
 (defvar dired-guess-shell-alist-user
   '(("\.pdf$" "xpdf")
     ("\.html$" "firefox")
-    ("\.mp3$\\|.mp4$\\|.mkv$\\|" "mpv")
-    ("\.epub$\\|.mobi$\\|.azw3$|" "ebook-viewer")))
+    ("\.epub$" "ebook-viewer")
+    ("\.mp3$" "mpv")))
 
 
 ;; Hooks
