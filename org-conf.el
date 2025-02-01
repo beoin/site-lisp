@@ -4,6 +4,9 @@
 ;;; Code:
 
 ;; Vars
+(defvar org-cycle-separator-lines 0)
+(defvar org-cycle-hide-block-startup t)
+(defvar org-cycle-hide-drawer-startup t)
 (defvar org-ctrl-k-protect-subtree 'query)
 (defvar org-agenda-files "~/Org/agenda-files.org")
 (defvar org-directory "~/Org")
@@ -14,7 +17,6 @@
 (defvar org-rainbow-tags-hash-start-index 10)
 (defvar org-return-follows-link nil)
 (defvar org-link-descriptive t)
-(defvar org-cycle-separator-lines 0)
 (defvar org-ellipsis "…")
 (defvar org-fontify-quote-and-verse-blocks t)
 (defvar org-pretty-entities nil)
