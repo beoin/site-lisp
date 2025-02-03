@@ -23,6 +23,7 @@
 (defvar org-fontify-quote-and-verse-blocks t)
 (defvar org-pretty-entities nil)
 (defvar org-goto-interface 'outline-path-completion)
+(defvar org-babel-lisp-eval-fn 'sly-eval)
 
 ;; Hooks
 (add-hook 'org-mode-hook
