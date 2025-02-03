@@ -11,6 +11,8 @@
 (defvar org-startup-folded t)
 (defvar org-hide-emphasis-markers t)
 (defvar org-hide-block-startup t)
+(defvar org-babel-lisp-eval-fn 'sly-eval)
+(defvar org-babel-uppercase-example-markers t)
 (defvar org-ctrl-k-protect-subtree 'query)
 (defvar org-agenda-files "~/Org/agenda-files.org")
 (defvar org-directory "~/Org")
@@ -23,7 +25,6 @@
 (defvar org-fontify-quote-and-verse-blocks t)
 (defvar org-pretty-entities nil)
 (defvar org-goto-interface 'outline-path-completion)
-(defvar org-babel-lisp-eval-fn 'sly-eval)
 
 ;; Hooks
 (add-hook 'org-mode-hook
