@@ -13,6 +13,7 @@
 (defvar dired-deletion-confirmer 'y-or-n-p)
 (defvar dired-dwim-target t)
 (defvar dired-clean-confirm-killing-deleted-buffers nil)
+(defvar dired-movement-style 'bounded)
 (defvar dired-guess-shell-znew-switches "-KPv")
 (defvar dired-guess-shell-alist-user
   '(("\.pdf$" "xpdf")
