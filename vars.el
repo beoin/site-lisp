@@ -118,6 +118,7 @@
 
 ;; Grep
 (setq grep-command  "grep -r --color=auto -nH --null -e" )
+(defvar grep-use-headings t)
 
 ;; Find
 (setq find-name-arg "-iname")
