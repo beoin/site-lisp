@@ -20,7 +20,7 @@
 
 ;; UI
 (defvar truncate-string-ellipsis "…")
-(defvar which-func-update-delay 1.0)
+
 (column-number-mode +1)
 (setq-default goggles-pulse t)
 (defvar display-line-numbers-grow-only t)
@@ -29,8 +29,12 @@
 
 ;; Editor
 (delete-selection-mode t)
-(which-function-mode t)
 (setq confirm-kill-emacs #'yes-or-no-p)
+
+;; Which Function
+(which-function-mode)
+(defvar which-func-update-delay 1.0)
+(defvar which-func-display 'mode)
 
 ;; Documentation
 (defvar help-clean-buttons t)
