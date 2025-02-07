@@ -42,5 +42,10 @@
           (defun diff-hook ()
             (keymap-local-unset "M-o")))
 
+(add-hook 'emacs-news-view-mode-hook
+          (defun emacs-news-hook ()
+            (keymap-local-set "C-S-n" #'outline-next-visible-heading)
+            (keymap-local-set "C-S-p" #'outline-previous-visible-heading)))
+
 (provide 'hooks)
 ;;; hooks.el ends here.
