@@ -48,5 +48,11 @@
 (add-hook 'org-shiftdown-final-hook 'windmove-down)
 (add-hook 'org-shiftright-final-hook 'windmove-right)
 
+;; Functions
+(defun org-news ()
+    "Open the \"org-mode\" news file."
+    (interactive)
+    (find-file (concat data-directory "ORG-NEWS")))
+
 (provide 'org-conf)
 ;;; org-conf.el ends here
