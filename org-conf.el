@@ -14,6 +14,8 @@
 (defvar org-babel-lisp-eval-fn 'sly-eval)
 (defvar org-babel-uppercase-example-markers t)
 (defvar org-babel-hash-show-time t)
+(defvar org-special-ctrl-a/e t)
+(defvar org-special-ctrl-k t)
 (defvar org-ctrl-k-protect-subtree 'query)
 (defvar org-agenda-files "~/Org/agenda-files.org")
 (defvar org-directory "~/Org")
