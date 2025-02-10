@@ -28,9 +28,11 @@
 (setq kill-do-not-save-duplicates t)
 (defvar vertico-count 15)
 (setq max-mini-window-height 10.00)
+(defvar embark-confirm-act-all t)
 
 ;;Keybindings
 (keymap-global-set "C-x B" 'ibuffer-list-buffers)
+(keymap-global-set "C-." 'embark-act)
 
 (provide 'buffers-conf)
 ;;; buffers-conf.el ends here

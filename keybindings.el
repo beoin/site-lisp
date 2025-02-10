@@ -7,7 +7,6 @@
 (keymap-global-set "C-x t" 'previous-window-any-frame)
 (keymap-global-set "M-<backspace>" 'backward-delete-word)
 (keymap-global-set "C-c m" 'move-to-line-middle)
-(keymap-global-set "C-." 'embark-act)
 (keymap-global-set "C-c k" 'delete-current-line)
 (keymap-global-set "C-c r" 'replace-char)
 (keymap-global-set "S-<right>" 'windmove-right)
