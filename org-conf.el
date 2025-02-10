@@ -29,6 +29,7 @@
 (defvar org-pretty-entities nil)
 (defvar org-goto-interface 'outline-path-completion)
 (defvar org-M-RET-may-split-line '((headline . nil) (item . t) (table . t)))
+(defvar org-loop-over-headlines-in-active-region t)
 
 ;; Hooks
 (add-hook 'org-mode-hook
