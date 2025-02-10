@@ -28,6 +28,7 @@
 (defvar org-fontify-quote-and-verse-blocks t)
 (defvar org-pretty-entities nil)
 (defvar org-goto-interface 'outline-path-completion)
+(defvar org-M-RET-may-split-line '((headline . nil) (item . t) (table . t)))
 
 ;; Hooks
 (add-hook 'org-mode-hook
