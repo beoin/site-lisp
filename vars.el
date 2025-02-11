@@ -73,7 +73,6 @@
 (recentf-mode 1)
 (defvar find-file-visit-truename t)
 (setq delete-by-moving-to-trash t)
-(setq comment-empty-lines t)
 (setq find-file-suppress-same-file-warnings t)
 
 ;; Backups
@@ -92,6 +91,8 @@
 (defvar xref-show-definitions-function #'xref-show-definitions-completing-read)
 (defvar flymake-shellcheck-path "usr/bin/shellcheck")
 (setq prettify-symbols-unprettify-at-point t)
+(defvar comment-empty-lines nil)
+(defvar comment-padding 1)
 
 ;; Electric pair mode
 (electric-pair-mode +1)
