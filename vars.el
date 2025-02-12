@@ -40,6 +40,8 @@
 (defvar help-clean-buttons t)
 (defvar help-window-keep-selected t)
 (defvar help-window-select t)
+(defvar help-enable-variable-value-editing nil)
+(defvar describe-bindings-show-prefix-commands t)
 
 ;; UX
 (setq ring-bell-function 'ignore)
