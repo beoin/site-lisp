@@ -5,6 +5,11 @@
 
 ;;; Code:
 
+(defun show-file-name ()
+  "Echo the full path of the current file."
+  (interactive)
+  (message (buffer-file-name)))
+
 (defun elisp-info (node-name)
   "Search the builtin Emacs Lisp information pages.
 Takes a String NODE-NAME, used search to documentation tree."
