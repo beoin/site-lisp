@@ -42,6 +42,7 @@
 (defvar help-window-select t)
 (defvar help-enable-variable-value-editing nil)
 (defvar describe-bindings-show-prefix-commands t)
+(put 'help-fns-edit-variable 'disabled nil)
 
 ;; UX
 (setq ring-bell-function 'ignore)
