@@ -29,6 +29,7 @@
 (defvar vertico-count 15)
 (setq max-mini-window-height 10.00)
 (defvar embark-confirm-act-all t)
+(defvar minibuffer-visible-completions t)
 
 ;;Keybindings
 (keymap-global-set "C-x B" 'ibuffer-list-buffers)
