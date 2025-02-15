@@ -4,6 +4,8 @@
 ;;; Code:
 (keymap-global-unset "C-x m")
 (keymap-global-unset "C-x t")
+(keymap-global-unset "<XF86WakeUp>")
+(keymap-global-unset "<print>")
 (keymap-global-set "C-x t" 'previous-window-any-frame)
 (keymap-global-set "M-<backspace>" 'backward-delete-word)
 (keymap-global-set "C-c m" 'move-to-line-middle)
