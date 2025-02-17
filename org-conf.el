@@ -30,6 +30,7 @@
 (defvar org-goto-interface 'outline-path-completion)
 (defvar org-M-RET-may-split-line '((headline . nil) (item . t) (table . t)))
 (defvar org-loop-over-headlines-in-active-region t)
+(defvar org-src-window-setup 'current-window)
 
 ;; Hooks
 (add-hook 'org-mode-hook
