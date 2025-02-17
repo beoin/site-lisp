@@ -47,7 +47,7 @@ C: The character to zap up to."
   (capitalize-word 1))
 
 (defun downcase-word-start ()
-  "Downcase form the beginnning of the word at point.
+  "Downcase from the beginnning of the word at point.
 Variant of the builtin \"downcase-word\"."
   (interactive)
   (if (equal " " (string (preceding-char)))
