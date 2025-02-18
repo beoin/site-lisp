@@ -5,6 +5,11 @@
 
 ;;; Code:
 
+(defun messages-buffer ()
+  "Switch to the *Messages* buffer."
+  (interactive)
+  (pop-to-buffer-same-window "*Messages*"))
+
 (defun show-file-name ()
   "Echo the full path of the current file."
   (interactive)
