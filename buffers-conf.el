@@ -9,6 +9,7 @@
 (defvar switch-to-buffer-in-dedicated-window 'pop)
 (defvar switch-to-buffer-obey-display-actions t)
 (setq display-buffer-alist nil)
+(defvar message-log-max 250)
 
 ;; Ibuffer
 (defvar ibuffer-movement-cycle nil)
