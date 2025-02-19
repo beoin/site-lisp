@@ -30,6 +30,7 @@
 ;; Editor
 (delete-selection-mode t)
 (setq confirm-kill-emacs #'yes-or-no-p)
+(defvar next-line-add-newlines nil)
 
 ;; Which Function
 (which-function-mode)
