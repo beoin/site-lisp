@@ -51,6 +51,7 @@
 (setq confirm-nonexistent-file-or-buffer nil)
 (setq visible-bell nil)
 (defvar outline-minor-mode-cycle t)
+(setq-default indicate-empty-lines t)
 
 ;; Frames
 (setq-default window-resize-pixelwise t)
