@@ -32,6 +32,7 @@
 (defvar embark-confirm-act-all t)
 (defvar minibuffer-visible-completions t)
 (defvar minibuffer-follows-selected-frame t)
+(defvar file-name-shadow-properties '(invisible t intangible t face file-name-shadow field shadow))
 
 ;; Functions
 (defun delete-this-buffer-and-file ()
