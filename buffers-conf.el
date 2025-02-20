@@ -33,6 +33,7 @@
 (defvar minibuffer-visible-completions t)
 (defvar minibuffer-follows-selected-frame t)
 (defvar file-name-shadow-properties '(invisible t intangible t face file-name-shadow field shadow))
+(defvar insert-default-directory t)
 
 ;; Functions
 (defun delete-this-buffer-and-file ()
