@@ -31,6 +31,7 @@
 (setq max-mini-window-height 10.00)
 (defvar embark-confirm-act-all t)
 (defvar minibuffer-visible-completions t)
+(defvar minibuffer-follows-selected-frame t)
 
 ;; Functions
 (defun delete-this-buffer-and-file ()
@@ -41,10 +42,10 @@
         (name (buffer-name)))
     (if (not (and filename (file-exists-p filename)))
         (error "Buffer '%s' is not visiting a file!" name)
-        (when (yes-or-no-p "Are you sure you want to remove this file? ")
-          (delete-file filename)
-          (kill-buffer buffer)
-          (message "File '%s' successfully removed" filename)))))
+      (when (yes-or-no-p "Are you sure you want to remove this file? ")
+        (delete-file filename)
+        (kill-buffer buffer)
+        (message "File '%s' successfully removed" filename)))))
 
 ;;Keybindings
 (keymap-global-set "C-x B" 'ibuffer-list-buffers)
