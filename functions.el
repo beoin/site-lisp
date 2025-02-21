@@ -1,12 +1,13 @@
 ;;; functions.el --- Utility functions -*- lexical-binding: t; -*-
 
 ;;; Commentary:
-;;; Convenience functions common across configs
+;;; functions not related to text editing.
 
 ;;; Code:
 
 (defun messages-buffer ()
-  "Switch to the *Messages* buffer."
+  "Switch to the *Messages* buffer.
+Prefer instead the builtin function \"view-echo-area-messages\"."
   (interactive)
   (pop-to-buffer-same-window "*Messages*"))
 
