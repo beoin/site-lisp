@@ -34,6 +34,7 @@
 (defvar minibuffer-follows-selected-frame t)
 (defvar file-name-shadow-properties '(invisible t intangible t face file-name-shadow field shadow))
 (defvar insert-default-directory t)
+(defvar resize-mini-windows 'grow-only)
 
 ;; Functions
 (defun delete-this-buffer-and-file ()
