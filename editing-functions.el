@@ -3,6 +3,7 @@
 ;;; Commentary:
 ;;; Code:
 
+;; Prevent a whitespace only string being saved to the kill ring.
 (setq kill-transform-function
       (lambda (string)
         (and (not (string-blank-p string))
