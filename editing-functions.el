@@ -3,6 +3,11 @@
 ;;; Commentary:
 ;;; Code:
 
+(setq kill-transform-function
+      (lambda (string)
+        (and (not (string-blank-p string))
+             string)))
+
 (defun replace-char ()
   "Replace the char at point."
   (interactive)
