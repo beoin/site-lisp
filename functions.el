@@ -32,6 +32,12 @@ Takes a String NODE-NAME, used search to documentation tree."
   (interactive "sBook: ")
   (browse-url
    (format "https://www.google.com/search?udm=36&q=%s" (string-replace " " "+" book))))
+
+(defun google-define (word)
+  "Get a dictionary definition of WORD from Google search."
+  (interactive "sDefine: ")
+  (browse-url
+   (format "https://www.google.com/search?hl=en&q=define %s" word)))
   
 (defun search-query (query-url prompt)
   "Open the search url constructed with the QUERY-URL.
