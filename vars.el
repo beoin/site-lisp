@@ -61,6 +61,7 @@
 (setq scroll-margin 0)
 (setq scroll-conservatively 100000)
 (setq scroll-preserve-screen-position 1)
+(put 'scroll-left 'disabled nil)
 
 ;; Cursor
 (blink-cursor-mode 0)
