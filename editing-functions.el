@@ -3,6 +3,20 @@
 ;;; Commentary:
 ;;; Code:
 
+(defun forward-line-quarters (&optional arg)
+  "Move point across the current line in quarters.
+A prefix ARG between 1 and 4 moves the point forward.
+The default value for ARG is 1."
+  (interactive "p")
+  (if (> arg 4)
+    (error "Acceptable arguments between 1 and 4"))
+  (or arg (setq arg 1))
+    (let* ((begin (line-beginning-position))
+           (end (line-end-position))
+           (quart (/ arg 4.0))
+           (pos (+ begin (* (- end begin) quart))))
+    (goto-char (round pos))))
+
 ;; Prevent a whitespace only string being saved to the kill ring.
 (setq kill-transform-function
       (lambda (string)
