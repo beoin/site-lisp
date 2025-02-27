@@ -72,7 +72,6 @@
 (doom-modeline-mode 1)
 
 ;; Files
-(global-auto-revert-mode t)
 (setq large-file-warning-threshold 100000000)
 (defvar recentf-max-saved-items 50)
 (defvar recentf-max-menu-items 20)
