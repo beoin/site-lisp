@@ -82,8 +82,8 @@
 (setq find-file-suppress-same-file-warnings t)
 
 ;; Backups
-(setq backup-directory-alist '(("." . "~/.emacs.d/backups")))
-(setq version-control t)
+(setq backup-directory-alist '(("." . ".~")))
+(setq version-control 'never)
 (setq delete-old-versions t)
 
 ;; Custom File
