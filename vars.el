@@ -92,7 +92,6 @@
 (setq set-mark-command-repeat-pop t)
 
 ;; Programming
-(semantic-mode 1)
 (defvar xref-show-definitions-function #'xref-show-definitions-completing-read)
 (defvar flymake-shellcheck-path "usr/bin/shellcheck")
 (setq prettify-symbols-unprettify-at-point t)
