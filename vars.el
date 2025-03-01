@@ -76,7 +76,6 @@
 (defvar recentf-max-saved-items 50)
 (defvar recentf-max-menu-items 20)
 (recentf-mode 1)
-(defvar find-file-visit-truename t)
 (setq delete-by-moving-to-trash t)
 (setq find-file-suppress-same-file-warnings t)
 
