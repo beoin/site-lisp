@@ -76,6 +76,7 @@
 (recentf-mode 1)
 (setq delete-by-moving-to-trash t)
 (setq find-file-suppress-same-file-warnings t)
+(defvar archive-visit-single-files t)
 
 ;; Backups
 (setq backup-directory-alist '(("." . ".~")))
