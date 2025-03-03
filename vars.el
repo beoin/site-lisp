@@ -37,11 +37,12 @@
 (defvar which-func-display 'mode)
 
 ;; Documentation
-(defvar help-clean-buttons t)
-(defvar help-window-keep-selected t)
-(defvar help-window-select t)
-(defvar help-enable-variable-value-editing nil)
-(defvar describe-bindings-show-prefix-commands t)
+(require 'help-fns)
+(setq help-clean-buttons t)
+(setq help-window-keep-selected t)
+(setq help-window-select t)
+(setq help-enable-variable-value-editing nil)
+(setq describe-bindings-show-prefix-commands t)
 (put 'help-fns-edit-variable 'disabled nil)
 
 ;; UX
