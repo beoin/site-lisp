@@ -31,8 +31,9 @@
 (defvar next-line-add-newlines nil)
 
 ;; Which Function
+(require 'which-func)
 (which-function-mode)
-(defvar which-func-update-delay 1.0)
+(setq which-func-update-delay 1.0)
 (defvar which-func-display 'mode)
 
 ;; Documentation
