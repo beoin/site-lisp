@@ -73,8 +73,6 @@
 
 ;; Files
 (setq large-file-warning-threshold 100000000)
-(defvar recentf-max-saved-items 50)
-(defvar recentf-max-menu-items 20)
 (setq delete-by-moving-to-trash t)
 (setq find-file-suppress-same-file-warnings t)
 (defvar archive-visit-single-files t)
