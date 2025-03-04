@@ -90,8 +90,6 @@
 
 ;; Programming
 (defvar xref-show-definitions-function #'xref-show-definitions-completing-read)
-(require 'flymake-shellcheck)
-(setq flymake-shellcheck-program "~/.local/bin/shellcheck")
 (setq prettify-symbols-unprettify-at-point t)
 (defvar comment-empty-lines nil)
 (defvar comment-padding 1)
@@ -117,11 +115,6 @@
 (setq-default truncate-lines t)
 (setq sentence-end-double-space nil)
 (setq require-final-newline t)
-
-;; Shell
-(defvar eshell-aliases-file "~/.emacs.d/eshell/alias")
-(defvar flycheck-sh-shellcheck-executable "/usr/bin/shellcheck")
-(setq major-mode-remap-alist '((sh-mode . bash-ts-mode)))
 
 ;; Grep
 (setq grep-command  "grep -r --color=auto -nH --null -e" )

@@ -9,19 +9,10 @@
 
 (add-hook 'xref-backend-functions #'dumb-jump-xref-activate)
 
-(add-hook 'eshell-mode-hook
-	  (defun eshell-hook ()
-	    (eshell/addpath (concat (getenv "HOME") "/.local/bin"))
-	    (eshell/addpath (concat (getenv "HOME") "/bin"))))
-
 (add-hook 'markdown-mode-hook
 	  (defun markdown-hook ()
 	    (keymap-local-set "C-S-p" #'markdown-previous-visible-heading)
 	    (keymap-local-set "C-S-n" #'markdown-next-visible-heading)))
-
-(add-hook 'sh-mode-hook
-	  (defun sh-hook ()
-	    (flycheck-mode)))
 
 (add-hook 'prog-mode-hook
 	  (defun prog-hook ()

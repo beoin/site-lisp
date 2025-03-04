@@ -30,7 +30,6 @@
 (keymap-global-set "C-c i" 'crux-find-user-init-file)
 (keymap-global-set "C-c d" 'crux-duplicate-current-line-or-region)
 (keymap-global-set "M-c" 'capitalise-word)
-(keymap-global-set "M-!" 'eshell-command)
 (keymap-global-set "M-z" 'quick-zap-up-to-char)
 (keymap-global-set "C-c U" 'search-github)
 (keymap-global-set "C-c u" 'search-github-ext)
