@@ -2,21 +2,27 @@
 ;;; Commentary:
 
 ;;; Code:
+
+;; Imports
+(require 'dired)
 (require 'dired-x)
+(require 'dired-aux)
+(require 'find-dired)
 
 ;; Vars
 (put 'dired-find-alternate-file 'disabled nil)
 (setq dired-listing-switches "-goa --group-directories-first")
-(defvar dired-recursive-deletes 'always)
-(defvar dired-recursive-copies 'always)
-(defvar dired-create-destination-dirs 'ask)
-(defvar dired-ls-F-marks-symlinks t)
-(defvar dired-deletion-confirmer 'y-or-n-p)
-(defvar dired-dwim-target t)
-(defvar dired-clean-confirm-killing-deleted-buffers nil)
-(defvar dired-movement-style 'bounded)
-(defvar dired-guess-shell-znew-switches "-KPv")
-(defvar dired-guess-shell-alist-user
+(setq dired-recursive-deletes 'always)
+(setq dired-recursive-copies 'always)
+(setq dired-create-destination-dirs 'ask)
+(setq dired-ls-F-marks-symlinks t)
+(setq dired-deletion-confirmer 'y-or-n-p)
+(setq dired-dwim-target t)
+(setq dired-clean-confirm-killing-deleted-buffers nil)
+(setq dired-movement-style 'bounded)
+(setq find-name-arg "-iname")
+(setq dired-guess-shell-znew-switches "-KPv")
+(setq dired-guess-shell-alist-user
   '(("\.pdf$" "xpdf")
     ("\.html$" "firefox")
     ("\.epub$" "ebook-viewer")
@@ -33,7 +39,7 @@
 
 ;; Functions
 (defun dired-common-dirs (key)
-"A function in progesss. Open locations which are known to you in the file system.
+"Open locations which are known to you in the file system.
 KEY represents a $HOME directory"
   (interactive "sr ~/remote, o ~/Org, b ~/bin, s ~/src, dw ~/Downloads, dk ~/Desktop: ")
   (cond ((equal key "r") (dired-other-window "~/remote"))
