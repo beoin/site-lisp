@@ -90,7 +90,8 @@
 
 ;; Programming
 (defvar xref-show-definitions-function #'xref-show-definitions-completing-read)
-(defvar flymake-shellcheck-path "usr/bin/shellcheck")
+(require 'flymake-shellcheck)
+(setq flymake-shellcheck-program "~/.local/bin/shellcheck")
 (setq prettify-symbols-unprettify-at-point t)
 (defvar comment-empty-lines nil)
 (defvar comment-padding 1)
