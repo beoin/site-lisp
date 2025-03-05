@@ -89,12 +89,13 @@
 (setq set-mark-command-repeat-pop t)
 
 ;; Programming
-(defvar xref-show-definitions-function #'xref-show-definitions-completing-read)
+(defvar xref-show-definitions-function 'xref-show-definitions-completing-read)
 (setq prettify-symbols-unprettify-at-point t)
 (defvar comment-empty-lines nil)
 (defvar comment-padding 1)
 
 ;; Electric pair mode
+(require 'elec-pair)
 (electric-pair-mode +1)
 (setq electric-pair-pairs '((?\< . ?\>)
                             (34 . 34)
@@ -119,9 +120,6 @@
 ;; Grep
 (setq grep-command  "grep -r --color=auto -nH --null -e" )
 (defvar grep-use-headings t)
-
-;; Find
-(setq find-name-arg "-iname")
 
 ;; Tree Sitter
 (defvar treesit-language-source-alist '())
