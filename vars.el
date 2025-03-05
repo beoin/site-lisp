@@ -1,4 +1,4 @@
-;;; vars.el --- Variable settings.  -*- lexical-binding: t -*-
+;;; vars.el --- Variables without a dedicated config file.  -*- lexical-binding: t -*-
 ;;; Commentary:
 
 ;;; Code:
@@ -139,7 +139,7 @@
 
 ;; Spell Checking
 (defvar ispell-program-name "aspell")
-(defvar ispell-personal-dictionary "~/.aspell.en.pws")
+(setq ispell-personal-dictionary "~/.aspell.en.pws")
 (defvar ispell-extra-args '("--sug-mode=ultra"))
 (defvar flyspell-abbrev-p t)
 (defvar flyspell-use-global-abbrev-table-p t)
