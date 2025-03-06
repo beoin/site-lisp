@@ -93,6 +93,7 @@
 (setq prettify-symbols-unprettify-at-point t)
 (defvar comment-empty-lines nil)
 (defvar comment-padding 1)
+(add-to-list 'auto-mode-alist '("\\.c\\'" . c-ts-mode))
 
 ;; Electric pair mode
 (require 'elec-pair)
