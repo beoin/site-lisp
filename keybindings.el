@@ -4,6 +4,7 @@
 ;;; Code:
 (keymap-global-unset "C-x m")
 (keymap-global-unset "C-x t")
+(keymap-global-unset "C-z")
 (keymap-global-unset "<XF86WakeUp>")
 (keymap-global-unset "<print>")
 (keymap-global-set "C-x t" 'previous-window-any-frame)
