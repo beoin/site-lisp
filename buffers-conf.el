@@ -3,13 +3,17 @@
 
 ;;; Code:
 
+;; Imports
+(require 'vertico)
+(require 'embark)
+
 ;; Vars
-(defvar view-read-only t)
+(setq view-read-only t)
 (defvar view-scroll-auto-exit t)
-(defvar switch-to-buffer-in-dedicated-window 'pop)
-(defvar switch-to-buffer-obey-display-actions t)
+(setq switch-to-buffer-in-dedicated-window 'pop)
+(setq switch-to-buffer-obey-display-actions t)
 (setq display-buffer-alist nil)
-(defvar message-log-max 250)
+(setq message-log-max 250)
 
 ;; Ibuffer
 (defvar ibuffer-movement-cycle nil)
@@ -27,14 +31,14 @@
 (setq use-short-answers t)
 (setq enable-recursive-minibuffers t)
 (setq kill-do-not-save-duplicates t)
-(defvar vertico-count 15)
+(setq vertico-count 15)
 (setq max-mini-window-height 10.00)
-(defvar embark-confirm-act-all t)
-(defvar minibuffer-visible-completions t)
-(defvar minibuffer-follows-selected-frame t)
-(defvar file-name-shadow-properties '(invisible t intangible t face file-name-shadow field shadow))
-(defvar insert-default-directory t)
-(defvar resize-mini-windows 'grow-only)
+(setq embark-confirm-act-all t)
+(setq minibuffer-visible-completions t)
+(setq minibuffer-follows-selected-frame t)
+(setq file-name-shadow-properties '(invisible t intangible t face file-name-shadow field shadow))
+(setq insert-default-directory t)
+(setq resize-mini-windows 'grow-only)
 
 ;; Functions
 (defun delete-this-buffer-and-file ()
