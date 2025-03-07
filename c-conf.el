@@ -12,6 +12,7 @@
 ;; Hooks
 (add-hook 'c-ts-mode-hook
           (defun c-hook ()
+            (keymap-local-set "C-a" #'beginning-of-line-text)
             (auto-revert-mode)))
 
 (provide 'c-conf)
