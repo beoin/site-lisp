@@ -91,9 +91,8 @@
 ;; Programming
 (defvar xref-show-definitions-function 'xref-show-definitions-completing-read)
 (setq prettify-symbols-unprettify-at-point t)
-(defvar comment-empty-lines nil)
-(defvar comment-padding 1)
-(add-to-list 'auto-mode-alist '("\\.c\\'" . c-ts-mode))
+(setq comment-empty-lines nil)
+(setq comment-padding 1)
 
 ;; Electric pair mode
 (require 'elec-pair)
