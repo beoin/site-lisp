@@ -3,17 +3,50 @@
 
 ;;; Code:
 
-;; Vars
-(defvar org-cycle-separator-lines 0)
-(defvar org-cycle-hide-block-startup t)
-(defvar org-cycle-hide-drawer-startup t)
+;; Visibility cycling of Org entries.
+(require 'org-cycle)
+(setq org-cycle-hide-drawer-startup t)
+(setq org-hide-block-startup t)
+(setq org-cycle-separator-lines 0)
+(setq org-cycle-hide-block-startup t)
+
+;; Babel. Working with Code Blocks.
+(require 'ob-core)
+(setq org-babel-uppercase-example-markers t)
+(setq org-babel-hash-show-time t)
+
+;; Babel Functions for Common Lisp
+(require 'ob-lisp)
+(setq org-babel-lisp-eval-fn 'sly-eval)
+
+;; Colorize org tags automatically
+(require 'org-rainbow-tags)
+(setq org-rainbow-tags-hash-start-index 10)
+
+;; Key bindings for Org mode
+(require 'org-keys)
+(setq org-return-follows-link nil)
+
+;; Org links library
+(require 'ol)
+(setq org-link-descriptive t)
+
+;; Face definitions
+(require 'org-faces)
+(setq org-fontify-quote-and-verse-blocks t)
+
+;; Fast navigation in an Org buffer
+(require 'org-goto)
+(setq org-goto-interface 'outline-path-completion)
+
+;; Source code examples in Org
+(require 'org-src)
+(setq org-src-window-setup 'current-window)
+
+;; Org core vars
 (defvar org-startup-with-inline-images t)
 (defvar org-startup-folded t)
 (defvar org-hide-emphasis-markers t)
-(defvar org-hide-block-startup t)
-(defvar org-babel-lisp-eval-fn 'sly-eval)
-(defvar org-babel-uppercase-example-markers t)
-(defvar org-babel-hash-show-time t)
 (defvar org-special-ctrl-a/e t)
 (defvar org-special-ctrl-k t)
 (defvar org-ctrl-k-protect-subtree 'query)
@@ -21,16 +54,10 @@
 (defvar org-directory "~/Org")
 (defvar org-default-notes-file (concat org-directory "/capture_notes.org"))
 (defvar org-use-tag-inheritance nil)
-(defvar org-rainbow-tags-hash-start-index 10)
-(defvar org-return-follows-link nil)
-(defvar org-link-descriptive t)
 (defvar org-ellipsis "…")
-(defvar org-fontify-quote-and-verse-blocks t)
 (defvar org-pretty-entities nil)
-(defvar org-goto-interface 'outline-path-completion)
 (defvar org-M-RET-may-split-line '((headline . nil) (item . t) (table . t)))
 (defvar org-loop-over-headlines-in-active-region t)
-(defvar org-src-window-setup 'current-window)
 
 ;; Hooks
 (add-hook 'org-mode-hook
