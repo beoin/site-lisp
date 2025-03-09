@@ -43,21 +43,22 @@
 (require 'org-src)
 (setq org-src-window-setup 'current-window)
 
-;; Org core vars
-(defvar org-startup-with-inline-images t)
-(defvar org-startup-folded t)
-(defvar org-hide-emphasis-markers t)
-(defvar org-special-ctrl-a/e t)
-(defvar org-special-ctrl-k t)
-(defvar org-ctrl-k-protect-subtree 'query)
-(defvar org-agenda-files "~/Org/agenda-files.org")
-(defvar org-directory "~/Org")
-(defvar org-default-notes-file (concat org-directory "/capture_notes.org"))
-(defvar org-use-tag-inheritance nil)
-(defvar org-ellipsis "…")
-(defvar org-pretty-entities nil)
-(defvar org-M-RET-may-split-line '((headline . nil) (item . t) (table . t)))
-(defvar org-loop-over-headlines-in-active-region t)
+;; Outline-based notes management and organizer
+(require 'org)
+(setq org-startup-with-inline-images t)
+(setq org-startup-folded 'fold)
+(setq org-hide-emphasis-markers t)
+(setq org-special-ctrl-a/e t)
+(setq org-special-ctrl-k t)
+(setq org-ctrl-k-protect-subtree 'query)
+(setq org-agenda-files "~/Org/agenda-files.org")
+(setq org-directory "~/Org")
+(setq org-default-notes-file (concat org-directory "/capture_notes.org"))
+(setq org-use-tag-inheritance nil)
+(setq org-ellipsis "…")
+(setq org-pretty-entities nil)
+(setq org-M-RET-may-split-line '((headline . nil) (item . t) (table . t)))
+(setq org-loop-over-headlines-in-active-region t)
 
 ;; Hooks
 (add-hook 'org-mode-hook
