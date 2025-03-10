@@ -24,6 +24,7 @@
 ;; Minibuffer
 (vertico-mode +1)
 (marginalia-mode +1)
+(minibuffer-electric-default-mode)
 (which-key-mode)
 (which-key-setup-minibuffer)
 (setq completion-styles '(orderless basic)
