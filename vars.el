@@ -40,7 +40,7 @@
 (require 'help-fns)
 (setq help-clean-buttons t)
 (setq help-window-keep-selected t)
-(setq help-window-select t)
+(setq help-window-select nil)
 (setq help-enable-variable-value-editing nil)
 (setq describe-bindings-show-prefix-commands t)
 (put 'help-fns-edit-variable 'disabled nil)
