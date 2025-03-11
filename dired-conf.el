@@ -3,24 +3,28 @@
 
 ;;; Code:
 
-;; Imports
-(require 'dired)
+;;extra Dired functionality.
 (require 'dired-x)
-(require 'dired-aux)
-(require 'find-dired)
 
-;; Vars
+;; less commonly used parts of dired
+(require 'dired-aux)
+(setq dired-create-destination-dirs 'ask)
+
+;; run a `find' command and dired the output
+(require 'find-dired)
+(setq find-name-arg "-iname")
+
+;; dired: directory-browsing commands
+(require 'dired)
 (put 'dired-find-alternate-file 'disabled nil)
 (setq dired-listing-switches "-goa --group-directories-first")
 (setq dired-recursive-deletes 'always)
 (setq dired-recursive-copies 'always)
-(setq dired-create-destination-dirs 'ask)
 (setq dired-ls-F-marks-symlinks t)
 (setq dired-deletion-confirmer 'y-or-n-p)
 (setq dired-dwim-target t)
 (setq dired-clean-confirm-killing-deleted-buffers nil)
 (setq dired-movement-style 'bounded)
-(setq find-name-arg "-iname")
 (setq dired-guess-shell-znew-switches "-KPv")
 (setq dired-guess-shell-alist-user
   '(("\.pdf$" "xpdf")
@@ -33,7 +37,7 @@
 (add-hook 'dired-mode-hook
 	  (defun dired-hook ()
 	    (keymap-local-set "c" #'dired-create-empty-file)
-            (dired-omit-mode t)
+            (dired-omit-mode t) ;; dired-x
             (hl-line-mode)
 	    (diredfl-mode t)))
 
