@@ -8,6 +8,8 @@
 (setq isearch-lazy-count t)
 (setq lazy-count-prefix-format nil)
 (setq lazy-count-suffix-format "   (%s/%s)")
+(setq search-ring-max 20)
+(setq case-fold-search t)
 
 ;; Imenu
 (defvar imenu-auto-rescan t)
