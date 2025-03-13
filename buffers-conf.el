@@ -3,43 +3,66 @@
 
 ;;; Code:
 
-;; Imports
-(require 'vertico)
-(require 'embark)
-
-;; Vars
-(setq view-read-only t)
-(defvar view-scroll-auto-exit t)
+;; GNU Emacs window commands aside from those written in C
+(require 'window)
 (setq switch-to-buffer-in-dedicated-window 'pop)
 (setq switch-to-buffer-obey-display-actions t)
 (setq display-buffer-alist nil)
+
+;; Peruse file or buffer without editing
+(require 'view)
+(defvar view-scroll-auto-exit t)
+
+;; file input and output commands
+(setq view-read-only t)
+
+;; Display generation from window structure and buffer text.
 (setq message-log-max 250)
 
-;; Ibuffer
+;; Buffer manipulation primitives for GNU Emacs.
+(setq kill-buffer-delete-auto-save-files t)
+
+;; Operate on buffers like dired
+(require 'ibuffer)
 (defvar ibuffer-movement-cycle nil)
 (defvar ibuffer-old-time 24)
 (defvar ibuffer-default-sorting-mode 'alphabetic)
 (defvar ibuffer-expert nil)
 
-;; Minibuffer
+;; VERTical Interactive COmpletion
+(require 'vertico)
 (vertico-mode +1)
+(setq vertico-count 15)
+
+;; Conveniently act on minibuffer completions
+(require 'embark)
+(setq embark-confirm-act-all t)
+
+;; Enrich existing commands with completion annotations
+(require 'marginalia)
 (marginalia-mode +1)
-(minibuffer-electric-default-mode)
+
+;; Display available keybindings in popup
+(require 'which-key)
 (which-key-mode)
 (which-key-setup-minibuffer)
-(setq completion-styles '(orderless basic)
-      completion-category-overrides '((file (styles basic partial-completion))))
+
+;; Minibuffer
+(minibuffer-electric-default-mode)
 (setq use-short-answers t)
 (setq enable-recursive-minibuffers t)
 (setq kill-do-not-save-duplicates t)
-(setq vertico-count 15)
 (setq max-mini-window-height 10.00)
-(setq embark-confirm-act-all t)
-(setq minibuffer-visible-completions t)
 (setq minibuffer-follows-selected-frame t)
 (setq file-name-shadow-properties '(invisible t intangible t face file-name-shadow field shadow))
-(setq insert-default-directory t)
 (setq resize-mini-windows 'grow-only)
+
+;; Minibuffer and completion functions
+(require 'minibuffer)
+(setq insert-default-directory t)
+(setq minibuffer-visible-completions t)
+(setq completion-styles '(orderless basic))
+(setq completion-category-overrides '((file (styles basic partial-completion))))
 
 ;; Functions
 (defun delete-this-buffer-and-file ()
