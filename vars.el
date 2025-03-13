@@ -38,13 +38,19 @@
 (setq which-func-update-delay 1.0)
 (defvar which-func-display 'mode)
 
-;; Documentation
-(require 'help-fns)
-(setq help-clean-buttons t)
+;; The Help System
+(require 'help)
 (setq help-window-keep-selected t)
 (setq help-window-select nil)
-(setq help-enable-variable-value-editing nil)
 (setq describe-bindings-show-prefix-commands t)
+
+;; `help-mode' used by *Help* buffers
+(require 'help-mode)
+(setq help-clean-buttons t)
+
+;; Complex help functions
+(require 'help-fns)
+(setq help-enable-variable-value-editing nil)
 (put 'help-fns-edit-variable 'disabled nil)
 
 ;; UX
