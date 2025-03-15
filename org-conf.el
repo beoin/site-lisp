@@ -45,7 +45,7 @@
 
 ;; Outline-based notes management and organizer
 (require 'org)
-(setq org-startup-with-inline-images t)
+(setq org-startup-with-inline-images nil)
 (setq org-startup-folded 'fold)
 (setq org-hide-emphasis-markers t)
 (setq org-special-ctrl-a/e t)
