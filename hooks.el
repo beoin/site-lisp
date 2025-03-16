@@ -9,6 +9,7 @@
 
 (add-hook 'xref-backend-functions #'dumb-jump-xref-activate)
 
+(require 'markdown-mode)
 (add-hook 'markdown-mode-hook
 	  (defun markdown-hook ()
 	    (keymap-local-set "C-S-p" #'markdown-previous-visible-heading)
@@ -33,6 +34,7 @@
           (defun diff-hook ()
             (keymap-local-unset "M-o")))
 
+(require 'outline)
 (add-hook 'emacs-news-view-mode-hook
           (defun emacs-news-hook ()
             (keymap-local-set "C-S-n" #'outline-next-visible-heading)
