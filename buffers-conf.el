@@ -29,19 +29,6 @@
 (defvar ibuffer-default-sorting-mode 'alphabetic)
 (defvar ibuffer-expert nil)
 
-;; VERTical Interactive COmpletion
-(require 'vertico)
-(vertico-mode +1)
-(setq vertico-count 15)
-
-;; Conveniently act on minibuffer completions
-(require 'embark)
-(setq embark-confirm-act-all t)
-
-;; Enrich existing commands with completion annotations
-(require 'marginalia)
-(marginalia-mode +1)
-
 ;; Display available keybindings in popup
 (require 'which-key)
 (which-key-mode)
@@ -61,7 +48,6 @@
 (require 'minibuffer)
 (setq insert-default-directory t)
 (setq minibuffer-visible-completions t)
-(setq completion-styles '(orderless basic))
 (setq completion-category-overrides '((file (styles basic partial-completion))))
 
 ;; Functions
@@ -80,7 +66,6 @@
 
 ;;Keybindings
 (keymap-global-set "C-x B" 'ibuffer-list-buffers)
-(keymap-global-set "C-." 'embark-act)
 
 (provide 'buffers-conf)
 ;;; buffers-conf.el ends here
