@@ -76,9 +76,6 @@
 (setq cursor-type 'box)
 (setq x-stretch-cursor nil)
 
-;; Modeline
-(doom-modeline-mode 1)
-
 ;; Files
 (setq large-file-warning-threshold 100000000)
 (setq delete-by-moving-to-trash t)
