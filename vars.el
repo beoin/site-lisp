@@ -27,6 +27,9 @@
 (defvar display-line-numbers-grow-only t)
 (setq use-dialog-box nil)
 
+;; mode line
+(size-indication-mode)
+
 ;; Editor
 (delete-selection-mode t)
 (setq confirm-kill-emacs #'yes-or-no-p)
