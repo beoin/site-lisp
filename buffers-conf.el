@@ -66,6 +66,7 @@
 
 ;;Keybindings
 (keymap-global-set "C-x B" 'ibuffer-list-buffers)
+(keymap-global-set "C-x C-b" 'ibuffer)
 
 (provide 'buffers-conf)
 ;;; buffers-conf.el ends here
