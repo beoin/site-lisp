@@ -9,6 +9,11 @@
 (setq switch-to-buffer-obey-display-actions t)
 (setq display-buffer-alist nil)
 
+;; Unique buffer names dependent on file name
+(require 'uniquify)
+(setq uniquify-buffer-name-style 'forward)
+(setq uniquify-trailing-separator-p 't)
+
 ;; Peruse file or buffer without editing
 (require 'view)
 (defvar view-scroll-auto-exit t)
