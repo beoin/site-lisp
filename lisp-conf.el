@@ -4,15 +4,8 @@
 
 ;;; Code:
 
-;; Vars
-(add-to-list 'auto-mode-alist '("\\.scrbl\\'" . racket-hash-lang-mode))
-
 ;; lisp.el Lisp editing commands for Emacs
 (setq delete-pair-blink-delay 0.25)
-
-;; an inferior-lisp mode
-(require 'inf-lisp)
-(setq inferior-lisp-program "/usr/bin/sbcl")
 
 ;; Paren Matching
 (setq blink-matching-paren 'jump)
@@ -23,13 +16,6 @@
 (setq show-paren-style 'parenthesis)
 
 ;; Hooks
-(add-hook 'racket-mode-hook
-          (defun racket-hook ()
-            (lisp-hook)))
-
-(add-hook 'racket-hash-lang-mode-hook
-          (defun racket-hash-lang-hook ()
-            (setq-local racket-xp-add-binding-faces t)))
 
 ;; minor mode for editing parentheses
 (require 'paredit)
@@ -39,10 +25,6 @@
             (keymap-local-set "M-[" #'paredit-wrap-square)
             (keymap-local-set "M-{" #'paredit-wrap-curly)
             (keymap-local-set "{" #'paredit-open-curly)))
-
-(add-hook 'clojure-mode-hook
-          (defun clojure-hook ()
-            (lisp-hook)))
 
 (add-hook 'emacs-lisp-mode-hook
           (defun elisp-hook ()
@@ -55,14 +37,6 @@
             (lisp-hook)
             (keymap-local-set "C-j" #'newline)
             (keymap-local-set "<return>" #'ielm-return)))
-
-(add-hook 'sly-mode-hook
-          (defun sly-hook ()
-            (lisp-hook)))
-
-(add-hook 'sly-mrepl-mode-hook
-          (defun sly-repl-hook ()
-            (keymap-local-set "<return>" #'sly-mrepl-return)))
 
 (add-hook 'eval-expression-minibuffer-setup-hook
           (defun eval-hook ()
