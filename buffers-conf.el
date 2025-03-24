@@ -53,7 +53,6 @@
 (require 'minibuffer)
 (setq insert-default-directory t)
 (setq minibuffer-visible-completions t)
-(setq completion-category-overrides '((file (styles basic partial-completion))))
 
 ;; Functions
 (defun delete-this-buffer-and-file ()
