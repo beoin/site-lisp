@@ -57,7 +57,6 @@ KEY represents a $HOME directory"
 (keymap-global-unset "C-x d")
 (keymap-global-set "C-x l" (defun dired-site-lisp()(interactive)(dired "~/.emacs.d/lisp")))
 (keymap-global-set "C-x d" 'dired-jump)
-(keymap-global-set "C-x C-f" 'dired)
 (keymap-global-set "C-c o" 'dired-common-dirs)
 
 (provide 'dired-conf)
