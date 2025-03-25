@@ -49,10 +49,14 @@
 (setq file-name-shadow-properties '(invisible t intangible t face file-name-shadow field shadow))
 (setq resize-mini-windows 'grow-only)
 
-;; Minibuffer and completion functions
+;; minibuffer and completion functions
 (require 'minibuffer)
 (setq insert-default-directory t)
 (setq minibuffer-visible-completions t)
+
+;; minibuffer completion incremental feedback
+(require 'icomplete)
+(fido-mode)
 
 ;; Functions
 (defun delete-this-buffer-and-file ()
