@@ -14,6 +14,10 @@
 (require 'find-dired)
 (setq find-name-arg "-iname")
 
+;; Rename files editing their names in dired buffers
+(require 'wdired)
+(setq wdired-use-interactive-rename 't)
+
 ;; dired: directory-browsing commands
 (require 'dired)
 (put 'dired-find-alternate-file 'disabled nil)
