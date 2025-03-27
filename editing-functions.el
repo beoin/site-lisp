@@ -74,6 +74,19 @@ C: The character to zap up to."
 	 (interactive)
 	 (forward-whitespace -1))
 
+(defun copy-word-at-point ()
+  "Copy the current word under point and add it to the kill ring."
+  (interactive)
+  (let ((curr (point))
+        (end  (progn
+               (forward-word)
+               (point)))
+         (beg (progn
+                (backward-word)
+                (point))))
+    (copy-region-as-kill beg end)
+    (goto-char curr)))
+
 (defun capitalise-word ()
   "Variant of builtin \"capitalize-word\". Capitalise the word at point."
   (interactive)
