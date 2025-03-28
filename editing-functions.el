@@ -87,6 +87,15 @@ C: The character to zap up to."
     (copy-region-as-kill beg end)
     (goto-char curr)))
 
+(defun copy-def-at-point ()
+  "Copy the current definition under point and add it to the kill ring."
+  (interactive)
+  (let ((curr (point))
+        (end (goto-char (1- (re-search-forward "[ \t]+\\|\n" nil 'move))))
+        (beg (goto-char (1+ (re-search-backward "[ \t]+\\|\n" nil 'move)))))
+    (copy-region-as-kill beg end)
+    (goto-char curr)))
+
 (defun capitalise-word ()
   "Variant of builtin \"capitalize-word\". Capitalise the word at point."
   (interactive)
