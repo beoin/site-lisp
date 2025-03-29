@@ -80,8 +80,9 @@ PROMPT sets the `read-string prompt."
         (switch-to-buffer (other-buffer))))))
 
 (defun status ()
+  "Call the status shell file."
   (interactive)
-  (eshell-command "status"))
+  (shell-command "status"))
 
 (defun derived-modes (mode)
   "Return a list of the ancestor modes that MODE is derived from.
