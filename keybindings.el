@@ -8,6 +8,7 @@
 (keymap-global-unset "<XF86WakeUp>")
 (keymap-global-unset "<print>")
 (keymap-global-set "C-x t" 'previous-window-any-frame)
+(keymap-global-set "C-x C-f" 'find-view-file)
 (keymap-global-set "M-<backspace>" 'backward-delete-word)
 (keymap-global-set "C-c m" 'move-to-line-middle)
 (keymap-global-set "C-c k" 'delete-current-line)
