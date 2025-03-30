@@ -140,5 +140,12 @@ MODE must be a symbol"
   (let ((url "https://www.google.com/search?hl=en&q=define+"))
     (browse-url (concat url word))))
 
+(defun find-view-file ()
+  "With prefix \"view-file\" otherwise \"find-file\"."
+  (interactive)
+  (if current-prefix-arg
+      (command-execute #'view-file)
+      (command-execute #'find-file)))
+
 (provide 'functions)
 ;;; functions.el ends here
