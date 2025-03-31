@@ -72,6 +72,13 @@
         (kill-buffer buffer)
         (message "File '%s' successfully removed" filename)))))
 
+(defun find-view-file ()
+  "With prefix \"view-file\" otherwise \"find-file\"."
+  (interactive)
+  (if current-prefix-arg
+      (command-execute #'view-file)
+      (command-execute #'find-file)))
+
 ;;Keybindings
 (keymap-global-set "C-x B" 'ibuffer-list-buffers)
 (keymap-global-set "C-x C-b" 'ibuffer)
