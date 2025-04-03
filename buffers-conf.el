@@ -50,6 +50,7 @@
 (require 'minibuffer)
 (setq insert-default-directory t)
 (setq minibuffer-visible-completions t)
+(setq completions-format 'horizontal)
 
 ;; minibuffer completion incremental feedback
 (require 'icomplete)
