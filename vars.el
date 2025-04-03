@@ -79,20 +79,6 @@
 (setq cursor-type 'box)
 (setq x-stretch-cursor nil)
 
-;; Files
-(setq large-file-warning-threshold 100000000)
-(setq delete-by-moving-to-trash t)
-(setq find-file-suppress-same-file-warnings t)
-(defvar archive-visit-single-files t)
-
-;; Backups
-(setq backup-directory-alist '(("." . ".~")))
-(setq version-control 'never)
-(setq delete-old-versions t)
-
-;; Custom File
-(setq custom-file (concat user-emacs-directory "custom.el"))
-
 ;; Marks
 (setq set-mark-command-repeat-pop t)
 

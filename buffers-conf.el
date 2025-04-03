@@ -18,9 +18,6 @@
 (require 'view)
 (defvar view-scroll-auto-exit t)
 
-;; file input and output commands
-(setq view-read-only t)
-
 ;; Display generation from window structure and buffer text.
 (setq message-log-max 250)
 
