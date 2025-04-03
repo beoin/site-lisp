@@ -144,5 +144,9 @@
 ;; Find file at point
 (defvar ffap-machine-p-known 'reject)
 
+;; Cross-referencing commands
+(require 'xref)
+(setq xref-after-jump-hook '(recenter xref-pulse-momentarily view-mode-enter))
+
 (provide 'vars)
 ;;; vars.el ends here
