@@ -25,5 +25,10 @@
   (interactive)
   (message (buffer-file-name)))
 
+(defun grep-config-symbol-at-point ()
+  "Recursively grep the Emacs config for the symbol at point."
+  (interactive)
+  (rgrep (thing-at-point 'symbol) "*" (concat user-emacs-directory "lisp")))
+
 (provide 'files-conf)
 ;;; files-conf.el ends here
