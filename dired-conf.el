@@ -49,13 +49,15 @@
 (defun dired-common-dirs (key)
 "Open locations which are known to you in the file system.
 KEY represents a $HOME directory"
-  (interactive "sr ~/remote, o ~/Org, b ~/bin, s ~/src, dw ~/Downloads, dk ~/Desktop: ")
+  (interactive
+   "sr ~/remote, o ~/Org, b ~/bin, s ~/src, dw ~/Downloads, dk ~/Desktop:, dc ~/Documents ")
   (cond ((equal key "r") (dired-other-window "~/remote"))
 	       ((equal key "o") (dired-other-window "~/Org"))
 	       ((equal key "b") (dired-other-window "~/bin"))
 	       ((equal key "s") (dired-other-window "~/src"))
 	       ((equal key "dw") (dired-other-window "~/Downloads"))
-	       ((equal key "dk") (dired-other-window "~/Desktop"))))
+	       ((equal key "dk") (dired-other-window "~/Desktop"))
+	       ((equal key "dc") (dired-other-window "~/Documents"))))
 
 ;; Keybindings
 (keymap-global-unset "C-x d")
