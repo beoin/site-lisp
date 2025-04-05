@@ -29,8 +29,7 @@
 (add-hook 'emacs-lisp-mode-hook
           (defun elisp-hook ()
             (lisp-hook)
-            (keymap-local-set "C-c x" #'ielm-window)
-            (keymap-local-set "C-a" 'crux-move-beginning-of-line)))
+            (keymap-local-set "C-c x" #'ielm-window)))
 
 (add-hook 'ielm-mode-hook
           (defun ielm-hook ()
