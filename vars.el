@@ -3,6 +3,9 @@
 
 ;;; Code:
 
+(defvar config-files (concat user-emacs-directory "lisp" )
+  "Configuration files path.")
+
 ;; Search
 (setq lazy-highlight-initial-delay 5.00)
 (setq isearch-lazy-count t)
