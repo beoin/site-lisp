@@ -77,9 +77,15 @@
       (command-execute #'view-file)
       (command-execute #'find-file)))
 
+(defun vc-dir-config ()
+  "Execute the function \"vc-dir\" within the Emacs config."
+  (interactive)
+  (vc-dir config-files))
+
 ;;Keybindings
 (keymap-global-set "C-x B" 'ibuffer-list-buffers)
 (keymap-global-set "C-x C-b" 'ibuffer)
+(keymap-global-set "C-x v c" 'vc-dir-config)
 
 (provide 'buffers-conf)
 ;;; buffers-conf.el ends here
