@@ -26,9 +26,14 @@
   (message (buffer-file-name)))
 
 (defun grep-config-symbol-at-point ()
-  "Recursively grep the Emacs config for the symbol at point."
+  "Recursively grep config for the symbol at point."
   (interactive)
   (rgrep (thing-at-point 'symbol) "*" config-files))
+
+(defun grep-config (arg)
+  "Recursivly grep config with ARG."
+  (interactive "sGrep for: ")
+  (rgrep arg "*" config-files))
 
 (provide 'files-conf)
 ;;; files-conf.el ends here
