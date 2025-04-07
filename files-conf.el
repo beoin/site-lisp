@@ -12,6 +12,10 @@
 (setq delete-old-versions t)
 (setq view-read-only t)
 
+;; revert buffers when files on disk change
+(require 'autorevert)
+(global-auto-revert-mode)
+
 ;; Vars
 (setq delete-by-moving-to-trash t)
 (defvar archive-visit-single-files t)
