@@ -39,5 +39,16 @@
   (interactive "sGrep for: ")
   (rgrep arg "*" config-files))
 
+(defun find-view-file ()
+  "With prefix \"view-file\" otherwise \"find-file\"."
+  (interactive)
+  (if current-prefix-arg
+      (command-execute #'view-file)
+      (command-execute #'find-file)))
+
+;; Keybindings
+(keymap-global-set "C-c t" (defun todo()(interactive)(find-file "~/Org/todo.org")))
+(keymap-global-set "C-x C-f" 'find-view-file)
+
 (provide 'files-conf)
 ;;; files-conf.el ends here

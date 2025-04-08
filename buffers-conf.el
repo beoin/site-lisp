@@ -70,13 +70,6 @@
         (kill-buffer buffer)
         (message "File '%s' successfully removed" filename)))))
 
-(defun find-view-file ()
-  "With prefix \"view-file\" otherwise \"find-file\"."
-  (interactive)
-  (if current-prefix-arg
-      (command-execute #'view-file)
-      (command-execute #'find-file)))
-
 (defun vc-dir-config ()
   "Execute the function \"vc-dir\" within the Emacs config."
   (interactive)
@@ -86,6 +79,8 @@
 (keymap-global-set "C-x B" 'ibuffer-list-buffers)
 (keymap-global-set "C-x C-b" 'ibuffer)
 (keymap-global-set "C-x v c" 'vc-dir-config)
+(keymap-global-set "C-c S" 'scratch-buffer)
+(keymap-global-set "C-c M" 'messages-buffer)
 
 (provide 'buffers-conf)
 ;;; buffers-conf.el ends here
