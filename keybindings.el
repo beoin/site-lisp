@@ -42,6 +42,7 @@
 (keymap-global-set "C-c B" 'search-google-books)
 (keymap-global-set "C-c p" 'search-archwiki)
 (keymap-global-set "M-l" 'downcase-word-start)
+(keymap-global-set "<escape> w s" 'toggle-window-split)
 
 (provide 'keybindings)
 ;;; keybindings.el ends here
