@@ -6,13 +6,13 @@
 (defvar config-files (concat user-emacs-directory "lisp" )
   "Configuration files path.")
 
-;; Search
+;; incremental search minor mode
+(require 'isearch)
 (setq lazy-highlight-initial-delay 5.00)
 (setq isearch-lazy-count t)
 (setq lazy-count-prefix-format nil)
 (setq lazy-count-suffix-format "   (%s/%s)")
 (setq search-ring-max 20)
-(setq case-fold-search t)
 
 ;; Imenu
 (defvar imenu-auto-rescan t)
@@ -25,13 +25,13 @@
 
 ;; UI
 (defvar truncate-string-ellipsis "…")
-(column-number-mode +1)
 (setq-default goggles-pulse t)
 (defvar display-line-numbers-grow-only t)
 (setq use-dialog-box nil)
 
 ;; mode line
 (size-indication-mode)
+(column-number-mode +1)
 
 ;; Editor
 (delete-selection-mode t)
