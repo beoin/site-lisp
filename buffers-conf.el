@@ -21,8 +21,9 @@
 ;; Display generation from window structure and buffer text.
 (setq message-log-max 250)
 
-;; Buffer manipulation primitives for GNU Emacs.
+;; buffer.c Buffer manipulation primitives for GNU Emacs.
 (setq kill-buffer-delete-auto-save-files t)
+(setq case-fold-search t)
 
 ;; Operate on buffers like dired
 (require 'ibuffer)
