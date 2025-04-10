@@ -3,6 +3,10 @@
 
 ;;; Code:
 
+;;Compatibility Code for Older Emacsen
+(require 'org-compat)
+(setq org-imenu-depth 2)
+
 ;; Visibility cycling of Org entries.
 (require 'org-cycle)
 (setq org-cycle-hide-drawer-startup t)
