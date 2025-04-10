@@ -11,6 +11,8 @@
 (setq version-control 'never)
 (setq delete-old-versions t)
 (setq view-read-only t)
+(setq confirm-nonexistent-file-or-buffer nil)
+(setq require-final-newline t)
 
 ;; revert buffers when files on disk change
 (require 'autorevert)

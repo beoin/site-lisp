@@ -62,7 +62,6 @@
 ;; UX
 (setq ring-bell-function 'ignore)
 (setq mouse-yank-at-point t)
-(setq confirm-nonexistent-file-or-buffer nil)
 (setq visible-bell nil)
 (defvar outline-minor-mode-cycle t)
 (setq-default indicate-empty-lines t)
@@ -112,7 +111,6 @@
 (setq-default word-wrap t)
 (setq-default truncate-lines t)
 (setq sentence-end-double-space nil)
-(setq require-final-newline t)
 
 ;; Grep
 (setq grep-command  "grep -r --color=auto -nH --null -e" )
