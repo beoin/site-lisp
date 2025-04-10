@@ -46,6 +46,14 @@
       (command-execute #'view-file)
       (command-execute #'find-file)))
 
+(defun touchx ()
+  "Create an empty, executable file and load it into a buffer."
+  (interactive)
+  (let ((file-name (read-file-name "Create an executable file named: ")))
+    (make-empty-file file-name)
+    (chmod file-name #o755)
+    (find-file file-name)))
+
 ;; Keybindings
 (keymap-global-set "C-c t" (defun todo()(interactive)(find-file "~/Org/todo.org")))
 (keymap-global-set "C-x C-f" 'find-view-file)
