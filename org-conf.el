@@ -93,5 +93,12 @@
     (interactive)
     (find-file (concat data-directory "ORG-NEWS")))
 
+(defun org-sort-alpha ()
+  "Quickly sort an org document alphabetically."
+  (interactive)
+  (if (and (org-before-first-heading-p) (eq (point) 1))
+      (org-sort-entries nil ?a)
+    (error "Locate point on an empty line at the top of an org document")))
+
 (provide 'org-conf)
 ;;; org-conf.el ends here
