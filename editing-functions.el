@@ -9,12 +9,12 @@ A prefix ARG between 1 and 4 moves the point forward.
 The default value for ARG is 1."
   (interactive "p")
   (if (> arg 4)
-    (error "Acceptable arguments between 1 and 4"))
+      (error "Acceptable arguments between 1 and 4"))
   (or arg (setq arg 1))
-    (let* ((begin (line-beginning-position))
-           (end (line-end-position))
-           (quart (/ arg 4.0))
-           (pos (+ begin (* (- end begin) quart))))
+  (let* ((begin (line-beginning-position))
+         (end (line-end-position))
+         (quart (/ arg 4.0))
+         (pos (+ begin (* (- end begin) quart))))
     (goto-char (round pos))))
 
 (defun backward-line-quarters (&optional arg)
@@ -121,13 +121,13 @@ Variant of the builtin \"upcase-word\""
 
 (defun delete-word (arg)
   "Delete characters forward until encountering the end of a word.
-With argument, do this that many times."
+With ARG, repeat that many times."
   (interactive "p")
   (delete-region (point) (progn (forward-word arg) (point))))
 
 (defun backward-delete-word (arg)
   "Delete characters backward until encountering the end of a word.
-With argument, do this that many times."
+With ARG, repeat that many times."
   (interactive "p")
   (delete-word (- arg)))
 
@@ -146,7 +146,7 @@ With argument, do this that many times."
     (newline)))
 
 (defun display-prefix (arg)
-  "Display the value of the raw prefix arg."
+  "Display the value of the raw prefix ARG."
   (interactive "P")
   (if (equal current-prefix-arg '(4))
       (message "%s" (car arg))
