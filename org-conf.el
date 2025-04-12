@@ -96,9 +96,17 @@
 (defun org-sort-alpha ()
   "Quickly sort an org document alphabetically."
   (interactive)
-  (if (and (org-before-first-heading-p) (eq (point) 1))
-      (org-sort-entries nil ?a)
-    (error "Locate point on an empty line at the top of an org document")))
+  (let ((curr (point)))
+    (if (progn
+          (goto-char 0)
+          (current-line-empty-p))
+        (org-sort-entries nil ?a)
+      (progn (open-line 1)
+             (org-sort-entries nil ?a)
+             (goto-char 0)
+             (kill-line)))
+    (goto-char curr)
+    (org-overview)))
 
 (provide 'org-conf)
 ;;; org-conf.el ends here
