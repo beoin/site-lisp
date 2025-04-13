@@ -3,36 +3,40 @@
 
 ;;; Code:
 
-;; GNU Emacs window commands aside from those written in C
+;; window commands aside from those written in C
 (require 'window)
 (setq switch-to-buffer-in-dedicated-window 'pop)
 (setq switch-to-buffer-obey-display-actions t)
 (setq display-buffer-alist nil)
 
-;; Unique buffer names dependent on file name
+;; unique buffer names dependent on file name
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'forward)
 (setq uniquify-trailing-separator-p 't)
 
-;; Peruse file or buffer without editing
+;; peruse file or buffer without editing
 (require 'view)
 (defvar view-scroll-auto-exit t)
 
-;; Display generation from window structure and buffer text.
+;; xdisp.c display generation from window structure and buffer text.
 (setq message-log-max 250)
 
-;; buffer.c Buffer manipulation primitives for GNU Emacs.
+;; buffer.c buffer manipulation primitives
 (setq kill-buffer-delete-auto-save-files t)
 (setq case-fold-search t)
 
-;; Operate on buffers like dired
+;; operate on buffers like dired
 (require 'ibuffer)
-(defvar ibuffer-movement-cycle nil)
-(defvar ibuffer-old-time 24)
-(defvar ibuffer-default-sorting-mode 'alphabetic)
-(defvar ibuffer-expert nil)
+(setq ibuffer-movement-cycle nil)
+(setq ibuffer-default-sorting-mode 'alphabetic)
+(setq ibuffer-expert nil)
+(setq ibuffer-use-other-window nil)
 
-;; Display available keybindings in popup
+;; extensions for ibuffer
+(require 'ibuf-ext)
+(setq ibuffer-old-time 24)
+
+;; display available keybindings in popup
 (require 'which-key)
 (which-key-mode)
 (which-key-setup-minibuffer)
@@ -76,7 +80,7 @@
   (interactive)
   (vc-dir config-files))
 
-;;Keybindings
+;; Keybindings
 (keymap-global-set "C-x B" 'ibuffer-list-buffers)
 (keymap-global-set "C-x C-b" 'ibuffer)
 (keymap-global-set "C-x v c" 'vc-dir-config)
