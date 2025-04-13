@@ -1,4 +1,4 @@
-;;; predicate-functions.el --- functions returning 't or nil -*- lexical-binding: t; -*-
+;;; predicates.el --- functions returning 't or nil -*- lexical-binding: t; -*-
 
 ;;; Commentary:
 ;;; predicate functions used throughout config.
@@ -27,5 +27,5 @@
     (beginning-of-line)
     (looking-at-p "[[:blank:]]*$")))
 
-(provide 'predicate-functions)
+(provide 'predicates)
 ;;; predicate-functions.el ends here
