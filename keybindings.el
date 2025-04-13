@@ -5,6 +5,11 @@
 (keymap-global-unset "C-x m")
 (keymap-global-unset "C-x t")
 (keymap-global-unset "C-z")
+
+(keymap-global-set "<escape> w s" 'toggle-window-split)
+(keymap-global-set "<escape> o s a" 'org-sort-alpha)
+(keymap-global-set "<escape> o d p" 'org-do-promote)
+(keymap-global-set "<escape> o d d" 'org-do-demote)
 (keymap-global-unset "<XF86WakeUp>")
 (keymap-global-unset "<print>")
 (keymap-global-set "C-x t" 'previous-window-any-frame)
@@ -37,7 +42,6 @@
 (keymap-global-set "C-c B" 'search-google-books)
 (keymap-global-set "C-c p" 'search-archwiki)
 (keymap-global-set "M-l" 'downcase-word-start)
-(keymap-global-set "<escape> w s" 'toggle-window-split)
 
 (provide 'keybindings)
 ;;; keybindings.el ends here
