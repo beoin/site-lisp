@@ -59,6 +59,11 @@ KEY represents a $HOME directory"
 	       ((equal key "dk") (dired-other-window "~/Desktop"))
 	       ((equal key "dc") (dired-other-window "~/Documents"))))
 
+(defun find-iname-dired (pattern)
+  "Find case-insensitive \"wildcard\" PATTERN in an interactivly selected directory."
+  (interactive "sFind: ")
+  (find-dired (read-directory-name "In Directory: ") (format "-iname '*%s*'" pattern)))
+
 ;; Keybindings
 (keymap-global-unset "C-x d")
 (keymap-global-set "C-x l" (defun dired-site-lisp()(interactive)(dired "~/.emacs.d/lisp")))
