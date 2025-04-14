@@ -50,6 +50,7 @@
 (setq minibuffer-follows-selected-frame t)
 (setq file-name-shadow-properties '(invisible t intangible t face file-name-shadow field shadow))
 (setq resize-mini-windows 'grow-only)
+(setq read-file-name-completion-ignore-case nil)
 
 ;; minibuffer and completion functions
 (require 'minibuffer)
