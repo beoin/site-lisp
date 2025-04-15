@@ -3,7 +3,7 @@
 
 ;;; Code:
 
-;;Compatibility Code for Older Emacsen
+;; Compatibility Code for Older Emacsen
 (require 'org-compat)
 (setq org-imenu-depth 2)
 
@@ -94,7 +94,7 @@
     (find-file (concat data-directory "ORG-NEWS")))
 
 (defun org-sort-alpha ()
-  "Quickly sort an org document alphabetically."
+  "Quickly sort the top-level an org document alphabetically."
   (interactive)
   (let ((curr (point)))
     (if (progn
@@ -107,6 +107,16 @@
              (kill-line)))
     (goto-char curr)
     (org-overview)))
+
+(defun org-emphasize-code ()
+  "Emphasise at point a symbol as \"code\"."
+  (interactive)
+  (let ((curr (point))
+        (end (goto-char (re-search-forward "[ \t]+\\|\n" nil 'move))))
+    (goto-char curr)
+    (insert "~")
+    (goto-char end)
+    (insert "~")))
 
 (provide 'org-conf)
 ;;; org-conf.el ends here
