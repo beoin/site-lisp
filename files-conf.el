@@ -36,17 +36,22 @@
   (interactive)
   (rgrep (thing-at-point 'symbol) "*" config-files))
 
-(defun grep-config (arg)
-  "Recursivly grep config with ARG."
+(defun grep-config (pattern)
+  "Recursivly grep config with PATTERN."
   (interactive "sGrep for: ")
-  (rgrep arg "*" config-files))
+  (rgrep pattern "*" config-files))
+
+(defun grep-emacs-src (pattern)
+  "Recursively grep Emacs Lisp source files for PATTERN."
+  (interactive "sGrep for: ")
+  (rgrep pattern "*" (concat source-directory "lisp")))
 
 (defun find-view-file ()
   "With prefix \"view-file\" otherwise \"find-file\"."
   (interactive)
   (if current-prefix-arg
       (command-execute #'view-file)
-      (command-execute #'find-file)))
+    (command-execute #'find-file)))
 
 (defun touchx ()
   "Create an empty, executable file and load it into a buffer."
