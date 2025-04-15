@@ -61,8 +61,18 @@
     (chmod file-name #o755)
     (find-file file-name)))
 
+(defun todo-file ()
+  "Switch to todo.org. If prefix arg is supplied close all other windows."
+  (interactive)
+  (let ((todo "~/Org/todo.org"))
+    (if current-prefix-arg
+        (eval
+         (find-file todo)
+         (delete-other-windows))
+      (find-file todo))))
+
 ;; Keybindings
-(keymap-global-set "C-c t" (defun todo()(interactive)(find-file "~/Org/todo.org")))
+(keymap-global-set "C-c t" 'todo-file)
 (keymap-global-set "C-x C-f" 'find-view-file)
 
 (provide 'files-conf)
