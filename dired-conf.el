@@ -41,6 +41,7 @@
 (add-hook 'dired-mode-hook
 	  (defun dired-hook ()
 	    (keymap-local-set "c" #'dired-create-empty-file)
+	    (keymap-local-set "V" #'dired-view-file-other-window)
             (dired-omit-mode t) ;; dired-x
             (hl-line-mode)
 	    (diredfl-mode t)))
@@ -63,6 +64,16 @@ KEY represents a $HOME directory"
   "Find case-insensitive \"wildcard\" PATTERN in an interactivly selected directory."
   (interactive "sFind: ")
   (find-dired (read-directory-name "In Directory: ") (format "-iname '*%s*'" pattern)))
+
+(defun dired-view-file-other-window ()
+  "View file in View mode in another window from a Dired buffer."
+  (interactive)
+  (let ((file (dired-get-file-for-visit)))
+    (if (file-directory-p file)
+	(or (and (cdr dired-subdir-alist)
+		 (dired-goto-subdir file))
+	    (dired file))
+      (view-file-other-window file))))
 
 ;; Keybindings
 (keymap-global-unset "C-x d")
