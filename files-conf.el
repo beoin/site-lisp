@@ -18,9 +18,12 @@
 (require 'autorevert)
 (global-auto-revert-mode)
 
-;; Vars
+;; simple editing of archives
+(require 'arc-mode)
+(setq archive-visit-single-files t)
+
+;; fileio.c
 (setq delete-by-moving-to-trash t)
-(defvar archive-visit-single-files t)
 
 ;; Custom File
 (setq custom-file (concat user-emacs-directory "custom.el"))
@@ -31,7 +34,7 @@
   (interactive)
   (message (buffer-file-name)))
 
-(defun grep-config-symbol-at-point ()
+(defun grep-config-at-point ()
   "Recursively grep config for the symbol at point."
   (interactive)
   (rgrep (thing-at-point 'symbol) "*" config-files))
@@ -41,10 +44,14 @@
   (interactive "sGrep for: ")
   (rgrep pattern "*" config-files))
 
-(defun grep-emacs-src (pattern)
+(defun grep-src (pattern)
   "Recursively grep Emacs Lisp source files for PATTERN."
   (interactive "sGrep for: ")
   (rgrep pattern "*" (concat source-directory "lisp")))
+
+(defun grep-src-at-point ()
+  (interactive)
+  (rgrep (thing-at-point 'symbol) "*"  (concat source-directory "lisp")))
 
 (defun find-view-file ()
   "With prefix \"view-file\" otherwise \"find-file\"."
