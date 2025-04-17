@@ -141,16 +141,15 @@ With ARG, repeat that many times."
 (defun open-line-below-point ()
   "Create a newline below point and move to it."
   (interactive)
-  (progn
-    (end-of-line)
-    (newline)))
+  (end-of-line)
+  (newline))
 
 (defun display-prefix (arg)
   "Display the value of the raw prefix ARG."
   (interactive "P")
   (if (equal current-prefix-arg '(4))
       (message "%s" (car arg))
-      (message "%s" arg)))
+    (message "%s" arg)))
 
 (provide 'editing-functions)
 ;;; editing-functions.el ends here
