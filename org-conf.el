@@ -108,17 +108,27 @@
     (goto-char curr)
     (org-overview)))
 
-(defalias 'org-emphasize-gen 'org-emphasize)
+(defalias 'org-emphasize-gen #'org-emphasize)
 
-(defun org-emphasize-code ()
-  "Emphasise at point a symbol as \"code\"."
+(defun org-emphasize-as-code ()
+  "Emphasise the symbol at point as \"code\"."
   (interactive)
   (let ((curr (point))
-        (end (goto-char (re-search-forward "[ \t]+\\|\n" nil 'move))))
+        (end (goto-char (re-search-forward "[ \t]+\\|\n" nil nil nil))))
     (goto-char curr)
     (insert "~")
     (goto-char end)
     (insert "~")))
+
+(defun org-emphasize-to-colon ()
+  "Emphasise from point until the next colon."
+  (interactive)
+  (let ((curr (point))
+        (end (goto-char (re-search-forward "[:\t]+\\|\n" nil nil nil))))
+    (goto-char curr)
+    (insert "=")
+    (goto-char end)
+    (insert "=")))
 
 (provide 'org-conf)
 ;;; org-conf.el ends here
