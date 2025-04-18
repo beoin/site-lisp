@@ -11,7 +11,8 @@
 (add-hook 'vc-dir-mode-hook
           (defun vc-mode-hook ()
             (keymap-local-set "v" #'vc-next-action-window-below)
-            (keymap-local-set "L" #'vc-print-root-log-fill-window)))
+            (keymap-local-set "L" #'vc-print-root-log-fill-window)
+            (keymap-local-set "r" #'vc-refresh-state)))
 
 ;; Functions
 (defun vc-print-root-log-fill-window ()
