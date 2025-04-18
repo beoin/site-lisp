@@ -32,7 +32,7 @@
   (vc-dir config-files))
 
 ;; Keybindings
-(keymap-global-set "C-x v c" 'vc-dir-config)
+(keymap-global-set "C-x v c" 'vc-dir-root)
 
 (provide 'vc-conf)
 ;;; vc-conf.el ends here
