@@ -50,6 +50,7 @@
   (rgrep pattern "*" (concat source-directory "lisp")))
 
 (defun grep-src-at-point ()
+  "Recursively grep Emacs Lisp source files for symbol at point."
   (interactive)
   (rgrep (thing-at-point 'symbol) "*"  (concat source-directory "lisp")))
 
