@@ -3,18 +3,6 @@
 ;;; functions not related to text editing.
 ;;; Code:
 
-(defun vc-print-root-log-fill-window ()
-  "Fill the current window when \"vc-print-root-log\" is called."
-  (interactive)
-  (vc-print-root-log)
-  (delete-other-windows))
-
-(defun vc-next-action-window-below ()
-  "Do the next logical vc operation in the current window split below."
-  (interactive)
-  (split-window-below)
-  (vc-next-action nil))
-
 (defun messages-buffer ()
   "Switch to the *Messages* buffer.
 Prefer instead the builtin function \"view-echo-area-messages\"."

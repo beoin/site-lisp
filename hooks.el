@@ -40,10 +40,5 @@
             (keymap-local-set "C-S-n" #'outline-next-visible-heading)
             (keymap-local-set "C-S-p" #'outline-previous-visible-heading)))
 
-(add-hook 'vc-dir-mode-hook
-          (defun vc-mode-hook ()
-            (keymap-local-set "v" #'vc-next-action-window-below)
-            (keymap-local-set "L" #'vc-print-root-log-fill-window)))
-
 (provide 'hooks)
 ;;; hooks.el ends here.

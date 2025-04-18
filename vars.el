@@ -98,9 +98,6 @@
                             (8220 . 8221)
                             (?\{ . ?\})))
 
-;; Version Control
-(setq vc-follow-symlinks nil)
-
 ;; Text Editing
 (put 'upcase-region 'disabled nil)
 (put 'downcase-region 'disabled nil)
