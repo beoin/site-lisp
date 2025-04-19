@@ -5,11 +5,12 @@
 (keymap-global-unset "C-x m")
 (keymap-global-unset "C-x t")
 (keymap-global-unset "C-z")
+(keymap-global-unset "C-x v x")
 
 (keymap-global-set "<escape> w s" 'toggle-window-split)
 (keymap-global-set "<escape> o s a" 'org-sort-alpha)
-(keymap-global-set "<escape> o d p" 'org-do-promote)
 (keymap-global-set "<escape> o d d" 'org-do-demote)
+(keymap-global-set "<escape> o d p" 'org-do-promote)
 (keymap-global-unset "<XF86WakeUp>")
 (keymap-global-unset "<print>")
 (keymap-global-set "C-x t" 'previous-window-any-frame)
