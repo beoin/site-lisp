@@ -79,6 +79,7 @@
 	    (setq buffer-face-mode-face '(:family "Cantarell" :height 140))
 	    (buffer-face-mode)
             (org-rainbow-tags-mode)
+            (electric-pair-mode -1)
             (goggles-mode)
             (org-indent-mode)))
 
