@@ -30,10 +30,6 @@
           (defun outline-hook ()
             (outline-cycle-buffer 1)))
 
-(add-hook 'diff-mode-hook
-          (defun diff-hook ()
-            (keymap-local-unset "M-o")))
-
 (require 'outline)
 (add-hook 'emacs-news-view-mode-hook
           (defun emacs-news-hook ()

@@ -14,7 +14,18 @@
             (keymap-local-set "L" #'vc-print-root-log-fill-window)
             (keymap-local-set "r" #'vc-refresh-state)))
 
+(add-hook 'diff-mode-hook
+          (defun diff-hook ()
+            (keymap-local-unset "M-o")
+            (keymap-local-set "s" #'diff-goto-source-view-file)))
+
 ;; Functions
+(defun diff-goto-source-view-file ()
+  "Jump to the corresponding source line under \"view-mode\"."
+  (interactive)
+  (diff-goto-source)
+  (view-mode))
+
 (defun vc-print-root-log-fill-window ()
   "Fill the current window when \"vc-print-root-log\" is called."
   (interactive)
