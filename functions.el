@@ -3,6 +3,15 @@
 ;;; functions not related to text editing.
 ;;; Code:
 
+(defun follow ()
+  "Combines the current window into one tall virtual window via \"follow-mode\".
+Consider the builtin \"follow-delete-other-windows-and-split\" to this."
+  (interactive)
+  (delete-other-windows)
+  (recenter-top-bottom 0)
+  (follow-mode)
+  (split-window-right))
+
 (defun messages-buffer ()
   "Switch to the *Messages* buffer.
 Prefer instead the builtin function \"view-echo-area-messages\"."
