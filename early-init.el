@@ -1,6 +1,7 @@
-;;; early-init.el --- early bird -*- no-byte-compile: t -*-
+;;; early-init.el --- Emacs startup config -*- no-byte-compile: t -*-
 
 ;;; Commentary:
+;;; Customizations that take effect during Emacs startup.
 ;;; Code:
 
 ;; Number of bytes of consing between garbage collections.
@@ -15,6 +16,7 @@
 (setq default-input-method nil)
 (setq inhibit-compacting-font-caches t)
 (setq lisp-eval-depth-reserve 300)
+(setq frame-inhibit-implied-resize 't)
 
 ;; UI
 (menu-bar-mode -1)
