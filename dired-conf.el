@@ -78,8 +78,14 @@ KEY represents a $HOME directory"
 (defun dired-first-file ()
   "Move to the first file in a Dired buffer."
   (interactive)
-    (goto-char (point-min))
-    (dired-next-line 1))
+  (goto-char (point-min))
+  (dired-next-line 1))
+
+(defun dired-last-file ()
+  "Move to the last file in a Dired buffer."
+  (interactive)
+  (goto-char (point-max))
+  (dired-next-line -1))
 
 ;; Keybindings
 (keymap-global-unset "C-x d")
