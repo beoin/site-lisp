@@ -75,6 +75,12 @@ KEY represents a $HOME directory"
 	    (dired file))
       (view-file-other-window file))))
 
+(defun dired-first-file ()
+  "Move to the first file in a Dired buffer."
+  (interactive)
+    (goto-char (point-min))
+    (dired-next-line 1))
+
 ;; Keybindings
 (keymap-global-unset "C-x d")
 (keymap-global-set "C-x l" (defun dired-site-lisp()(interactive)(dired "~/.emacs.d/lisp")))
