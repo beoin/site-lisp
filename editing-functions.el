@@ -105,9 +105,10 @@ C: The character to zap up to."
   "Downcase from the beginnning of the word at point.
 Variant of the builtin \"downcase-word\"."
   (interactive)
-  (if (equal " " (string (preceding-char)))
+  (if (beginning-of-word-p)
       (downcase-word 1)
-      (downcase-word -1)))
+      (backward-word)
+      (downcase-word 1)))
 
 (defun upcase-word-start ()
   "Upcase from the beginning of the word at point.
