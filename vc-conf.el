@@ -2,6 +2,8 @@
 ;;; Commentary:
 
 ;;; Code:
+(require 'vc-dir)
+(require 'diff-mode)
 
 ;; resident support for version-control
 (require 'vc-hooks)
@@ -12,7 +14,7 @@
           (defun vc-mode-hook ()
             (keymap-local-set "v" #'vc-next-action-window-below)
             (keymap-local-set "L" #'vc-print-root-log-fill-window)
-            (keymap-local-set "r" #'vc-refresh-state)))
+            (keymap-local-set "r" #'vc-dir-refresh)))
 
 (add-hook 'diff-mode-hook
           (defun diff-hook ()
