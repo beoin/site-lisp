@@ -101,6 +101,13 @@ KEY represents a $HOME directory"
     (message "%s files" lines)
     (goto-char curr)))
 
+(defun dired-do-delete-skip-trash (&optional arg)
+  "Delete file under point and optionally the following ARG files."
+  (interactive "P")
+    (let ((delete-by-moving-to-trash nil))
+      (dired-do-delete arg)))
+
+
 ;; Keybindings
 (keymap-global-unset "C-x d")
 (keymap-global-set "C-x l" (defun dired-site-lisp()(interactive)(dired "~/.emacs.d/lisp")))
