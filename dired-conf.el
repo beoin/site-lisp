@@ -87,6 +87,20 @@ KEY represents a $HOME directory"
   (goto-char (point-max))
   (dired-next-line -1))
 
+(defun dired-count-files ()
+  "Print the number of files in a Dired buffer."
+  (interactive)
+  (let* ((curr (point))
+        (beg (prog2
+               (dired-first-file)
+               (point)))
+        (end (prog2
+               (dired-last-file)
+               (point)))
+        (lines (count-lines beg end)))
+    (message "%s files" lines)
+    (goto-char curr)))
+
 ;; Keybindings
 (keymap-global-unset "C-x d")
 (keymap-global-set "C-x l" (defun dired-site-lisp()(interactive)(dired "~/.emacs.d/lisp")))
