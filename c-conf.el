@@ -18,7 +18,8 @@
 ;; Hooks
 (add-hook 'c-ts-mode-hook
           (defun c-hook ()
-            (auto-revert-mode)))
+            (auto-revert-mode)
+            (electric-pair-mode)))
 
 (provide 'c-conf)
 ;;; c-conf.el ends here.
