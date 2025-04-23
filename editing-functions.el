@@ -3,6 +3,12 @@
 ;;; Commentary:
 ;;; Code:
 
+(defun mark-or-prompt (&optional prompt)
+  "If mark is active return the region as a string otherwise PROMPT for input."
+  (if mark-active
+      (buffer-substring-no-properties (region-beginning) (region-end))
+    (read-string (or prompt "$> "))))
+
 (defun forward-line-quarters (&optional arg)
   "Move point across the current line in quarters.
 A prefix ARG between 1 and 4 moves the point forward.
