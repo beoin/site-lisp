@@ -121,7 +121,7 @@
     (goto-char end)
     (insert "~")))
 
-(defun org-emphasize-to-colon ()
+(defun org-emphasize-colon ()
   "Emphasise from point until the next colon."
   (interactive)
   (let ((curr (point))
