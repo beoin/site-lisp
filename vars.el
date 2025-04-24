@@ -141,6 +141,11 @@
 ;; Find file at point
 (defvar ffap-machine-p-known 'reject)
 
+;; string and regular-expression replace commands
+(require 'replace)
+(setq list-matching-lines-jump-to-current-line 't)
+(setq list-matching-lines-default-context-lines 0)
+
 ;; Cross-referencing commands
 (require 'xref)
 (setq xref-after-jump-hook '(recenter xref-pulse-momentarily view-mode-enter))
