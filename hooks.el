@@ -7,8 +7,6 @@
 (add-hook 'find-function-after-hook #'view-mode-enter)
 (add-hook 'Info-selection-hook 'info-colors-fontify-node)
 
-(add-hook 'xref-backend-functions #'dumb-jump-xref-activate)
-
 (require 'markdown-mode)
 (add-hook 'markdown-mode-hook
 	  (defun markdown-hook ()
