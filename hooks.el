@@ -4,10 +4,14 @@
 
 ;;; Code:
 
+;; Imports
+(require 'outline)
+(require 'markdown-mode)
+
+;; Hooks
 (add-hook 'find-function-after-hook #'view-mode-enter)
 (add-hook 'Info-selection-hook 'info-colors-fontify-node)
 
-(require 'markdown-mode)
 (add-hook 'markdown-mode-hook
 	  (defun markdown-hook ()
 	    (keymap-local-set "C-S-p" #'markdown-previous-visible-heading)
@@ -21,14 +25,10 @@
             (flycheck-mode)
             (keymap-local-set "C-c c" #'compile)))
 
-(add-hook 'text-mode-hook
-          (defun text-hook ()))
-
 (add-hook 'outline-minor-mode-hook
           (defun outline-hook ()
             (outline-cycle-buffer 1)))
 
-(require 'outline)
 (add-hook 'emacs-news-view-mode-hook
           (defun emacs-news-hook ()
             (keymap-local-set "C-S-n" #'outline-next-visible-heading)
