@@ -65,7 +65,7 @@
       (ielm-window))))
 
 (defun copy-comment-sexp ()
-  "Copy sexp at point to the kill ring and comment it out."
+  "Comment sexp at point and add it to the kill ring."
   (interactive)
   (let ((beg (point))
         (end (progn
@@ -73,6 +73,14 @@
                (point))))
     (copy-region-as-kill beg end)
     (comment-region beg end)))
+
+(defun copy-comment-yank-sexp ()
+  "Comment sexp at point yank it to a new line below."
+  (interactive)
+  (copy-comment-sexp)
+  (newline 2)
+  (yank))
+
 
 (provide 'lisp-conf)
 ;;; lisp-conf.el ends here
