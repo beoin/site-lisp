@@ -3,9 +3,17 @@
 ;;; functions not related to text editing.
 ;;; Code:
 
+
+(defun list-urls ()
+  "Pop a list of all the urls in the current buffer."
+  (interactive)
+  (require 'ffap)
+  (let ((list-matching-lines-jump-to-current-line nil))
+    (list-matching-lines ffap-url-regexp 0 nil)))
+
 (defun follow ()
   "Combines the current window into one tall virtual window via \"follow-mode\".
-Consider the builtin \"follow-delete-other-windows-and-split\" to this."
+Consider the builtin \"follow-delete-other-windows-and-split\" instead."
   (interactive)
   (delete-other-windows)
   (recenter-top-bottom 0)
