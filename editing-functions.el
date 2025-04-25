@@ -84,17 +84,14 @@ C: The character to zap up to."
   "Copy the current word under point and add it to the kill ring."
   (interactive)
   (let ((curr (point))
-        (end  (progn
+        (end  (prog2
                (forward-word)
-               (point)))
-         (beg (progn
-                (backward-word)
-                (point))))
-    (copy-region-as-kill beg end)
+               (point))))
+    (copy-region-as-kill curr end)
     (goto-char curr)))
 
- (defun copy-def-at-point ()
-  "Copy the current definition under point and add it to the kill ring."
+(defun copy-def-at-point ()
+  "Copy the current definition at point and add it to the kill ring."
   (interactive)
   (let ((curr (point))
         (end (goto-char (1- (re-search-forward "[ \t]+\\|\n" nil 'move)))))
