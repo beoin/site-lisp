@@ -36,12 +36,12 @@
     ("\.epub$" "ebook-viewer")
     ("\.mp3$" "mpv")))
 
-
 ;; Hooks
 (add-hook 'dired-mode-hook
 	  (defun dired-hook ()
 	    (keymap-local-set "c" #'dired-create-empty-file)
 	    (keymap-local-set "V" #'dired-view-file-other-window)
+	    (keymap-local-set "<deletechar>" #'dired-do-delete-skip-trash)
             (dired-omit-mode t) ;; dired-x
             (hl-line-mode)
 	    (diredfl-mode t)))
