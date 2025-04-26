@@ -25,7 +25,8 @@
             (keymap-local-set "M-[" #'paredit-wrap-square)
             (keymap-local-set "M-{" #'paredit-wrap-curly)
             (keymap-local-set "{" #'paredit-open-curly)
-            (keymap-local-set "<" #'paredit-open-angled)))
+            (keymap-local-set "<" #'paredit-open-angled)
+            (keymap-local-set "C-M-w" #'paredit-backward-up)))
 
 (add-hook 'emacs-lisp-mode-hook
           (defun elisp-hook ()
