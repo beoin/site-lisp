@@ -4,6 +4,10 @@
 
 ;;; Code:
 
+;; interaction mode for Emacs Lisp
+(require 'ielm)
+(setq ielm-noisy nil)
+
 ;; lisp.el Lisp editing commands for Emacs
 (setq delete-pair-blink-delay 0.25)
 
