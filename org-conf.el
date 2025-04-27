@@ -75,6 +75,7 @@
             (keymap-local-set "C-c h" #'org-toggle-heading)
             (keymap-local-set "C-c C-d" #'org-do-demote)
             (keymap-local-set "C-c C-p" #'org-do-promote)
+            (keymap-local-set "<escape> :" #'org-emphasize-colon)
             (flyspell-mode +1)
 	    (setq buffer-face-mode-face '(:family "Cantarell" :height 140))
 	    (buffer-face-mode)
