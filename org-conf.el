@@ -126,7 +126,8 @@
   "Emphasise from point until the next colon."
   (interactive)
   (let ((curr (point))
-        (end (goto-char (re-search-forward "[:\t]+\\|\n" nil nil nil))))
+        (end (re-search-forward "[:\t]+\\|\n" (line-end-position) t 1)))
+    (or end (error "Error: colon not found"))
     (goto-char curr)
     (insert "=")
     (goto-char end)
