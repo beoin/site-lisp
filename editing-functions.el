@@ -2,6 +2,13 @@
 
 ;;; Commentary:
 ;;; Code:
+(defun delete-space-line-end ()
+  "Delete all spaces and tabs from the end of current line."
+  (interactive)
+  (let ((curr (point)))
+    (move-end-of-line 1)
+    (delete-horizontal-space)
+    (goto-char curr)))
 
 (defun mark-or-prompt (&optional prompt)
   "If mark is active return the region as a string otherwise PROMPT for input."
