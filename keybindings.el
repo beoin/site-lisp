@@ -6,6 +6,7 @@
 (keymap-global-unset "C-x t")
 (keymap-global-unset "C-z")
 (keymap-global-unset "C-x v x")
+(keymap-global-unset "C-x f")
 
 (keymap-global-set "<escape> w s" 'toggle-window-split)
 (keymap-global-set "<escape> o s a" 'org-sort-alpha)
