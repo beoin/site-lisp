@@ -122,10 +122,13 @@
 ;; Snippets
 (defvar yas-snippet-dirs '("~/.emacs.d/lisp/snippets"))
 
+;; indentation commands for Emacs
+(require 'indent)
+(setq tab-always-indent 't)
+(setq-default indent-tabs-mode nil)
+
 ;; Tabs
 (setq tab-bar-show t)
-(setq tab-always-indent 'complete)
-(setq-default indent-tabs-mode nil)
 (setq-default tab-width 8)
 
 ;; Spell Checking
