@@ -12,6 +12,10 @@
 (add-hook 'find-function-after-hook #'view-mode-enter)
 (add-hook 'Info-selection-hook 'info-colors-fontify-node)
 
+(add-hook 'odin-mode-hook
+          (defun odin-hook ()
+            (electric-pair-mode)))
+
 (add-hook 'markdown-mode-hook
 	  (defun markdown-hook ()
 	    (keymap-local-set "C-S-p" #'markdown-previous-visible-heading)
