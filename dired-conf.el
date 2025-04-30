@@ -3,22 +3,22 @@
 
 ;;; Code:
 
-;;extra Dired functionality.
+;; extra Dired functionality.
 (require 'dired-x)
 
 ;; less commonly used parts of dired
 (require 'dired-aux)
 (setq dired-create-destination-dirs 'ask)
 
-;; run a `find' command and dired the output
+;; run a find command and dired the output
 (require 'find-dired)
 (setq find-name-arg "-iname")
 
-;; Rename files editing their names in dired buffers
+;; rename files editing their names in dired buffers
 (require 'wdired)
 (setq wdired-use-interactive-rename 't)
 
-;; dired: directory-browsing commands
+;; directory-browsing commands
 (require 'dired)
 (put 'dired-find-alternate-file 'disabled nil)
 (setq dired-listing-switches "-goa --group-directories-first")

@@ -3,7 +3,8 @@
 ;;; Commentary:
 ;;; Code:
 (defun delete-space-line-end ()
-  "Delete all spaces and tabs from the end of current line."
+  "Delete all spaces and tabs from the end of current line.
+Consider instead the builtin function \"delete-trailing-whitespace\""
   (interactive)
   (let ((curr (point)))
     (move-end-of-line 1)

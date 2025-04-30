@@ -3,51 +3,51 @@
 
 ;;; Code:
 
-;; Compatibility Code for Older Emacsen
+;; compatibility code for older emacsen
 (require 'org-compat)
 (setq org-imenu-depth 2)
 
-;; Visibility cycling of Org entries.
+;; visibility cycling of org entries
 (require 'org-cycle)
 (setq org-cycle-hide-drawer-startup t)
 (setq org-hide-block-startup t)
 (setq org-cycle-separator-lines 0)
 (setq org-cycle-hide-block-startup t)
 
-;; Babel. Working with Code Blocks.
+;; babel. working with code blocks
 (require 'ob-core)
 (setq org-babel-uppercase-example-markers t)
 (setq org-babel-hash-show-time t)
 
-;; Babel Functions for Common Lisp
+;; babel functions for common lisp
 (require 'ob-lisp)
 (setq org-babel-lisp-eval-fn 'sly-eval)
 
-;; Colorize org tags automatically
+;; colorize org tags automatically
 (require 'org-rainbow-tags)
 (setq org-rainbow-tags-hash-start-index 10)
 
-;; Key bindings for Org mode
+;; key bindings for org mode
 (require 'org-keys)
 (setq org-return-follows-link nil)
 
-;; Org links library
+;; org links library
 (require 'ol)
 (setq org-link-descriptive t)
 
-;; Face definitions
+;; face definitions
 (require 'org-faces)
 (setq org-fontify-quote-and-verse-blocks t)
 
-;; Fast navigation in an Org buffer
+;; fast navigation in an org buffer
 (require 'org-goto)
 (setq org-goto-interface 'outline-path-completion)
 
-;; Source code examples in Org
+;; source code examples in org
 (require 'org-src)
 (setq org-src-window-setup 'current-window)
 
-;; Outline-based notes management and organizer
+;; outline-based notes management and organizer
 (require 'org)
 (setq org-startup-with-inline-images nil)
 (setq org-startup-folded 'fold)

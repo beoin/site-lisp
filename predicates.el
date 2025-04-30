@@ -28,4 +28,4 @@
     (looking-at-p "[[:blank:]]*$")))
 
 (provide 'predicates)
-;;; predicate-functions.el ends here
+;;; predicates.el ends here

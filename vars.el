@@ -14,135 +14,164 @@
 (setq lazy-count-suffix-format "   (%s/%s)")
 (setq search-ring-max 20)
 
-;; Imenu
-(defvar imenu-auto-rescan t)
-(defvar imenu-use-popup-menu nil)
-(defvar imenu-flatten nil)
+;; framework for mode-specific buffer indexes
+(require 'imenu)
+(setq imenu-auto-rescan t)
+(setq imenu-use-popup-menu nil)
+(setq imenu-flatten nil)
 
-;; Sessions
-(savehist-mode +1)
+;; utility functions for multilingual environment (mule)
+(require 'mule-util)
+(setq truncate-string-ellipsis "…")
 
-;; UI
-(defvar truncate-string-ellipsis "…")
+;; Pulse modified regions
+(require 'goggles)
 (setq-default goggles-pulse t)
-(defvar display-line-numbers-grow-only t)
-(setq use-dialog-box nil)
 
-;; mode line
+;; interface for display-line-numbers
+(require 'display-line-numbers)
+(setq display-line-numbers-grow-only t)
+
+;; basic editing commands for Emacs
+(require 'simple)
 (size-indication-mode)
-(column-number-mode +1)
+(column-number-mode)
+(setq next-line-add-newlines nil)
+(setq set-mark-command-repeat-pop t)
+(setq kill-do-not-save-duplicates t)
+(setq blink-matching-paren 'jump)
+(put 'set-goal-column 'disabled nil)
 
-;; Editor
-(delete-selection-mode t)
-(setq confirm-kill-emacs #'yes-or-no-p)
-(defvar next-line-add-newlines nil)
+;; fns.c Random utility Lisp functions.
+(setq use-dialog-box nil)
+(setq use-short-answers t)
 
-;; Which Function
+;; delete selection if you insert
+(require 'delsel)
+(delete-selection-mode)
+
+;; print current function in mode line
 (require 'which-func)
 (which-function-mode)
 (setq which-func-update-delay 1.0)
-(defvar which-func-display 'mode)
+(setq which-func-display 'mode)
 
-;; The Help System
+;; help commands for Emacs
 (require 'help)
 (setq help-window-keep-selected t)
 (setq help-window-select nil)
 (setq describe-bindings-show-prefix-commands t)
 
-;; `help-mode' used by *Help* buffers
+;; help-mode used by *Help* buffers
 (require 'help-mode)
 (setq help-clean-buttons t)
 
-;; Complex help functions
+;; complex help functions
 (require 'help-fns)
 (setq help-enable-variable-value-editing nil)
 (put 'help-fns-edit-variable 'disabled nil)
 
-;; UX
-(setq ring-bell-function 'ignore)
+;; window system-independent mouse support
+(require 'mouse)
 (setq mouse-yank-at-point t)
-(setq visible-bell nil)
-(defvar outline-minor-mode-cycle t)
-(setq-default indicate-empty-lines t)
 
-;; Frames
+;; dispnew.c updating of data structures for redisplay.
+(setq visible-bell nil)
+
+;; an outline can be abstracted to show headers at any given level
+(require 'outline)
+(setq outline-minor-mode-cycle t)
+
+;; frame.c Generic frame functions
 (setq-default window-resize-pixelwise t)
 (setq-default frame-resize-pixelwise t)
 
-;; Scrolling
+;; xdisp.c display generation from window structure and buffer text.
 (setq scroll-margin 0)
 (setq scroll-conservatively 100000)
+(setq x-stretch-cursor nil)
+(setq max-mini-window-height 10.00)
+(setq message-log-max 250)
+(setq resize-mini-windows 'grow-only)
+
+;; window.c window creation, deletion and examination
 (setq scroll-preserve-screen-position 1)
 (put 'scroll-left 'disabled nil)
 
-;; Cursor
-(blink-cursor-mode 0)
-(setq cursor-type 'box)
-(setq x-stretch-cursor nil)
+;; multi-frame management independent of window systems
+(require 'frame)
+(blink-cursor-mode)
 
-;; Marks
-(setq set-mark-command-repeat-pop t)
-
-;; Programming
-(defvar xref-show-definitions-function 'xref-show-definitions-completing-read)
+;; generic major mode for programming
+(require 'prog-mode)
 (setq prettify-symbols-unprettify-at-point t)
-(setq comment-empty-lines nil)
-(setq comment-padding 1)
 
-;; Electric pair mode
+;; (un)comment regions of buffers
+(require 'newcomment)
+(setq comment-padding 1)
+(setq comment-empty-lines nil)
+
+;; Automatic parenthesis pairing
 (require 'elec-pair)
-(electric-pair-mode +1)
+(electric-pair-mode)
 (setq electric-pair-pairs '((?\< . ?\>)
                             (34 . 34)
                             (8216 . 8217)
                             (8220 . 8221)
                             (?\{ . ?\})))
 
-;; Text Editing
+;; casefiddle.c case conversion functions
 (put 'upcase-region 'disabled nil)
 (put 'downcase-region 'disabled nil)
-(put 'set-goal-column 'disabled nil)
+
+;; An overloading mechanism for Emacs Lisp functions
+(require 'advice)
 (setq ad-redefinition-action 'error)
-(setq-default fill-column 80)
-(setq-default word-wrap t)
-(setq-default truncate-lines t)
+
+;; paragraph and sentence parsing
+;;(require 'paragraph) not provided
 (setq sentence-end-double-space nil)
 
-;; Grep
+;; run grep and display the results
+(require 'grep)
 (setq grep-command  "grep -r --color=auto -nH --null -e" )
-(defvar grep-use-headings t)
+(setq grep-use-headings t)
 
-;; Tree Sitter
-(defvar treesit-language-source-alist '())
-(defvar treesit-font-lock-level 4)
+;; tree-sitter utilities
+(require 'treesit)
+(setq treesit-language-source-alist '())
+(setq treesit-font-lock-level 4)
 
-;; Compilation
-(defvar compilation-always-kill t)
+;; run compiler as inferior of Emacs, parse error messages
+(require 'compile)
+(setq compilation-always-kill t)
 
-;; Snippets
-(defvar yas-snippet-dirs '("~/.emacs.d/lisp/snippets"))
+;; Yet another snippet extension
+(require 'yasnippet)
+(setq yas-snippet-dirs '("~/.emacs.d/lisp/snippets"))
 
 ;; indentation commands for Emacs
-(require 'indent)
+;;(require 'indent) indent not provided
 (setq tab-always-indent 't)
 (setq-default indent-tabs-mode nil)
 
-;; Tabs
+;; frame-local tabs with named persistent window configurations
+(require 'tab-bar)
 (setq tab-bar-show t)
-(setq-default tab-width 8)
 
-;; Spell Checking
-(defvar ispell-program-name "aspell")
+;; interface to spell checkers
+(require 'ispell)
+(setq ispell-program-name "aspell")
 (setq ispell-personal-dictionary "~/.aspell.en.pws")
-(defvar ispell-extra-args '("--sug-mode=ultra"))
-(defvar flyspell-abbrev-p t)
-(defvar flyspell-use-global-abbrev-table-p t)
-(defvar flyspell-issue-message-flag nil)
-(defvar flyspell-issue-welcome-flag nil)
+(setq ispell-extra-args '("--sug-mode=ultra"))
 (add-to-list 'auto-mode-alist '("\\.pws\\'" . text-mode))
 
-;; Find file at point
-(defvar ffap-machine-p-known 'reject)
+;; On-the-fly spell checker
+(require 'flyspell)
+(setq flyspell-abbrev-p t)
+(setq flyspell-use-global-abbrev-table-p t)
+(setq flyspell-issue-message-flag nil)
+(setq flyspell-issue-welcome-flag nil)
 
 ;; string and regular-expression replace commands
 (require 'replace)
@@ -152,6 +181,7 @@
 ;; Cross-referencing commands
 (require 'xref)
 (setq xref-after-jump-hook '(recenter xref-pulse-momentarily view-mode-enter))
+(setq xref-show-definitions-function 'xref-show-definitions-completing-read)
 
 (provide 'vars)
 ;;; vars.el ends here

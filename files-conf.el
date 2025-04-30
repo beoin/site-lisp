@@ -13,6 +13,11 @@
 (setq view-read-only t)
 (setq confirm-nonexistent-file-or-buffer nil)
 (setq require-final-newline t)
+(setq confirm-kill-emacs #'yes-or-no-p)
+
+;; find file (or url) at point
+(require 'ffap)
+(setq ffap-machine-p-known 'reject)
 
 ;; revert buffers when files on disk change
 (require 'autorevert)
@@ -22,10 +27,11 @@
 (require 'arc-mode)
 (setq archive-visit-single-files t)
 
-;; fileio.c
+;; fileio.c file io
 (setq delete-by-moving-to-trash t)
 
-;; Custom File
+;; tools for customizing Emacs and Lisp packages
+(require 'cus-edit)
 (setq custom-file (concat user-emacs-directory "custom.el"))
 
 ;; Functions

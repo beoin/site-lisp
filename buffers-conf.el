@@ -16,14 +16,17 @@
 
 ;; peruse file or buffer without editing
 (require 'view)
-(defvar view-scroll-auto-exit t)
-
-;; xdisp.c display generation from window structure and buffer text.
-(setq message-log-max 250)
+(setq view-scroll-auto-exit t)
 
 ;; buffer.c buffer manipulation primitives
 (setq kill-buffer-delete-auto-save-files t)
 (setq case-fold-search t)
+(setq cursor-type 'box)
+(setq-default word-wrap t)
+(setq-default truncate-lines t)
+(setq-default fill-column 80)
+(setq-default tab-width 8)
+(setq-default indicate-empty-lines t)
 
 ;; operate on buffers like dired
 (require 'ibuffer)
@@ -41,22 +44,28 @@
 (which-key-mode)
 (which-key-setup-minibuffer)
 
-;; Minibuffer
+;; only show defaults in prompts when applicable
+(require 'minibuf-eldef)
 (minibuffer-electric-default-mode)
-(setq use-short-answers t)
-(setq enable-recursive-minibuffers t)
-(setq kill-do-not-save-duplicates t)
-(setq max-mini-window-height 10.00)
+
+;; minibuf.c minibuffer input and completion.
 (setq minibuffer-follows-selected-frame t)
+(setq enable-recursive-minibuffers t)
+
+;; Highlight shadowed part of read-file-name input text
+(require 'rfn-eshadow)
 (setq file-name-shadow-properties '(invisible t intangible t face file-name-shadow field shadow))
-(setq resize-mini-windows 'grow-only)
-(setq read-file-name-completion-ignore-case nil)
+
+;; Save minibuffer history
+(require 'savehist)
+(savehist-mode)
 
 ;; minibuffer and completion functions
 (require 'minibuffer)
 (setq insert-default-directory t)
 (setq minibuffer-visible-completions t)
 (setq completions-format 'horizontal)
+(setq read-file-name-completion-ignore-case nil)
 
 ;; minibuffer completion incremental feedback
 (require 'icomplete)

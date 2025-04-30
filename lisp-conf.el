@@ -9,10 +9,8 @@
 (setq ielm-noisy nil)
 
 ;; lisp.el Lisp editing commands for Emacs
+;; (require 'lisp) not provided
 (setq delete-pair-blink-delay 0.25)
-
-;; Paren Matching
-(setq blink-matching-paren 'jump)
 
 ;; highlight matching paren
 (require 'paren)
