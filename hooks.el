@@ -12,6 +12,10 @@
 (add-hook 'find-function-after-hook #'view-mode-enter)
 (add-hook 'Info-selection-hook 'info-colors-fontify-node)
 
+(add-hook 'emacs-startup-hook
+          (defun startup-hook ()
+            (setq gc-cons-threshold (* 50 1024 1024))))
+
 (add-hook 'odin-mode-hook
           (defun odin-hook ()
             (electric-pair-mode)))
