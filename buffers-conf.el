@@ -6,7 +6,7 @@
 ;; window commands aside from those written in C
 (require 'window)
 (setq switch-to-buffer-in-dedicated-window 'pop)
-(setq switch-to-buffer-obey-display-actions t)
+(setq switch-to-buffer-obey-display-actions 't)
 (setq display-buffer-alist nil)
 
 ;; unique buffer names dependent on file name
@@ -16,17 +16,17 @@
 
 ;; peruse file or buffer without editing
 (require 'view)
-(setq view-scroll-auto-exit t)
+(setq view-scroll-auto-exit 't)
 
 ;; buffer.c buffer manipulation primitives
-(setq kill-buffer-delete-auto-save-files t)
-(setq case-fold-search t)
+(setq kill-buffer-delete-auto-save-files 't)
+(setq case-fold-search 't)
 (setq cursor-type 'box)
-(setq-default word-wrap t)
-(setq-default truncate-lines t)
+(setq-default word-wrap 't)
+(setq-default truncate-lines 't)
 (setq-default fill-column 80)
 (setq-default tab-width 8)
-(setq-default indicate-empty-lines t)
+(setq-default indicate-empty-lines 't)
 
 ;; operate on buffers like dired
 (require 'ibuffer)
@@ -49,27 +49,28 @@
 (minibuffer-electric-default-mode)
 
 ;; minibuf.c minibuffer input and completion.
-(setq minibuffer-follows-selected-frame t)
-(setq enable-recursive-minibuffers t)
+(setq minibuffer-follows-selected-frame 't)
+(setq enable-recursive-minibuffers 't)
 
-;; Highlight shadowed part of read-file-name input text
+;; highlight shadowed part of read-file-name input text
 (require 'rfn-eshadow)
 (setq file-name-shadow-properties '(invisible t intangible t face file-name-shadow field shadow))
 
-;; Save minibuffer history
+;; save minibuffer history
 (require 'savehist)
 (savehist-mode)
 
 ;; minibuffer and completion functions
 (require 'minibuffer)
-(setq insert-default-directory t)
-(setq minibuffer-visible-completions t)
+(setq insert-default-directory 't)
+(setq minibuffer-visible-completions 't)
 (setq completions-format 'horizontal)
 (setq read-file-name-completion-ignore-case nil)
 
 ;; minibuffer completion incremental feedback
 (require 'icomplete)
-(fido-mode)
+(icomplete-mode)
+(setq icomplete-show-matches-on-no-input 't)
 
 ;; Functions
 (defun delete-this-buffer-and-file ()
