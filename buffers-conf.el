@@ -67,11 +67,6 @@
 (setq completions-format 'horizontal)
 (setq read-file-name-completion-ignore-case nil)
 
-;; minibuffer completion incremental feedback
-(require 'icomplete)
-(icomplete-mode)
-(setq icomplete-show-matches-on-no-input 't)
-
 ;; Functions
 (defun delete-this-buffer-and-file ()
   "Remove file connected to current buffer and kill buffer."
