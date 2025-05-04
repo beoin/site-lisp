@@ -48,8 +48,7 @@
 
 ;; Functions
 (defun dired-common-dirs (key)
-"Open locations which are known to you in the file system.
-KEY represents a $HOME directory"
+"Open a Dired in a common directory (KEY)."
   (interactive
    "sr ~/remote, o ~/Org, b ~/bin, s ~/src, dw ~/Downloads, dk ~/Desktop:, dc ~/Documents ")
   (cond ((equal key "r") (dired-other-window "~/remote"))
@@ -58,7 +57,8 @@ KEY represents a $HOME directory"
 	       ((equal key "s") (dired-other-window "~/src"))
 	       ((equal key "dw") (dired-other-window "~/Downloads"))
 	       ((equal key "dk") (dired-other-window "~/Desktop"))
-	       ((equal key "dc") (dired-other-window "~/Documents"))))
+	       ((equal key "dc") (dired-other-window "~/Documents"))
+               (t (error "Error: [%s] not found" key))))
 
 (defun find-iname-dired (pattern)
   "Find case-insensitive \"wildcard\" PATTERN in an interactivly selected directory."
