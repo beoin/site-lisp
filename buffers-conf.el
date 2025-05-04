@@ -67,6 +67,10 @@
 (setq completions-format 'horizontal)
 (setq read-file-name-completion-ignore-case nil)
 
+;; Only show defaults in prompts when applicable
+(require 'minibuf-eldef)
+(minibuffer-electric-default-mode)
+
 ;; Functions
 (defun delete-this-buffer-and-file ()
   "Remove file connected to current buffer and kill buffer."
