@@ -6,17 +6,17 @@
 (defvar config-files (concat user-emacs-directory "lisp" )
   "Configuration files path.")
 
-;; incremental search minor mode
+;; incremental search
 (require 'isearch)
 (setq lazy-highlight-initial-delay 5.00)
-(setq isearch-lazy-count t)
+(setq isearch-lazy-count 't)
 (setq lazy-count-prefix-format nil)
 (setq lazy-count-suffix-format "   (%s/%s)")
 (setq search-ring-max 20)
 
 ;; framework for mode-specific buffer indexes
 (require 'imenu)
-(setq imenu-auto-rescan t)
+(setq imenu-auto-rescan 't)
 (setq imenu-use-popup-menu nil)
 (setq imenu-flatten nil)
 
@@ -24,27 +24,27 @@
 (require 'mule-util)
 (setq truncate-string-ellipsis "…")
 
-;; Pulse modified regions
+;; pulse modified regions
 (require 'goggles)
-(setq-default goggles-pulse t)
+(setq-default goggles-pulse 't)
 
 ;; interface for display-line-numbers
 (require 'display-line-numbers)
-(setq display-line-numbers-grow-only t)
+(setq display-line-numbers-grow-only 't)
 
-;; basic editing commands for Emacs
+;; basic editing commands
 (require 'simple)
 (size-indication-mode)
 (column-number-mode)
 (setq next-line-add-newlines nil)
-(setq set-mark-command-repeat-pop t)
-(setq kill-do-not-save-duplicates t)
+(setq set-mark-command-repeat-pop 't)
+(setq kill-do-not-save-duplicates 't)
 (setq blink-matching-paren 'jump)
 (put 'set-goal-column 'disabled nil)
 
-;; fns.c Random utility Lisp functions.
+;; fns.c Random utility lisp functions
 (setq use-dialog-box nil)
-(setq use-short-answers t)
+(setq use-short-answers 't)
 
 ;; delete selection if you insert
 (require 'delsel)
@@ -56,15 +56,15 @@
 (setq which-func-update-delay 1.0)
 (setq which-func-display 'mode)
 
-;; help commands for Emacs
+;; help commands
 (require 'help)
-(setq help-window-keep-selected t)
+(setq help-window-keep-selected 't)
 (setq help-window-select nil)
-(setq describe-bindings-show-prefix-commands t)
+(setq describe-bindings-show-prefix-commands 't)
 
 ;; help-mode used by *Help* buffers
 (require 'help-mode)
-(setq help-clean-buttons t)
+(setq help-clean-buttons 't)
 
 ;; complex help functions
 (require 'help-fns)
@@ -73,18 +73,18 @@
 
 ;; window system-independent mouse support
 (require 'mouse)
-(setq mouse-yank-at-point t)
+(setq mouse-yank-at-point 't)
 
 ;; dispnew.c updating of data structures for redisplay.
 (setq visible-bell nil)
 
 ;; an outline can be abstracted to show headers at any given level
 (require 'outline)
-(setq outline-minor-mode-cycle t)
+(setq outline-minor-mode-cycle 't)
 
-;; frame.c Generic frame functions
-(setq-default window-resize-pixelwise t)
-(setq-default frame-resize-pixelwise t)
+;; frame.c generic frame functions
+(setq-default window-resize-pixelwise 't)
+(setq-default frame-resize-pixelwise 't)
 
 ;; xdisp.c display generation from window structure and buffer text.
 (setq scroll-margin 0)
@@ -104,14 +104,14 @@
 
 ;; generic major mode for programming
 (require 'prog-mode)
-(setq prettify-symbols-unprettify-at-point t)
+(setq prettify-symbols-unprettify-at-point 't)
 
 ;; (un)comment regions of buffers
 (require 'newcomment)
 (setq comment-padding 1)
 (setq comment-empty-lines nil)
 
-;; Automatic parenthesis pairing
+;; automatic parenthesis pairing
 (require 'elec-pair)
 (electric-pair-mode)
 (setq electric-pair-pairs '((?\< . ?\>)
@@ -124,7 +124,7 @@
 (put 'upcase-region 'disabled nil)
 (put 'downcase-region 'disabled nil)
 
-;; An overloading mechanism for Emacs Lisp functions
+;; an overloading mechanism for lisp functions
 (require 'advice)
 (setq ad-redefinition-action 'error)
 
@@ -135,29 +135,29 @@
 ;; run grep and display the results
 (require 'grep)
 (setq grep-command  "grep -r --color=auto -nH --null -e" )
-(setq grep-use-headings t)
+(setq grep-use-headings 't)
 
 ;; tree-sitter utilities
 (require 'treesit)
 (setq treesit-language-source-alist '())
 (setq treesit-font-lock-level 4)
 
-;; run compiler as inferior of Emacs, parse error messages
+;; run compiler, parse error messages
 (require 'compile)
-(setq compilation-always-kill t)
+(setq compilation-always-kill 't)
 
-;; Yet another snippet extension
+;; snippet extensions
 (require 'yasnippet)
 (setq yas-snippet-dirs '("~/.emacs.d/lisp/snippets"))
 
-;; indentation commands for Emacs
-;;(require 'indent) indent not provided
+;; indentation commands
+;;(require 'indent) not provided
 (setq tab-always-indent 't)
 (setq-default indent-tabs-mode nil)
 
 ;; frame-local tabs with named persistent window configurations
 (require 'tab-bar)
-(setq tab-bar-show t)
+(setq tab-bar-show 't)
 
 ;; interface to spell checkers
 (require 'ispell)
@@ -166,10 +166,10 @@
 (setq ispell-extra-args '("--sug-mode=ultra"))
 (add-to-list 'auto-mode-alist '("\\.pws\\'" . text-mode))
 
-;; On-the-fly spell checker
+;; on-the-fly spell checker
 (require 'flyspell)
-(setq flyspell-abbrev-p t)
-(setq flyspell-use-global-abbrev-table-p t)
+(setq flyspell-abbrev-p 't)
+(setq flyspell-use-global-abbrev-table-p 't)
 (setq flyspell-issue-message-flag nil)
 (setq flyspell-issue-welcome-flag nil)
 
@@ -178,7 +178,12 @@
 (setq list-matching-lines-jump-to-current-line 't)
 (setq list-matching-lines-default-context-lines 0)
 
-;; Cross-referencing commands
+;; some nonstandard editing and utility commands
+(require 'misc)
+(setq duplicate-line-final-position 1)
+(setq duplicate-region-final-position 1)
+
+;; cross-referencing commands
 (require 'xref)
 (setq xref-after-jump-hook '(recenter xref-pulse-momentarily view-mode-enter))
 (setq xref-show-definitions-function 'xref-show-definitions-completing-read)
