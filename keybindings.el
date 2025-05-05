@@ -32,7 +32,7 @@
 (keymap-global-set "C-c W" 'google-define)
 (keymap-global-set "C-x C-r" 'restart-emacs)
 (keymap-global-set "C-x e" 'emacs-version)
-(keymap-global-set "C-c d" 'crux-duplicate-current-line-or-region)
+(keymap-global-set "C-c d" 'duplicate-dwim)
 (keymap-global-set "M-c" 'capitalise-word)
 (keymap-global-set "M-z" 'quick-zap-up-to-char)
 (keymap-global-set "C-c U" 'search-github)
