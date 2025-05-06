@@ -50,15 +50,16 @@
 (defun dired-common-dirs (key)
 "Open a Dired in a common directory (KEY)."
   (interactive
-   "sr ~/remote, o ~/Org, b ~/bin, s ~/src, dw ~/Downloads, dk ~/Desktop:, dc ~/Documents ")
+   "sr ~/remote, h ~/home, o ~/Org, b ~/bin, s ~/src, dw ~/Downloads, dk ~/Desktop:, dc ~/Documents ")
   (cond ((equal key "r") (dired "~/remote"))
-	       ((equal key "o") (dired "~/Org"))
-	       ((equal key "b") (dired "~/bin"))
-	       ((equal key "s") (dired "~/src"))
-	       ((equal key "dw") (dired "~/Downloads"))
-	       ((equal key "dk") (dired "~/Desktop"))
-	       ((equal key "dc") (dired "~/Documents"))
-               (t (error "Error: [%s] not found" key))))
+        ((equal key "h") (dired "~/"))
+        ((equal key "o") (dired "~/Org"))
+        ((equal key "b") (dired "~/bin"))
+        ((equal key "s") (dired "~/src"))
+        ((equal key "dw") (dired "~/Downloads"))
+        ((equal key "dk") (dired "~/Desktop"))
+        ((equal key "dc") (dired "~/Documents"))
+        (t (error "Error: [%s] not found" key))))
 
 (defun find-iname-dired (pattern)
   "Find case-insensitive \"wildcard\" PATTERN in an interactivly selected directory."
