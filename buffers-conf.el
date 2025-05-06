@@ -89,7 +89,6 @@
         (message "File '%s' successfully removed" filename)))))
 
 ;; Keybindings
-(keymap-global-set "C-x B" 'ibuffer-list-buffers)
 (keymap-global-set "C-x C-b" 'ibuffer)
 (keymap-global-set "C-c S" 'scratch-buffer)
 (keymap-global-set "C-c M" 'messages-buffer)
