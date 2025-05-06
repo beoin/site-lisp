@@ -51,13 +51,13 @@
 "Open a Dired in a common directory (KEY)."
   (interactive
    "sr ~/remote, o ~/Org, b ~/bin, s ~/src, dw ~/Downloads, dk ~/Desktop:, dc ~/Documents ")
-  (cond ((equal key "r") (dired-other-window "~/remote"))
-	       ((equal key "o") (dired-other-window "~/Org"))
-	       ((equal key "b") (dired-other-window "~/bin"))
-	       ((equal key "s") (dired-other-window "~/src"))
-	       ((equal key "dw") (dired-other-window "~/Downloads"))
-	       ((equal key "dk") (dired-other-window "~/Desktop"))
-	       ((equal key "dc") (dired-other-window "~/Documents"))
+  (cond ((equal key "r") (dired "~/remote"))
+	       ((equal key "o") (dired "~/Org"))
+	       ((equal key "b") (dired "~/bin"))
+	       ((equal key "s") (dired "~/src"))
+	       ((equal key "dw") (dired "~/Downloads"))
+	       ((equal key "dk") (dired "~/Desktop"))
+	       ((equal key "dc") (dired "~/Documents"))
                (t (error "Error: [%s] not found" key))))
 
 (defun find-iname-dired (pattern)
