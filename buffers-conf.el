@@ -66,6 +66,9 @@
 (setq minibuffer-visible-completions 't)
 (setq completions-format 'horizontal)
 (setq read-file-name-completion-ignore-case nil)
+(setq minibuffer-default-prompt-format " [%s]")
+(setq completions-header-format
+      (propertize "%s matches:\n" 'face 'shadow))
 
 ;; Only show defaults in prompts when applicable
 (require 'minibuf-eldef)
