@@ -31,7 +31,7 @@
 ;; operate on buffers like dired
 (require 'ibuffer)
 (setq ibuffer-movement-cycle nil)
-(setq ibuffer-default-sorting-mode 'alphabetic)
+(setq ibuffer-default-sorting-mode 'recency)
 (setq ibuffer-expert nil)
 (setq ibuffer-use-other-window nil)
 
