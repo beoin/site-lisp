@@ -20,10 +20,6 @@
           (defun startup-hook ()
             (setq gc-cons-threshold (* 50 1024 1024))))
 
-(add-hook 'odin-mode-hook
-          (defun odin-hook ()
-            (electric-pair-mode)))
-
 (add-hook 'markdown-mode-hook
 	  (defun markdown-hook ()
 	    (keymap-local-set "C-S-p" #'markdown-previous-visible-heading)
