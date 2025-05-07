@@ -78,8 +78,6 @@
             (keymap-local-set "<escape> :" #'org-emphasize-colon)
             (keymap-local-set "M-<tab>" #'complete-symbol)
             (flyspell-mode +1)
-	    (setq buffer-face-mode-face '(:family "Cantarell" :height 140))
-	    (buffer-face-mode)
             (org-rainbow-tags-mode)
             (electric-pair-mode -1)
             (goggles-mode)
