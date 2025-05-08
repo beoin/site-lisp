@@ -81,6 +81,7 @@
             (org-rainbow-tags-mode)
             (electric-pair-mode -1)
             (goggles-mode)
+            (variable-pitch-mode)
             (org-indent-mode)))
 
 (add-hook 'org-shiftup-final-hook 'windmove-up)
