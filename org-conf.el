@@ -76,6 +76,7 @@
             (keymap-local-set "C-c C-d" #'org-do-demote)
             (keymap-local-set "C-c C-p" #'org-do-promote)
             (keymap-local-set "<escape> :" #'org-emphasize-colon)
+            (keymap-local-set "<escape> ;" #'org-emphasize-code)
             (keymap-local-set "M-<tab>" #'complete-symbol)
             (flyspell-mode +1)
             (org-rainbow-tags-mode)
@@ -112,7 +113,7 @@
 
 (defalias 'org-emphasize-gen #'org-emphasize)
 
-(defun org-emphasize-as-code ()
+(defun org-emphasize-code ()
   "Emphasise the symbol at point as \"code\"."
   (interactive)
   (let ((curr (point))
