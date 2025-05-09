@@ -44,10 +44,6 @@
 (which-key-mode)
 (which-key-setup-minibuffer)
 
-;; only show defaults in prompts when applicable
-(require 'minibuf-eldef)
-(minibuffer-electric-default-mode)
-
 ;; minibuf.c minibuffer input and completion.
 (setq minibuffer-follows-selected-frame 't)
 (setq enable-recursive-minibuffers 't)
