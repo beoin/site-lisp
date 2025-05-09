@@ -74,6 +74,10 @@
 (require 'minibuf-eldef)
 (minibuffer-electric-default-mode)
 
+;; Indicate minibuffer-depth in prompt
+(require 'mb-depth)
+(minibuffer-depth-indicate-mode)
+
 ;; Functions
 (defun delete-this-buffer-and-file ()
   "Remove file connected to current buffer and kill buffer."
