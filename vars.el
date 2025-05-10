@@ -164,6 +164,7 @@
 (setq ispell-program-name "aspell")
 (setq ispell-personal-dictionary "~/.aspell.en.pws")
 (setq ispell-extra-args '("--sug-mode=ultra"))
+(setq ispell-silently-savep 't)
 (add-to-list 'auto-mode-alist '("\\.pws\\'" . text-mode))
 
 ;; on-the-fly spell checker
