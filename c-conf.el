@@ -19,7 +19,8 @@
 (add-hook 'c-ts-mode-hook
           (defun c-hook ()
             (auto-revert-mode)
-            (electric-pair-mode)))
+            (electric-pair-mode)
+            (keymap-local-set "C-j" #'open-line-below-point)))
 
 (provide 'c-conf)
 ;;; c-conf.el ends here.
