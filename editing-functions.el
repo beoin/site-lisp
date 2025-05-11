@@ -2,6 +2,18 @@
 
 ;;; Commentary:
 ;;; Code:
+
+(defun delete-space-period-line-end ()
+  "Delete all space and the period from the end of a line."
+  (interactive)
+  (let ((curr (point)))
+    (move-end-of-line 1)
+    (if (equal (char-before) 32)
+        (delete-horizontal-space))
+    (if (equal (char-before) ?.)
+        (delete-char -1))
+    (goto-char curr)))
+
 (defun delete-space-line-end ()
   "Delete all spaces and tabs from the end of current line.
 Consider instead the builtin function \"delete-trailing-whitespace\""
