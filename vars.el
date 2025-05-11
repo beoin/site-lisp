@@ -14,6 +14,10 @@
 (setq lazy-count-suffix-format "   (%s/%s)")
 (setq search-ring-max 20)
 
+;; text expansion
+(require 'abbrev)
+(abbrev-mode -1)
+
 ;; framework for mode-specific buffer indexes
 (require 'imenu)
 (setq imenu-auto-rescan 't)
