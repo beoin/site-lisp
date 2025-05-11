@@ -14,7 +14,9 @@
 
 (add-hook 'outline-mode-hook
           (defun outline-hook ()
-            (outline-show-only-headings)))
+            (outline-show-only-headings)
+            (keymap-local-set "C-S-n" #'outline-next-visible-heading)
+	    (keymap-local-set "C-S-p" #'outline-previous-visible-heading)))
 
 (add-hook 'emacs-startup-hook
           (defun startup-hook ()
