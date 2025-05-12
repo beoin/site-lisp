@@ -11,7 +11,7 @@
 (setq version-control 'never)
 (setq delete-old-versions t)
 (setq view-read-only t)
-(setq confirm-nonexistent-file-or-buffer nil)
+(setq confirm-nonexistent-file-or-buffer 't)
 (setq require-final-newline t)
 (setq confirm-kill-emacs #'yes-or-no-p)
 
