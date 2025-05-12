@@ -44,10 +44,6 @@
 (which-key-mode)
 (which-key-setup-minibuffer)
 
-;; minibuf.c minibuffer input and completion.
-(setq minibuffer-follows-selected-frame 't)
-(setq enable-recursive-minibuffers 't)
-
 ;; highlight shadowed part of read-file-name input text
 (require 'rfn-eshadow)
 (setq file-name-shadow-properties '(invisible t intangible t face file-name-shadow field shadow))
@@ -56,11 +52,17 @@
 (require 'savehist)
 (savehist-mode)
 
+;; minibuf.c minibuffer input and completion.
+(setq minibuffer-follows-selected-frame 't)
+(setq enable-recursive-minibuffers 't)
+(setq history-delete-duplicates 't)
+
 ;; minibuffer and completion functions
 (require 'minibuffer)
 (setq insert-default-directory 't)
 (setq minibuffer-visible-completions 't)
 (setq completions-format 'horizontal)
+(setq completion-auto-select 'second-tab)
 (setq read-file-name-completion-ignore-case nil)
 (setq minibuffer-default-prompt-format " [%s]")
 (setq completions-header-format
