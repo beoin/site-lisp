@@ -6,6 +6,13 @@
 (defvar config-files (concat user-emacs-directory "lisp" )
   "Configuration files path.")
 
+;; commands, docs, vars and functions apropos to supplied term
+(require 'apropos)
+(setq apropos-sort-by-scores 'verbose)
+(setq apropos-compact-layout nil)
+(setq apropos-documentation-sort-by-scores 't)
+(setq apropos-do-all nil)
+
 ;; incremental search
 (require 'isearch)
 (setq lazy-highlight-initial-delay 5.00)
