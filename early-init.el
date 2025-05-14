@@ -6,7 +6,7 @@
 
 ;; alloc.c storage allocation and gc for lisp interpreter
 (setq gc-cons-threshold most-positive-fixnum)
-(setq garbage-collection-messages 't)
+(setq garbage-collection-messages nil)
 
 ;; lread.c lisp parsing and input streams
 (setq load-prefer-newer 't)
