@@ -3,6 +3,14 @@
 ;;; Commentary:
 ;;; Code:
 
+(defun zap-up-to-string ()
+  "Kill line up to but not including supplied string."
+  (interactive)
+  (let* ((curr (point))
+        (target-str (read-from-minibuffer "zap up to: " nil nil nil nil nil nil))
+        (target-pnt (goto-char (- (search-forward target-str (line-end-position)) (length target-str)))))
+    (kill-region curr target-pnt)))
+
 (defun delete-space-period-line-end ()
   "Delete all space and the period from the end of a line."
   (interactive)
