@@ -111,8 +111,6 @@
     (goto-char curr)
     (org-overview)))
 
-(defalias 'org-emphasize-gen #'org-emphasize)
-
 (defun org-emphasize-code ()
   "Emphasise the symbol at point as \"code\"."
   (interactive)
