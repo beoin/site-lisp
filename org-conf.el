@@ -124,12 +124,13 @@
     (insert "~")))
 
 (defun org-emphasize-colon ()
-  "Emphasise from point until the next colon."
+  "Emphasise from the start of the current line until the first colon symbol."
   (interactive)
-  (let ((curr (point))
+  (beginning-of-line)
+  (let ((start (1- (re-search-forward "[[:alnum:]]" (line-end-position) t 1)))
         (end (re-search-forward "[:\t]+\\|\n" (line-end-position) t 1)))
     (or end (error "Error: colon not found"))
-    (goto-char curr)
+    (goto-char start)
     (insert "=")
     (goto-char end)
     (insert "=")))
