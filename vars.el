@@ -30,6 +30,7 @@
 (setq imenu-auto-rescan 't)
 (setq imenu-use-popup-menu nil)
 (setq imenu-flatten nil)
+(setq imenu-space-replacement "_")
 
 ;; utility functions for multilingual environment (mule)
 (require 'mule-util)
