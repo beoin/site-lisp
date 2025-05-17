@@ -20,7 +20,15 @@
           (defun c-hook ()
             (auto-revert-mode)
             (electric-pair-mode)
-            (keymap-local-set "C-j" #'open-line-below-point)))
+            (keymap-local-set "C-j" #'open-line-below-point)
+            (keymap-local-set "C-c b" #'c-insert-comment)))
+
+;; Functions
+(defun c-insert-comment ()
+  "Insert a C comment block at point."
+  (interactive)
+  (insert "/*   */")
+  (backward-char 4))
 
 (provide 'c-conf)
 ;;; c-conf.el ends here.
