@@ -52,6 +52,7 @@
 (setq set-mark-command-repeat-pop 't)
 (setq kill-do-not-save-duplicates 't)
 (setq blink-matching-paren 'jump)
+(setq shell-command-prompt-show-cwd 't)
 (put 'set-goal-column 'disabled nil)
 
 ;; fns.c Random utility lisp functions
