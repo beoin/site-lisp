@@ -3,6 +3,15 @@
 ;;; functions not related to text editing.
 ;;; Code:
 
+(defun pulse-error (msg)
+  "Pulse current line and display error MSG."
+  (pulse-momentary-highlight-one-line (point) 'error)
+  (error msg))
+
+(defun pulse-warning (msg)
+  "Pulse current line and display warning MSG."
+  (pulse-momentary-highlight-one-line (point) 'warning)
+  (warn msg))
 
 (defun list-urls ()
   "Pop a list of all the urls in the current buffer."
