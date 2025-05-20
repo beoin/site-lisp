@@ -3,12 +3,22 @@
 ;;; Commentary:
 ;;; Code:
 
+(defun trim-url-at-point ()
+  "Remove query string from url at point."
+  (interactive)
+  (let ((sv (progn (move-beginning-of-line nil)
+                   (search-forward "&" (line-end-position) 't 1))))
+    (or sv (error "URL: unavailable query string"))
+    (prog1
+        (backward-char)
+      (kill-line))))
+
 (defun zap-up-to-string ()
   "Kill line up to but not including supplied string."
   (interactive)
   (let* ((curr (point))
-        (target-str (read-from-minibuffer "zap up to: " nil nil nil nil nil nil))
-        (target-pnt (goto-char (- (search-forward target-str (line-end-position)) (length target-str)))))
+         (target-str (read-from-minibuffer "zap up to: " nil nil nil nil nil nil))
+         (target-pnt (goto-char (- (search-forward target-str (line-end-position)) (length target-str)))))
     (kill-region curr target-pnt)))
 
 (defun delete-space-period-line-end ()
