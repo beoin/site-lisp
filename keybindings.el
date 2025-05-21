@@ -2,11 +2,14 @@
 ;;; Commentary:
 
 ;;; Code:
-(keymap-global-unset "C-x m")
-(keymap-global-unset "C-x t")
-(keymap-global-unset "C-z")
-(keymap-global-unset "C-x v x")
-(keymap-global-unset "C-x f")
+(keymap-global-unset "C-x m")  ;; compose-mail
+(keymap-global-unset "C-x t")  ;; previous-window-any-frame
+(keymap-global-unset "C-z")    ;; suspend-frame
+(keymap-global-unset "C-x v x");; vc-delete-file
+(keymap-global-unset "C-x f")  ;; set-fill-column
+(keymap-global-unset "C-x C-q");; read-only-mode
+(keymap-global-unset "<XF86WakeUp>")
+(keymap-global-unset "<print>")
 
 (keymap-global-set "<escape> w s" 'toggle-window-split)
 (keymap-global-set "<escape> o s a" 'org-sort-alpha)
@@ -15,8 +18,6 @@
 (keymap-global-set "<escape> z c" 'zap-to-char)
 (keymap-global-set "<escape> z s" 'zap-up-to-string)
 (keymap-global-set "<escape> z u" 'zap-up-to-char)
-(keymap-global-unset "<XF86WakeUp>")
-(keymap-global-unset "<print>")
 (keymap-global-set "C-x t" 'previous-window-any-frame)
 (keymap-global-set "M-<backspace>" 'backward-delete-word)
 (keymap-global-set "C-c m" 'move-to-line-middle)
