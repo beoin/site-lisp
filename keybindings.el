@@ -12,9 +12,6 @@
 (keymap-global-unset "<print>")
 
 (keymap-global-set "<escape> w s" 'toggle-window-split)
-(keymap-global-set "<escape> o s a" 'org-sort-alpha)
-(keymap-global-set "<escape> o d d" 'org-do-demote)
-(keymap-global-set "<escape> o d p" 'org-do-promote)
 (keymap-global-set "<escape> z c" 'zap-to-char)
 (keymap-global-set "<escape> z s" 'zap-up-to-string)
 (keymap-global-set "<escape> z u" 'zap-up-to-char)
