@@ -136,5 +136,9 @@
     (goto-char end)
     (insert "=")))
 
+(defun org-line-folded-p ()
+  "Non-nil if line at point is in folded state."
+  (org-fold-core-folded-p (line-end-position) nil))
+
 (provide 'org-conf)
 ;;; org-conf.el ends here
