@@ -11,31 +11,23 @@
 (keymap-global-unset "<XF86WakeUp>")
 (keymap-global-unset "<print>")
 
+;; Escape
 (keymap-global-set "<escape> w s" 'toggle-window-split)
 (keymap-global-set "<escape> z c" 'zap-to-char)
 (keymap-global-set "<escape> z s" 'zap-up-to-string)
 (keymap-global-set "<escape> z u" 'zap-up-to-char)
-(keymap-global-set "C-x t" 'previous-window-any-frame)
-(keymap-global-set "M-<backspace>" 'backward-delete-word)
+(keymap-global-set "<escape> ." 'delete-space-period-line-end)
+
+;; C-c
 (keymap-global-set "C-c m" 'move-to-line-middle)
 (keymap-global-set "C-c k" 'delete-current-line)
 (keymap-global-set "C-c r" 'replace-char)
-(keymap-global-set "S-<right>" 'windmove-right)
-(keymap-global-set "S-<left>" 'windmove-left)
-(keymap-global-set "S-<up>" 'windmove-up)
-(keymap-global-set "S-<down>" 'windmove-down)
+(keymap-global-set "C-x t" 'previous-window-any-frame)
 (keymap-global-set "C-c s" 'status)
 (keymap-global-set "C-c v" 'view-mode)
-(keymap-global-set "M-o" 'other-window)
-(keymap-global-set "M-u" 'upcase-word-start)
 (keymap-global-set "C-c l" 'comment-or-uncomment-region)
 (keymap-global-set "C-c w" 'lookup-word-at-point)
 (keymap-global-set "C-c W" 'google-define)
-(keymap-global-set "C-x C-r" 'restart-emacs)
-(keymap-global-set "C-x e" 'emacs-version)
-(keymap-global-set "C-c d" 'duplicate-dwim)
-(keymap-global-set "M-c" 'capitalise-word)
-(keymap-global-set "M-z" 'quick-zap-up-to-char)
 (keymap-global-set "C-c U" 'search-github)
 (keymap-global-set "C-c u" 'search-github-ext)
 (keymap-global-set "C-c P" 'search-wikipedia)
@@ -44,7 +36,25 @@
 (keymap-global-set "C-c y" 'search-youtube)
 (keymap-global-set "C-c B" 'search-google-books)
 (keymap-global-set "C-c p" 'search-archwiki)
+(keymap-global-set "C-c d" 'duplicate-dwim)
+
+;; C-x
+(keymap-global-set "C-x C-r" 'restart-emacs)
+(keymap-global-set "C-x e" 'emacs-version)
+
+;; Meta
+(keymap-global-set "M-<backspace>" 'backward-delete-word)
+(keymap-global-set "M-o" 'other-window)
+(keymap-global-set "M-u" 'upcase-word-start)
+(keymap-global-set "M-c" 'capitalise-word)
+(keymap-global-set "M-z" 'quick-zap-up-to-char)
 (keymap-global-set "M-l" 'downcase-word-start)
+
+;; Shift
+(keymap-global-set "S-<right>" 'windmove-right)
+(keymap-global-set "S-<left>" 'windmove-left)
+(keymap-global-set "S-<up>" 'windmove-up)
+(keymap-global-set "S-<down>" 'windmove-down)
 
 (provide 'keybindings)
 ;;; keybindings.el ends here
