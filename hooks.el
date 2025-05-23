@@ -32,7 +32,6 @@
 	    (display-line-numbers-mode +1)
             (goggles-mode)
             (hl-line-mode)
-            (flycheck-mode)
             (keymap-local-set "C-c c" #'compile)))
 
 (add-hook 'outline-minor-mode-hook

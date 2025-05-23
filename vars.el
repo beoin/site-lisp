@@ -25,6 +25,12 @@
 (require 'abbrev)
 (abbrev-mode -1)
 
+;; On-the-fly syntax checking
+(require 'flycheck)
+(global-flycheck-mode +1)
+(setq-default flycheck-disabled-checkers '(c/c++-clang))
+(setq flycheck-sh-shellcheck-executable "~/.local/bin/shellcheck")
+
 ;; framework for mode-specific buffer indexes
 (require 'imenu)
 (setq imenu-auto-rescan 't)
