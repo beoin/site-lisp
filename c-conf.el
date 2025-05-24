@@ -21,7 +21,8 @@
             (auto-revert-mode)
             (electric-pair-mode)
             (keymap-local-set "C-j" #'open-line-below-point)
-            (keymap-local-set "C-c b" #'c-insert-comment)))
+            (keymap-local-set "C-c b" #'c-insert-comment)
+            (keymap-local-set "C-c C" #'c-compile)))
 
 ;; Functions
 (defun c-insert-comment ()
@@ -29,6 +30,13 @@
   (interactive)
   (insert "/*   */")
   (backward-char 4))
+
+(defun c-compile ()
+  "Compile and run the current C file."
+  (interactive)
+  (let* ((name (buffer-name))
+         (exe (file-name-sans-extension name)))
+    (compile (format "cc %s -o %s && ./%s" name exe exe))))
 
 (provide 'c-conf)
 ;;; c-conf.el ends here.
