@@ -203,6 +203,10 @@
 (setq duplicate-line-final-position 1)
 (setq duplicate-region-final-position 1)
 
+;; log and display warnings
+(require 'warnings)
+(setq warning-suppress-types '((yasnippet) (backquote-change)))
+
 ;; cross-referencing commands
 (require 'xref)
 (setq xref-after-jump-hook '(recenter xref-pulse-momentarily view-mode-enter))
