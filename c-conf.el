@@ -20,6 +20,7 @@
           (defun c-hook ()
             (auto-revert-mode)
             (electric-pair-mode)
+            (yas-minor-mode)
             (keymap-local-set "C-j" #'open-line-below-point)
             (keymap-local-set "C-c b" #'c-insert-comment)
             (keymap-local-set "C-c C" #'c-compile)))
