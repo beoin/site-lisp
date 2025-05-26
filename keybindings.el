@@ -17,6 +17,7 @@
 (keymap-global-set "<escape> z s" 'zap-up-to-string)
 (keymap-global-set "<escape> z u" 'zap-up-to-char)
 (keymap-global-set "<escape> ." 'delete-space-period-line-end)
+(keymap-global-set "<escape> <escape>" 'switch-to-minibuffer)
 
 ;; C-c
 (keymap-global-set "C-c m" 'move-to-line-middle)
