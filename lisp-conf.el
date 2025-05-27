@@ -50,6 +50,11 @@
           (defun scheme-hook ()
             (lisp-hook)))
 
+(add-hook 'geiser-repl-mode-hook
+          (defun geiser-repl-hook ()
+            (lisp-hook)
+            (keymap-local-set "<return>" #'geiser-repl-maybe-send)))
+
 (defun lisp-hook ()
   "Hook applied across modes."
   (paredit-mode)
