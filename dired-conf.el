@@ -9,6 +9,8 @@
 ;; less commonly used parts of dired
 (require 'dired-aux)
 (setq dired-create-destination-dirs 'ask)
+(setq dired-isearch-filenames 't)
+(setq dired-create-destination-dirs-on-trailing-dirsep 't)
 
 ;; run a find command and dired the output
 (require 'find-dired)
@@ -48,7 +50,7 @@
 
 ;; Functions
 (defun dired-common-dirs (key)
-"Open a Dired in a common directory (KEY)."
+  "Open a Dired in a common directory (KEY)."
   (interactive
    "sr ~/remote, h ~/home, o ~/Org, b ~/bin, s ~/src, dw ~/Downloads, dk ~/Desktop:, dc ~/Documents ")
   (cond ((equal key "r") (dired "~/remote"))
