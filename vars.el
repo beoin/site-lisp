@@ -159,7 +159,8 @@
 ;; tree-sitter utilities
 (require 'treesit)
 (setq treesit-language-source-alist
-      '((janet-simple . ("https://github.com/sogaiu/tree-sitter-janet-simple"))))
+      '((janet-simple . ("https://github.com/sogaiu/tree-sitter-janet-simple"))
+        (rust . ("https://github.com/tree-sitter/tree-sitter-rust"))))
 (setq treesit-font-lock-level 4)
 
 ;; run compiler, parse error messages
