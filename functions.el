@@ -156,7 +156,7 @@ MODE must be a symbol"
 (defun lookup-word-at-point (word)
   "Lookup the WORD at point."
   (interactive (list (current-word)))
-  (let ((url "https://www.google.com/search?hl=en&q=define+"))
+  (let ((url "https://duckduckgo.com/?q=define+"))
     (browse-url (concat url word))))
 
 (provide 'functions)
