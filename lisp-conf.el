@@ -46,15 +46,6 @@
             (paredit-mode)
             (keymap-local-set "<return>" #'read--expression-try-read)))
 
-(add-hook 'scheme-mode-hook
-          (defun scheme-hook ()
-            (lisp-hook)))
-
-(add-hook 'geiser-repl-mode-hook
-          (defun geiser-repl-hook ()
-            (lisp-hook)
-            (keymap-local-set "<return>" #'geiser-repl-maybe-send)))
-
 (defun lisp-hook ()
   "Hook applied across modes."
   (paredit-mode)
